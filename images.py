@@ -11,7 +11,7 @@ time.sleep(2)
 # print(tmp)
 pag.typewrite('o', 0)
 sshot = pag.screenshot()
-image_location = pag.locateOnScreen('C:/0/5.jpg')
+image_location = pag.locateOnScreen('5.jpg')
 print(image_location)
 # if image_location is not None:
 #     print("Image found at ({}, {})".format(image_location.left, image_location.top))

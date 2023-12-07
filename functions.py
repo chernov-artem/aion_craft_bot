@@ -37,7 +37,7 @@ def choise_last():
     mouse.click('left')
 
 def exit():
-    # aion_screen()
+    aion_screen()
     move_and_clic(1317, 992)
     move_and_clic(1305, 937)
     time.sleep(0.7)
@@ -45,6 +45,6 @@ def exit():
     mouse.click('left')
 
 # get_position()
-choise_last()
-time.sleep(10)
+# choise_last()
+# time.sleep(10)
 exit()
