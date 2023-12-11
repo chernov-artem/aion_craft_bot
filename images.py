@@ -27,6 +27,21 @@ def change_pers():
 def morph():
     return find_coordinates('images/morph.png')
 
+def selected():
+    return find_coordinates('images/selected.png')
+
+def jelly():
+    return find_coordinates('images/jelly.png')
+
+def ferera():
+    return find_coordinates('images/ferera.png')
+
+def create_all():
+    return find_coordinates('images/create_all.png')
+
+
+
+
 # time.sleep(2)
 # image_location = pag.locateOnScreen('np.png')
 # if image_location is not None:
