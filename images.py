@@ -21,6 +21,33 @@ def find_coordinates(tmp: str) -> tuple:
     for pt in zip(*loc[::-1]):
         return pt
 
+def pers1():
+    return find_coordinates('images/SpielSucht.png')
+
+def pers2():
+    return find_coordinates('images/DeadPonyClub.png')
+
+def pers3():
+    return find_coordinates('images/HungaMunga.png')
+
+def pers4():
+    return find_coordinates('images/Rebyata.png')
+
+def pers5():
+    return find_coordinates('images/KillClericFirst.png')
+
+def pers6():
+    return find_coordinates('images/Huanito.png')
+
+def pers7():
+    return find_coordinates('images/Huanita.png')
+
+def pers8():
+    return find_coordinates('images/spbscale.png')
+
+def cross():
+    return find_coordinates('images/cross.png')
+
 def change_pers():
     return find_coordinates('images/change_pers_button.png')
 
@@ -39,6 +66,11 @@ def ferera():
 def create_all():
     return find_coordinates('images/create_all.png')
 
+def sklad_leg_btn():
+    return find_coordinates('images/sklad_leg_btn.png')
+
+def ferera_icon():
+    return find_coordinates('images/ferera_icon.png')
 
 
 
