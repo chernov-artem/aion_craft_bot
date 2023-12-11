@@ -162,6 +162,28 @@ def ferera():
         move_and_clic(1200, 500)
     time.sleep(0.4)
 
+def ferilla():
+    "функция нажатия на свежую фериллу"
+    xy_tmp = images.ferilla()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.4)
+
+def grifon():
+    "функция нажатия на свежую фериллу"
+    xy_tmp = images.grifon()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.4)
+
 def ferera_icon():
     "функция нажатия на фереру"
     xy_tmp = images.ferera_icon()
@@ -251,7 +273,9 @@ def craft():
     jelly()
     morph()
     selected()
-    ferera()
+    # ferera()
+    ferilla()
+    # grifon()
     create_all()
     print('крафчу')
     time.sleep(85)
@@ -271,10 +295,10 @@ def osn():
     # craft()
     # pers4()
     # craft()
-    pers5()
-    craft()
-    pers6()
-    craft()
+    # pers5()
+    # craft()
+    # pers6()
+    # craft()
     pers7()
     craft()
     pers8()

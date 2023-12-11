@@ -63,6 +63,12 @@ def jelly():
 def ferera():
     return find_coordinates('images/ferera.png')
 
+def ferilla():
+    return find_coordinates('images/ferilla.png')
+
+def grifon():
+    return find_coordinates('images/grifon.png')
+
 def create_all():
     return find_coordinates('images/create_all.png')
 
