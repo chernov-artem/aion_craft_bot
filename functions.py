@@ -48,6 +48,7 @@ def change_pers():
     print(dt)
 
 def morph():
+    "функция нажатия кнопки преобразования"
     t1 = time.time()
     xy_tmp = images.morph()
     x, y = xy_tmp[0], xy_tmp[1]
