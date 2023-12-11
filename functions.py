@@ -36,6 +36,9 @@ def choise_last():
     time.sleep(0.4)
     mouse.click('left')
 
+def change_pers():
+    pass
+
 def exit():
     aion_screen()
     move_and_clic(1317, 992)
