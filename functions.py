@@ -1,6 +1,7 @@
 import keyboard
 import mouse
 import time
+import images
 
 # keyboard.write('Hello!', 0.1)
 
@@ -37,7 +38,24 @@ def choise_last():
     mouse.click('left')
 
 def change_pers():
-    pass
+    t1 = time.time()
+    xy_tmp = images.change_pers()
+    x, y = xy_tmp[0], xy_tmp[1]
+    print(x, y)
+    t2 = time.time()
+    dt = t2 - t1
+    move_and_clic(x+35, y+8)
+    print(dt)
+
+def morph():
+    t1 = time.time()
+    xy_tmp = images.morph()
+    x, y = xy_tmp[0], xy_tmp[1]
+    print(x, y)
+    t2 = time.time()
+    dt = t2 - t1
+    move_and_clic(x+24, y+8)
+    print(dt)
 
 def exit():
     aion_screen()
@@ -47,7 +65,10 @@ def exit():
     mouse.move(973, 530, 0.2)
     mouse.click('left')
 
+time.sleep(2)
+morph()
+# change_pers()
 # get_position()
 # choise_last()
 # time.sleep(10)
-exit()
+# exit()
