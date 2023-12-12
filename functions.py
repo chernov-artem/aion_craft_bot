@@ -32,7 +32,7 @@ def move_and_right_clic(x: int, y: int):
     time.sleep(0.7)
 
 def pers1():
-    "функция выбора перса"
+    "функция выбора 1 перса"
     xy_tmp = images.pers1()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -40,12 +40,27 @@ def pers1():
         move_and_clic(x + 24, y + 8)
         mouse.click('left')
         mouse.click('left')
+    elif xy_tmp == None:
+        time.sleep(3)
+        xy_tmp = images.pers1()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
     else:
+        time.sleep(3)
+        xy_tmp = images.pers1()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
         move_and_clic(1200, 500)
     time.sleep(11)
 
 def pers2():
-    "функция выбора перса"
+    "функция выбора 2 перса"
     xy_tmp = images.pers2()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -53,12 +68,27 @@ def pers2():
         move_and_clic(x + 24, y + 8)
         mouse.click('left')
         mouse.click('left')
+    elif xy_tmp == None:
+        time.sleep(3)
+        xy_tmp = images.pers2()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
     else:
+        time.sleep(3)
+        xy_tmp = images.pers2()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
         move_and_clic(1200, 500)
     time.sleep(11)
 
 def pers3():
-    "функция выбора перса"
+    "функция выбора 3 перса"
     xy_tmp = images.pers3()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -66,12 +96,27 @@ def pers3():
         move_and_clic(x + 24, y + 8)
         mouse.click('left')
         mouse.click('left')
+    elif xy_tmp == None:
+        time.sleep(3)
+        xy_tmp = images.pers3()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
     else:
+        time.sleep(3)
+        xy_tmp = images.pers3()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
         move_and_clic(1200, 500)
     time.sleep(11)
 
 def pers4():
-    "функция выбора перса"
+    "функция выбора 4 перса"
     xy_tmp = images.pers4()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -79,12 +124,27 @@ def pers4():
         move_and_clic(x + 24, y + 8)
         mouse.click('left')
         mouse.click('left')
+    elif xy_tmp == None:
+        time.sleep(3)
+        xy_tmp = images.pers4()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
     else:
+        time.sleep(3)
+        xy_tmp = images.pers4()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
         move_and_clic(1200, 500)
     time.sleep(11)
 
 def pers5():
-    "функция выбора перса"
+    "функция выбора 5 перса"
     xy_tmp = images.pers5()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -92,12 +152,27 @@ def pers5():
         move_and_clic(x + 24, y + 8)
         mouse.click('left')
         mouse.click('left')
+    elif xy_tmp == None:
+        time.sleep(3)
+        xy_tmp = images.pers5()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
     else:
+        time.sleep(3)
+        xy_tmp = images.pers5()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
         move_and_clic(1200, 500)
     time.sleep(11)
 
 def pers6():
-    "функция выбора перса"
+    "функция выбора 6 перса"
     xy_tmp = images.pers6()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -105,12 +180,27 @@ def pers6():
         move_and_clic(x + 24, y + 8)
         mouse.click('left')
         mouse.click('left')
+    elif xy_tmp == None:
+        time.sleep(3)
+        xy_tmp = images.pers6()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
     else:
+        time.sleep(3)
+        xy_tmp = images.pers6()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
         move_and_clic(1200, 500)
     time.sleep(11)
 
 def pers7():
-    "функция выбора перса"
+    "функция выбора 7 перса"
     xy_tmp = images.pers7()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -118,12 +208,27 @@ def pers7():
         move_and_clic(x + 24, y + 8)
         mouse.click('left')
         mouse.click('left')
+    elif xy_tmp == None:
+        time.sleep(3)
+        xy_tmp = images.pers7()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
     else:
+        time.sleep(3)
+        xy_tmp = images.pers7()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
         move_and_clic(1200, 500)
     time.sleep(11)
 
 def pers8():
-    "функция выбора перса"
+    "функция выбора 8 перса"
     xy_tmp = images.pers8()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -131,7 +236,22 @@ def pers8():
         move_and_clic(x + 24, y + 8)
         mouse.click('left')
         mouse.click('left')
+    elif xy_tmp == None:
+        time.sleep(3)
+        xy_tmp = images.pers8()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
     else:
+        time.sleep(3)
+        xy_tmp = images.pers8()
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 24, y + 8)
+        mouse.click('left')
+        mouse.click('left')
         move_and_clic(1200, 500)
     time.sleep(11)
 def change_pers():
@@ -287,18 +407,18 @@ def craft():
     exit()
 
 def osn():
-    # pers1()
-    # craft()
-    # pers2()
-    # craft()
-    # pers3()
-    # craft()
-    # pers4()
-    # craft()
-    # pers5()
-    # craft()
-    # pers6()
-    # craft()
+    pers1()
+    craft()
+    pers2()
+    craft()
+    pers3()
+    craft()
+    pers4()
+    craft()
+    pers5()
+    craft()
+    pers6()
+    craft()
     pers7()
     craft()
     pers8()
