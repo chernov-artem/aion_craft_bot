@@ -175,12 +175,14 @@ def pers6():
     "функция выбора 6 перса"
     xy_tmp = images.pers6()
     if xy_tmp != None:
+        print('хуанито 1 попытка')
         x, y = xy_tmp[0], xy_tmp[1]
         print(x, y)
         move_and_clic(x + 24, y + 8)
         mouse.click('left')
         mouse.click('left')
     elif xy_tmp == None:
+        print('хуанито 2 попытка')
         time.sleep(3)
         xy_tmp = images.pers6()
         x, y = xy_tmp[0], xy_tmp[1]
@@ -189,6 +191,7 @@ def pers6():
         mouse.click('left')
         mouse.click('left')
     else:
+        print('хуанито 3 попытка')
         time.sleep(3)
         xy_tmp = images.pers6()
         x, y = xy_tmp[0], xy_tmp[1]
@@ -203,12 +206,14 @@ def pers7():
     "функция выбора 7 перса"
     xy_tmp = images.pers7()
     if xy_tmp != None:
+        print('хуанита 1 попытка')
         x, y = xy_tmp[0], xy_tmp[1]
         print(x, y)
         move_and_clic(x + 24, y + 8)
         mouse.click('left')
         mouse.click('left')
     elif xy_tmp == None:
+        print('хуанита 2 попытка')
         time.sleep(3)
         xy_tmp = images.pers7()
         x, y = xy_tmp[0], xy_tmp[1]
@@ -217,6 +222,7 @@ def pers7():
         mouse.click('left')
         mouse.click('left')
     else:
+        print('хуанита 3 попытка')
         time.sleep(3)
         xy_tmp = images.pers7()
         x, y = xy_tmp[0], xy_tmp[1]
@@ -304,6 +310,54 @@ def grifon():
         move_and_clic(1200, 500)
     time.sleep(0.4)
 
+def anis():
+    "функция нажатия на свежий звездный анис "
+    xy_tmp = images.anis()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.41)
+
+def sil_stih():
+    "функция нажатия на сильный стихийный камень(белый)"
+    xy_tmp = images.sil_stih()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.42)
+
+def veton():
+    "функция нажатия на свежую "
+    xy_tmp = images.veton()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.43)
+
+def paporotnik():
+    "функция нажатия на свежую "
+    xy_tmp = images.paporotnik()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.44)
+
+
+
+
+
 def ferera_icon():
     "функция нажатия на фереру"
     xy_tmp = images.ferera_icon()
@@ -365,16 +419,37 @@ def cross():
         move_and_clic(1200, 500)
     time.sleep(0.9)
 
+def menu_btn():
+    "функция нажатия на кнопку меню"
+    xy_tmp = images.menu_btn()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 2, y + 3)
+        # mouse.click('left')
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.9)
+    xy_tmp = images.sist_menu()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 2, y + 3)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.9)
+
+
 
 def exit():
+    "функция выхода в меню выбора перса"
     print('выход запущен')
     pag.typewrite('o', 0)
     print('нажал o')
     time.sleep(0.6)
     if images.change_pers() == None:
-        pag.typewrite('o', 0)
-        print('нажал o ещё раз')
-        time.sleep(0.55)
+        menu_btn()
+        print('нажал на меню мышкой')
         change_pers()
     else:
         change_pers()
@@ -394,8 +469,12 @@ def craft():
     morph()
     selected()
     # ferera()
-    ferilla()
+    # ferilla()
     # grifon()
+    anis()
+    # sil_stih()
+    # veton()
+    # paporotnik()
     create_all()
     print('крафчу')
     time.sleep(85)
@@ -407,8 +486,8 @@ def craft():
     exit()
 
 def osn():
-    pers1()
-    craft()
+    # pers1()
+    # craft()
     pers2()
     craft()
     pers3()
@@ -429,6 +508,9 @@ def osn():
 time.sleep(2)
 
 osn()
+
+
+# menu_btn()
 
 # craft()
 # sklad()

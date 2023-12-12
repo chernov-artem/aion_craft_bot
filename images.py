@@ -48,6 +48,10 @@ def pers8():
 def cross():
     return find_coordinates('images/cross.png')
 
+def menu_btn():
+    return find_coordinates('images/menu_btn.png')
+def sist_menu():
+    return find_coordinates('images/sist_menu.png')
 def change_pers():
     return find_coordinates('images/change_pers_button.png')
 
@@ -67,7 +71,19 @@ def ferilla():
     return find_coordinates('images/ferilla.png')
 
 def grifon():
-    return find_coordinates('images/grifon.png')
+    return find_coordinates('images/grifonia.png')
+
+def anis():
+    return find_coordinates('images/anis.png')
+
+def sil_stih():
+    return find_coordinates('images/silstih.png')
+
+def veton():
+    return find_coordinates('images/veton.png')
+
+def paporotnik():
+    return find_coordinates('images/paporotnik.png')
 
 def create_all():
     return find_coordinates('images/create_all.png')
