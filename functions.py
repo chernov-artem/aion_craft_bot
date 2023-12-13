@@ -498,12 +498,12 @@ def sklad():
     time.sleep(0.44)
     pag.typewrite('c', 1)
     sklad_leg_btn()
-    sil_stih_icon()
+    # sil_stih_icon()
     blue_grass_icon()
     red_grass_icon()
     # ferera_icon()
     time.sleep(0.3)
-    sil_stih_icon()
+    # sil_stih_icon()
     blue_grass_icon()
     red_grass_icon()
     # ferera_icon()
@@ -524,9 +524,9 @@ def craft():
     # ferilla()
     # grifon()
     # anis()
-    sil_stih()
+    # sil_stih()
     # veton()
-    # paporotnik()
+    paporotnik()
     create_all()
     print('крафчу')
     time.sleep(85)
@@ -556,8 +556,8 @@ def osn():
     craft()
 
 def osn_sklad():
-    pers2()
-    sklad()
+    # pers2()
+    # sklad()
     pers3()
     sklad()
     pers4()
@@ -574,13 +574,12 @@ def osn_sklad():
 time.sleep(2)
 
 # osn()
-
+osn_sklad()
 # blue_grass_icon()
 
 # menu_btn()
 
 # craft()
-sklad()
 # pers2()
 # jelly()
 # morph()
