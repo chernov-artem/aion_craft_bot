@@ -94,6 +94,12 @@ def sklad_leg_btn():
 def ferera_icon():
     return find_coordinates('images/ferera_icon.png')
 
+def blue_grass_icon():
+    return find_coordinates('images/blue_grass_icon.png')
+def red_grass_icon():
+    return find_coordinates('images/red_grass_icon.png')
+def sil_stih_icon():
+    return find_coordinates('images/sil_stih_icon.png')
 
 
 # time.sleep(2)

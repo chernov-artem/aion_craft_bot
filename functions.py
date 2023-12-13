@@ -365,9 +365,47 @@ def ferera_icon():
         x, y = xy_tmp[0], xy_tmp[1]
         print(x, y)
         move_and_right_clic(x + 34, y + 11)
+        mouse.move(44, 44)
     else:
         move_and_clic(1200, 500)
     time.sleep(0.43)
+
+def blue_grass_icon():
+    "функция нажатия на синюю траву(манна)"
+    xy_tmp = images.blue_grass_icon()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_right_clic(x + 34, y + 11)
+        mouse.move(44, 44)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.46)
+
+def red_grass_icon():
+    "функция нажатия на красную траву(hp)"
+    xy_tmp = images.red_grass_icon()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_right_clic(x + 34, y + 11)
+        mouse.move(44, 44)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.47)
+
+def sil_stih_icon():
+    "функция нажатия на сильный стихийный камень"
+    xy_tmp = images.sil_stih_icon()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_right_clic(x + 34, y + 11)
+        mouse.move(44, 44)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.47)
+
 def morph():
     "функция нажатия кнопки преобразования"
     xy_tmp = images.morph()
@@ -413,7 +451,7 @@ def cross():
         x, y = xy_tmp[0], xy_tmp[1]
         print(x, y)
         move_and_clic(x + 2, y + 3)
-        mouse.click('left')
+        # mouse.click('left')
         # mouse.click('left')
     else:
         move_and_clic(1200, 500)
@@ -457,11 +495,25 @@ def exit():
 
 def sklad():
     pag.typewrite('9', 1)
+    time.sleep(0.44)
     pag.typewrite('c', 1)
     sklad_leg_btn()
-    ferera_icon()
+    sil_stih_icon()
+    blue_grass_icon()
+    red_grass_icon()
+    # ferera_icon()
     time.sleep(0.3)
-    ferera_icon()
+    sil_stih_icon()
+    blue_grass_icon()
+    red_grass_icon()
+    # ferera_icon()
+    time.sleep(2)
+    print('закончилась пауза, запускаю выход')
+    pag.typewrite('esc', 1)
+    print('нажал esc')
+    cross()
+    print('нажал крестик')
+    exit()
 
 
 def craft():
@@ -471,8 +523,8 @@ def craft():
     # ferera()
     # ferilla()
     # grifon()
-    anis()
-    # sil_stih()
+    # anis()
+    sil_stih()
     # veton()
     # paporotnik()
     create_all()
@@ -486,8 +538,8 @@ def craft():
     exit()
 
 def osn():
-    # pers1()
-    # craft()
+    pers1()
+    craft()
     pers2()
     craft()
     pers3()
@@ -503,17 +555,32 @@ def osn():
     pers8()
     craft()
 
-
+def osn_sklad():
+    pers2()
+    sklad()
+    pers3()
+    sklad()
+    pers4()
+    sklad()
+    pers5()
+    sklad()
+    pers6()
+    sklad()
+    pers7()
+    sklad()
+    pers8()
+    sklad()
 
 time.sleep(2)
 
-osn()
+# osn()
 
+# blue_grass_icon()
 
 # menu_btn()
 
 # craft()
-# sklad()
+sklad()
 # pers2()
 # jelly()
 # morph()
