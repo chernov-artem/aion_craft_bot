@@ -652,8 +652,8 @@ def osn_sklad():
     sklad()
 
 def osn_sklad_take_vortex():
-    pers2()
-    sklad_take_res()
+    # pers2()
+    # sklad_take_res()
     pers3()
     sklad_take_res()
     pers4()
@@ -669,8 +669,8 @@ def osn_sklad_take_vortex():
 
 time.sleep(2)
 
-# osn()
-osn_sklad()
+osn()
+# osn_sklad_take_vortex()
 
 # craft()
 # pers2()
