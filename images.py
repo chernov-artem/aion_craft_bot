@@ -52,6 +52,9 @@ def menu_btn():
     return find_coordinates('images/menu_btn.png')
 def sist_menu():
     return find_coordinates('images/sist_menu.png')
+def prinat_btn():
+    return find_coordinates('images/prinat_btn.png')
+
 def change_pers():
     return find_coordinates('images/change_pers_button.png')
 
