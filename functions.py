@@ -554,20 +554,24 @@ def exit():
         change_pers()
     time.sleep(15)
 
+def sklad_funktions():
+    "функция действий на складе"
+    # sil_stih_icon()
+    # blue_grass_icon()
+    # red_grass_icon()
+    # ferera_icon()
+    vortex40()
+    take60()
 def sklad():
+    "функция работы со складом легиона"
     pag.typewrite('9', 1)
     time.sleep(0.44)
     pag.typewrite('c', 1)
     sklad_leg_btn()
-    sil_stih_icon()
-    # blue_grass_icon()
-    # red_grass_icon()
-    # ferera_icon()
-    time.sleep(0.3)
-    sil_stih_icon()
-    # blue_grass_icon()
-    # red_grass_icon()
-    # ferera_icon()
+    # что сделать на складе:
+    sklad_funktions()
+    # time.sleep(0.3)
+    # sklad_funktions()
     time.sleep(2)
     print('закончилась пауза, запускаю выход')
     pag.typewrite('esc', 1)
@@ -576,6 +580,21 @@ def sklad():
     print('нажал крестик')
     exit()
 
+def sklad_take_res():
+    "функция получения ресурсов со склада легиона"
+    pag.typewrite('9', 1)
+    time.sleep(0.44)
+    pag.typewrite('c', 1)
+    sklad_leg_btn()
+    # что сделать на складе:
+    sklad_funktions()
+    time.sleep(2)
+    print('закончилась пауза, запускаю выход')
+    pag.typewrite('esc', 1)
+    print('нажал esc')
+    cross()
+    print('нажал крестик')
+    exit()
 
 def craft():
     jelly()
@@ -632,12 +651,26 @@ def osn_sklad():
     pers8()
     sklad()
 
+def osn_sklad_take_vortex():
+    pers2()
+    sklad_take_res()
+    pers3()
+    sklad_take_res()
+    pers4()
+    sklad_take_res()
+    pers5()
+    sklad_take_res()
+    pers6()
+    sklad_take_res()
+    pers7()
+    sklad_take_res()
+    pers8()
+    sklad_take_res()
+
 time.sleep(2)
 
 # osn()
-# osn_sklad()
-take60()
-# vortex40()
+osn_sklad()
 
 # craft()
 # pers2()
