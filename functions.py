@@ -31,6 +31,9 @@ def move_and_right_clic(x: int, y: int):
     mouse.click('right')
     time.sleep(0.7)
 
+def razbib():
+    pass
+
 def pers1():
     "функция выбора 1 перса"
     xy_tmp = images.pers1()
@@ -355,9 +358,6 @@ def paporotnik():
     time.sleep(0.44)
 
 
-
-
-
 def ferera_icon():
     "функция нажатия на фереру"
     xy_tmp = images.ferera_icon()
@@ -397,6 +397,18 @@ def red_grass_icon():
 def sil_stih_icon():
     "функция нажатия на сильный стихийный камень"
     xy_tmp = images.sil_stih_icon()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_right_clic(x + 34, y + 11)
+        mouse.move(44, 44)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.47)
+
+def sil_vortex40():
+    "функция нажатия на белый эфир 40"
+    xy_tmp = images.vortex40_icon()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
         print(x, y)
@@ -498,14 +510,14 @@ def sklad():
     time.sleep(0.44)
     pag.typewrite('c', 1)
     sklad_leg_btn()
-    # sil_stih_icon()
-    blue_grass_icon()
-    red_grass_icon()
+    sil_stih_icon()
+    # blue_grass_icon()
+    # red_grass_icon()
     # ferera_icon()
     time.sleep(0.3)
-    # sil_stih_icon()
-    blue_grass_icon()
-    red_grass_icon()
+    sil_stih_icon()
+    # blue_grass_icon()
+    # red_grass_icon()
     # ferera_icon()
     time.sleep(2)
     print('закончилась пауза, запускаю выход')
@@ -524,9 +536,9 @@ def craft():
     # ferilla()
     # grifon()
     # anis()
-    # sil_stih()
+    sil_stih()
     # veton()
-    paporotnik()
+    # paporotnik()
     create_all()
     print('крафчу')
     time.sleep(85)
@@ -556,8 +568,8 @@ def osn():
     craft()
 
 def osn_sklad():
-    # pers2()
-    # sklad()
+    pers2()
+    sklad()
     pers3()
     sklad()
     pers4()
@@ -574,10 +586,9 @@ def osn_sklad():
 time.sleep(2)
 
 # osn()
-osn_sklad()
-# blue_grass_icon()
+# osn_sklad()
 
-# menu_btn()
+sil_vortex40()
 
 # craft()
 # pers2()
