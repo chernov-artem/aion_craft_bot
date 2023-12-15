@@ -411,7 +411,7 @@ def cross():
         # mouse.click('left')
     else:
         move_and_clic(1200, 500)
-    time.sleep(0.9)
+    time.sleep(0.53)
 
 def menu_btn():
     "функция нажатия на кнопку меню"
@@ -542,12 +542,36 @@ def craft():
     sklad_leg_btn()
     icons.vortex40_icon()
     take20()
+    cross()
     jelly()
     morph()
     selected()
-    # ferera()
+    ferera()
     # ferilla()
-    grifon()
+    # grifon()
+    # anis()
+    # sil_stih()
+    # veton()
+    # paporotnik()
+    create_all()
+    print('крафчу')
+    time.sleep(85)
+    print('закончилась пауза, запускаю выход')
+    pag.typewrite('esc', 1)
+    print('нажал esc')
+    cross()
+    print('нажал крестик')
+    exit()
+
+def craft_pers1():
+    "функция крафта ресурсов из эфира для первого перса"
+
+    jelly()
+    morph()
+    selected()
+    ferera()
+    # ferilla()
+    # grifon()
     # anis()
     # sil_stih()
     # veton()
@@ -563,8 +587,8 @@ def craft():
     exit()
 
 def osn():
-    # pers1()
-    # craft()
+    pers1()
+    craft_pers1()
     pers2()
     craft()
     pers3()
@@ -614,6 +638,7 @@ def osn_sklad_take_vortex():
 time.sleep(2)
 
 # icons.blue_grass_icon()
+
 osn()
 # osn()
 # osn()

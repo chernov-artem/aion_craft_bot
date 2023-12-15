@@ -1,5 +1,6 @@
 import time
 import mouse
+import pyautogui as pag
 
 import images
 
