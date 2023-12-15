@@ -104,7 +104,7 @@ def red_grass_icon():
 def sil_stih_icon():
     return find_coordinates('images/sil_stih_icon.png')
 def vortex40_icon():
-    return find_coordinates('images/vortex40.png')
+    return find_coordinates('images/vortex40g.png')
 
 
 

@@ -3,9 +3,8 @@ import mouse
 import time
 import images
 import pyautogui as pag
-# keyboard.write('Hello!', 0.1)
 
-
+import icons
 
 # mouse.move(419, 1052, 0.2)
 # mouse.click('left')
@@ -363,67 +362,6 @@ def paporotnik():
         move_and_clic(1200, 500)
     time.sleep(0.44)
 
-
-def ferera_icon():
-    "функция нажатия на фереру"
-    xy_tmp = images.ferera_icon()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_right_clic(x + 34, y + 11)
-        mouse.move(44, 44)
-    else:
-        move_and_clic(1200, 500)
-    time.sleep(0.43)
-
-def blue_grass_icon():
-    "функция нажатия на синюю траву(манна)"
-    xy_tmp = images.blue_grass_icon()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_right_clic(x + 34, y + 11)
-        mouse.move(44, 44)
-    else:
-        move_and_clic(1200, 500)
-    time.sleep(0.46)
-
-def red_grass_icon():
-    "функция нажатия на красную траву(hp)"
-    xy_tmp = images.red_grass_icon()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_right_clic(x + 34, y + 11)
-        mouse.move(44, 44)
-    else:
-        move_and_clic(1200, 500)
-    time.sleep(0.47)
-
-def sil_stih_icon():
-    "функция нажатия на сильный стихийный камень"
-    xy_tmp = images.sil_stih_icon()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_right_clic(x + 34, y + 11)
-        mouse.move(44, 44)
-    else:
-        move_and_clic(1200, 500)
-    time.sleep(0.47)
-
-def vortex40():
-    "функция нажатия на белый эфир 40"
-    xy_tmp = images.vortex40_icon()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        razbib(x + 34, y + 11)
-        mouse.move(44, 44)
-    else:
-        move_and_clic(1200, 500)
-    time.sleep(0.47)
-
 def morph():
     "функция нажатия кнопки преобразования"
     xy_tmp = images.morph()
@@ -560,8 +498,8 @@ def sklad_funktions():
     # blue_grass_icon()
     # red_grass_icon()
     # ferera_icon()
-    vortex40()
-    take60()
+    # vortex40()
+    # take60()
 def sklad():
     "функция работы со складом легиона"
     pag.typewrite('9', 1)
@@ -570,8 +508,8 @@ def sklad():
     sklad_leg_btn()
     # что сделать на складе:
     sklad_funktions()
-    # time.sleep(0.3)
-    # sklad_funktions()
+    time.sleep(0.3)
+    sklad_funktions()
     time.sleep(2)
     print('закончилась пауза, запускаю выход')
     pag.typewrite('esc', 1)
@@ -597,14 +535,21 @@ def sklad_take_res():
     exit()
 
 def craft():
+    "функция крафта ресурсов из эфира"
+    pag.typewrite('9', 1)
+    time.sleep(0.44)
+    pag.typewrite('c', 1)
+    sklad_leg_btn()
+    icons.vortex40_icon()
+    take20()
     jelly()
     morph()
     selected()
     # ferera()
     # ferilla()
-    # grifon()
+    grifon()
     # anis()
-    sil_stih()
+    # sil_stih()
     # veton()
     # paporotnik()
     create_all()
@@ -618,8 +563,8 @@ def craft():
     exit()
 
 def osn():
-    pers1()
-    craft()
+    # pers1()
+    # craft()
     pers2()
     craft()
     pers3()
@@ -634,14 +579,14 @@ def osn():
     craft()
     pers8()
     craft()
-
+    # time.sleep(850)
 def osn_sklad():
-    pers2()
-    sklad()
-    pers3()
-    sklad()
-    pers4()
-    sklad()
+    # pers2()
+    # sklad()
+    # pers3()
+    # sklad()
+    # pers4()
+    # sklad()
     pers5()
     sklad()
     pers6()
@@ -650,10 +595,9 @@ def osn_sklad():
     sklad()
     pers8()
     sklad()
-
 def osn_sklad_take_vortex():
-    # pers2()
-    # sklad_take_res()
+    pers2()
+    sklad_take_res()
     pers3()
     sklad_take_res()
     pers4()
@@ -669,7 +613,13 @@ def osn_sklad_take_vortex():
 
 time.sleep(2)
 
+# icons.blue_grass_icon()
 osn()
+# osn()
+# osn()
+
+# osn_sklad()
+
 # osn_sklad_take_vortex()
 
 # craft()
