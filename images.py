@@ -88,6 +88,9 @@ def veton():
 def paporotnik():
     return find_coordinates('images/paporotnik.png')
 
+def diamond():
+    return find_coordinates('images/diamond.png')
+
 def create_all():
     return find_coordinates('images/create_all.png')
 

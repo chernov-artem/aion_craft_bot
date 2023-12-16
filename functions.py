@@ -308,7 +308,7 @@ def ferilla():
     time.sleep(0.4)
 
 def grifon():
-    "функция нажатия на свежую фериллу"
+    "функция нажатия на свежую грифонию"
     xy_tmp = images.grifon()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -341,7 +341,7 @@ def sil_stih():
     time.sleep(0.42)
 
 def veton():
-    "функция нажатия на свежую "
+    "функция нажатия на свежий ветон "
     xy_tmp = images.veton()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -352,7 +352,7 @@ def veton():
     time.sleep(0.43)
 
 def paporotnik():
-    "функция нажатия на свежую "
+    "функция нажатия на свежий папоротник "
     xy_tmp = images.paporotnik()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -362,6 +362,16 @@ def paporotnik():
         move_and_clic(1200, 500)
     time.sleep(0.44)
 
+def diamond():
+    "функция нажатия на алмаз "
+    xy_tmp = images.diamond()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.44)
 def morph():
     "функция нажатия кнопки преобразования"
     xy_tmp = images.morph()
@@ -495,9 +505,9 @@ def exit():
 def sklad_funktions():
     "функция действий на складе"
     # sil_stih_icon()
-    icons.blue_grass_icon()
-    icons.red_grass_icon()
-    # icons.ferera_icon()
+    # icons.blue_grass_icon()
+    # icons.red_grass_icon()
+    icons.ferera_icon()
     # vortex40()
     # take60()
 def sklad():
@@ -548,11 +558,12 @@ def craft():
     selected()
     # ferera()
     # ferilla()
-    grifon()
+    # grifon()
     # anis()
     # sil_stih()
     # veton()
     # paporotnik()
+    diamond()
     create_all()
     print('крафчу')
     time.sleep(85)
@@ -571,11 +582,12 @@ def craft_pers1():
     selected()
     # ferera()
     # ferilla()
-    grifon()
+    # grifon()
     # anis()
     # sil_stih()
     # veton()
     # paporotnik()
+    diamond()
     create_all()
     print('крафчу')
     time.sleep(85)
@@ -605,8 +617,11 @@ def osn():
     craft()
     time.sleep(800)
 def osn_sklad():
-    pers3()
-    sklad()
+    "функция сбора ресурсов после крафта"
+    # pers2()
+    # sklad()
+    # pers3()
+    # sklad()
     pers4()
     sklad()
     pers5()
@@ -642,7 +657,6 @@ time.sleep(2)
 # osn()
 
 osn_sklad()
-
 # osn_sklad_take_vortex()
 
 # craft()
