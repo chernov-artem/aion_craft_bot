@@ -5,6 +5,8 @@ import images
 import pyautogui as pag
 
 import icons
+from base_functions import move_and_clic, move_and_right_clic, razbib
+from select_pers import *
 
 # mouse.move(419, 1052, 0.2)
 # mouse.click('left')
@@ -18,256 +20,7 @@ def get_position():
     current_cursor = mouse.get_position()
     print(current_cursor)
 
-def move_and_clic(x: int, y: int):
-    mouse.move(x, y, 0.2)
-    time.sleep(0.7)
-    mouse.click('left')
-    time.sleep(0.7)
 
-def move_and_right_clic(x: int, y: int):
-    mouse.move(x, y, 0.2)
-    time.sleep(0.7)
-    mouse.click('right')
-    time.sleep(0.7)
-
-def razbib(x: int, y: int):
-    mouse.move(x, y, 0.2)
-    time.sleep(0.3)
-    pag.keyDown('Shift')
-    mouse.click('right')
-    time.sleep(0.15)
-    pag.keyUp('Shift')
-    time.sleep(0.3)
-
-def pers1():
-    "функция выбора 1 перса"
-    xy_tmp = images.pers1()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    elif xy_tmp == None:
-        time.sleep(3)
-        xy_tmp = images.pers1()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    else:
-        time.sleep(3)
-        xy_tmp = images.pers1()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-        move_and_clic(1200, 500)
-    time.sleep(11)
-
-def pers2():
-    "функция выбора 2 перса"
-    xy_tmp = images.pers2()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    elif xy_tmp == None:
-        time.sleep(3)
-        xy_tmp = images.pers2()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    else:
-        time.sleep(3)
-        xy_tmp = images.pers2()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-        move_and_clic(1200, 500)
-    time.sleep(11)
-
-def pers3():
-    "функция выбора 3 перса"
-    xy_tmp = images.pers3()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    elif xy_tmp == None:
-        time.sleep(3)
-        xy_tmp = images.pers3()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    else:
-        time.sleep(3)
-        xy_tmp = images.pers3()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-        move_and_clic(1200, 500)
-    time.sleep(11)
-
-def pers4():
-    "функция выбора 4 перса"
-    xy_tmp = images.pers4()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    elif xy_tmp == None:
-        time.sleep(3)
-        xy_tmp = images.pers4()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    else:
-        time.sleep(3)
-        xy_tmp = images.pers4()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-        move_and_clic(1200, 500)
-    time.sleep(11)
-
-def pers5():
-    "функция выбора 5 перса"
-    xy_tmp = images.pers5()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    elif xy_tmp == None:
-        time.sleep(3)
-        xy_tmp = images.pers5()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    else:
-        time.sleep(3)
-        xy_tmp = images.pers5()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-        move_and_clic(1200, 500)
-    time.sleep(11)
-
-def pers6():
-    "функция выбора 6 перса"
-    xy_tmp = images.pers6()
-    if xy_tmp != None:
-        print('хуанито 1 попытка')
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    elif xy_tmp == None:
-        print('хуанито 2 попытка')
-        time.sleep(3)
-        xy_tmp = images.pers6()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    else:
-        print('хуанито 3 попытка')
-        time.sleep(3)
-        xy_tmp = images.pers6()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-        move_and_clic(1200, 500)
-    time.sleep(11)
-
-def pers7():
-    "функция выбора 7 перса"
-    xy_tmp = images.pers7()
-    if xy_tmp != None:
-        print('хуанита 1 попытка')
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    elif xy_tmp == None:
-        print('хуанита 2 попытка')
-        time.sleep(3)
-        xy_tmp = images.pers7()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    else:
-        print('хуанита 3 попытка')
-        time.sleep(3)
-        xy_tmp = images.pers7()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-        move_and_clic(1200, 500)
-    time.sleep(11)
-
-def pers8():
-    "функция выбора 8 перса"
-    xy_tmp = images.pers8()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    elif xy_tmp == None:
-        time.sleep(3)
-        xy_tmp = images.pers8()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-    else:
-        time.sleep(3)
-        xy_tmp = images.pers8()
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 24, y + 8)
-        mouse.click('left')
-        mouse.click('left')
-        move_and_clic(1200, 500)
-    time.sleep(11)
 def change_pers():
     "функция нажатия на кнопку смены игрока"
     xy_tmp = images.change_pers()
@@ -546,12 +299,12 @@ def sklad_take_res():
 
 def craft():
     "функция крафта ресурсов из эфира"
-    pag.typewrite('9', 1)
-    time.sleep(0.44)
-    pag.typewrite('c', 1)
-    sklad_leg_btn()
-    icons.vortex40_icon()
-    take20()
+    # pag.typewrite('9', 1)
+    # time.sleep(0.44)
+    # pag.typewrite('c', 1)
+    # sklad_leg_btn()
+    # icons.vortex40_icon()
+    # take20()
     cross()
     jelly()
     morph()
@@ -561,9 +314,9 @@ def craft():
     # grifon()
     # anis()
     # sil_stih()
-    # veton()
+    veton()
     # paporotnik()
-    diamond()
+    # diamond()
     create_all()
     print('крафчу')
     time.sleep(85)
@@ -585,9 +338,9 @@ def craft_pers1():
     # grifon()
     # anis()
     # sil_stih()
-    # veton()
+    veton()
     # paporotnik()
-    diamond()
+    # diamond()
     create_all()
     print('крафчу')
     time.sleep(85)
@@ -712,7 +465,8 @@ def craft_ferera():
     print('нажал крестик')
     exit()
 
-def all_sil_stih():
+def all_craft_sil_stih():
+    "функция крафта всеми персами сильного стихийного камня"
     pers1()
     craft_sil_sth()
     pers2()
@@ -729,9 +483,10 @@ def all_sil_stih():
     craft_sil_sth()
     pers8()
     craft_sil_sth()
-    time.sleep(800)
+    time.sleep(540)
 
-def all_sil_ferilla():
+def all_cratf_ferilla():
+    "функция крафта всеми персами фериллы"
     pers1()
     craft_firilla()
     pers2()
@@ -748,9 +503,10 @@ def all_sil_ferilla():
     craft_firilla()
     pers8()
     craft_firilla()
-    time.sleep(800)
+    time.sleep(540)
 
-def all_sil_grifon():
+def all_craft_grifon():
+    "функция крафта всеми персами грифонии"
     pers1()
     craft_grifon()
     pers2()
@@ -767,9 +523,10 @@ def all_sil_grifon():
     craft_grifon()
     pers8()
     craft_grifon()
-    time.sleep(800)
+    time.sleep(540)
 
-def all_sil_ferera():
+def all_craft_ferera():
+    "функция крафта всеми персами фереры"
     pers1()
     craft_ferera()
     pers2()
@@ -786,25 +543,19 @@ def all_sil_ferera():
     craft_ferera()
     pers8()
     craft_ferera()
-    time.sleep(800)
+    time.sleep(540)
 
 time.sleep(2)
 
 # icons.blue_grass_icon()
 
-all_sil_stih()
-all_sil_stih()
-all_sil_stih()
-all_sil_ferilla()
-all_sil_ferilla()
-all_sil_grifon()
-all_sil_grifon()
-all_sil_ferera()
-all_sil_ferera()
-all_sil_ferera()
-all_sil_ferera()
 
-# osn()
+time.sleep(360)
+all_craft_ferera()
+all_craft_ferera()
+all_craft_ferera()
+
+osn()
 # osn()
 # osn()
 
