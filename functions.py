@@ -241,6 +241,25 @@ def take60():
     else:
         move_and_clic(1200, 500)
 
+def take240():
+    "функция взятия со склада легиона 240 шт"
+    xy_tmp = images.prinat_btn()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        # нажать на цифру 2
+        move_and_clic(x + 17, y - 61)
+        # нажать на цифру 4
+        move_and_clic(x - 15, y - 85)
+        # нажать на цифру 0
+        move_and_clic(x + 86, y - 114)
+        #нажать кнопку "принять"
+        move_and_clic(x + 11, y + 7)
+    else:
+        move_and_clic(1200, 500)
+
+
+
 def exit():
     "функция выхода в меню выбора перса"
     print('выход запущен')
@@ -547,15 +566,9 @@ def all_craft_ferera():
 
 time.sleep(2)
 
-# icons.blue_grass_icon()
+take240()
 
 
-time.sleep(360)
-all_craft_ferera()
-all_craft_ferera()
-all_craft_ferera()
-
-osn()
 # osn()
 # osn()
 
