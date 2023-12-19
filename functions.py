@@ -104,6 +104,28 @@ def veton():
         move_and_clic(1200, 500)
     time.sleep(0.43)
 
+def okka():
+    "функция нажатия на окку "
+    xy_tmp = images.okka()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.44)
+
+def runime():
+    "функция нажатия на рунимэ "
+    xy_tmp = images.runime()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.45)
+
 def paporotnik():
     "функция нажатия на свежий папоротник "
     xy_tmp = images.paporotnik()
@@ -332,8 +354,8 @@ def craft():
     # ferilla()
     # grifon()
     # anis()
-    # sil_stih()
-    veton()
+    sil_stih()
+    # veton()
     # paporotnik()
     # diamond()
     create_all()
@@ -371,10 +393,10 @@ def craft_pers1():
     exit()
 
 def osn():
-    pers1()
-    craft_pers1()
-    pers2()
-    craft()
+    # pers1()
+    # craft_pers1()
+    # pers2()
+    # craft()
     pers3()
     craft()
     pers4()
@@ -387,13 +409,13 @@ def osn():
     craft()
     pers8()
     craft()
-    time.sleep(800)
+    time.sleep(610)
 def osn_sklad():
     "функция сбора ресурсов после крафта"
-    # pers2()
-    # sklad()
-    # pers3()
-    # sklad()
+    pers2()
+    sklad()
+    pers3()
+    sklad()
     pers4()
     sklad()
     pers5()
@@ -469,11 +491,43 @@ def craft_grifon():
     exit()
 
 def craft_ferera():
-    "функция крафта ресурсов из эфира"
+    "функция крафта фереры из эфира"
     jelly()
     morph()
     selected()
     ferera()
+    create_all()
+    print('крафчу')
+    time.sleep(85)
+    print('закончилась пауза, запускаю выход')
+    pag.typewrite('esc', 1)
+    print('нажал esc')
+    cross()
+    print('нажал крестик')
+    exit()
+
+def craft_okka():
+    "функция крафта окки из эфира"
+    jelly()
+    morph()
+    selected()
+    okka()
+    create_all()
+    print('крафчу')
+    time.sleep(85)
+    print('закончилась пауза, запускаю выход')
+    pag.typewrite('esc', 1)
+    print('нажал esc')
+    cross()
+    print('нажал крестик')
+    exit()
+
+def craft_runime():
+    "функция крафта рунимэ из эфира"
+    jelly()
+    morph()
+    selected()
+    runime()
     create_all()
     print('крафчу')
     time.sleep(85)
@@ -502,7 +556,7 @@ def all_craft_sil_stih():
     craft_sil_sth()
     pers8()
     craft_sil_sth()
-    time.sleep(540)
+    time.sleep(610)
 
 def all_cratf_ferilla():
     "функция крафта всеми персами фериллы"
@@ -522,7 +576,7 @@ def all_cratf_ferilla():
     craft_firilla()
     pers8()
     craft_firilla()
-    time.sleep(540)
+    time.sleep(610)
 
 def all_craft_grifon():
     "функция крафта всеми персами грифонии"
@@ -542,7 +596,7 @@ def all_craft_grifon():
     craft_grifon()
     pers8()
     craft_grifon()
-    time.sleep(540)
+    time.sleep(610)
 
 def all_craft_ferera():
     "функция крафта всеми персами фереры"
@@ -562,11 +616,38 @@ def all_craft_ferera():
     craft_ferera()
     pers8()
     craft_ferera()
-    time.sleep(540)
+    time.sleep(610)
+
+def all_craft_cocktail():
+    "функция крафта всеми персами окки и рунимэ"
+    pers1()
+    craft_okka()
+    pers2()
+    craft_okka()
+    pers3()
+    craft_okka()
+    pers4()
+    craft_okka()
+    pers5()
+    craft_runime()
+    pers6()
+    craft_runime()
+    pers7()
+    craft_runime()
+    pers8()
+    craft_runime()
+    time.sleep(610)
 
 time.sleep(2)
 
-take240()
+# osn()
+all_craft_cocktail()
+all_craft_cocktail()
+all_craft_cocktail()
+all_craft_cocktail()
+all_craft_sil_stih()
+all_craft_sil_stih()
+
 
 
 # osn()

@@ -88,6 +88,11 @@ def veton():
 def paporotnik():
     return find_coordinates('images/paporotnik.png')
 
+def okka():
+    return find_coordinates('images/okka.png')
+
+def runime():
+    return find_coordinates('images/runime.png')
 def diamond():
     return find_coordinates('images/diamond.png')
 
