@@ -96,6 +96,9 @@ def runime():
 def diamond():
     return find_coordinates('images/diamond.png')
 
+def silver():
+    return find_coordinates('images/silver.png')
+
 def create_all():
     return find_coordinates('images/create_all.png')
 

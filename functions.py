@@ -186,7 +186,7 @@ def create_all():
     time.sleep(0.5)
 
 def cross():
-    "функция нажатия на кнопку изготовить всё"
+    "функция нажатия на кнопку крестика"
     xy_tmp = images.cross()
     if xy_tmp != None:
         x, y = xy_tmp[0], xy_tmp[1]
@@ -638,16 +638,15 @@ def all_craft_cocktail():
     craft_runime()
     time.sleep(610)
 
-time.sleep(2)
+# time.sleep(2)
 
 # osn()
-all_craft_cocktail()
-all_craft_cocktail()
-all_craft_cocktail()
-all_craft_cocktail()
-all_craft_sil_stih()
-all_craft_sil_stih()
-
+# all_craft_cocktail()
+# all_craft_cocktail()
+# all_craft_cocktail()
+# all_craft_sil_stih()
+# all_craft_sil_stih()
+get_position()
 
 
 # osn()
