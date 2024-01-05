@@ -137,6 +137,18 @@ def paporotnik():
         move_and_clic(1200, 500)
     time.sleep(0.44)
 
+def silver():
+    "функция нажатия на серебряную руду"
+    xy_tmp = images.silver()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.43)
+
+
 def diamond():
     "функция нажатия на алмаз "
     xy_tmp = images.diamond()
