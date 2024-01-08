@@ -98,6 +98,9 @@ def diamond():
 
 def silver():
     return find_coordinates('images/silver.png')
+def iron_ore():
+    return find_coordinates('images/iron_ore.png')
+
 def rukon():
     return find_coordinates('images/rukon.png')
 def create_all():
