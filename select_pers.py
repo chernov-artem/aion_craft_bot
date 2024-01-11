@@ -232,3 +232,6 @@ def pers8():
         mouse.click('left')
         move_and_clic(1200, 500)
     time.sleep(11)
+
+time.sleep(2)
+pers3()

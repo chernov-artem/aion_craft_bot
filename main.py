@@ -7,5 +7,10 @@ import images
 
 if __name__ == '__main__':
     time.sleep(2)
-    functions2.Pers5.select_pers()
+    functions.morph()
+    time.sleep(1)
+    functions.cross()
+    time.sleep(1)
+    functions.morph()
+
 

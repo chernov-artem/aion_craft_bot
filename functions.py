@@ -668,7 +668,7 @@ def all_craft_cocktail():
 # all_craft_cocktail()
 # all_craft_sil_stih()
 # all_craft_sil_stih()
-get_position()
+# get_position()
 
 
 # osn()
