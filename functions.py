@@ -1,19 +1,9 @@
-import keyboard
-import mouse
-import time
-import images
 import pyautogui as pag
 
 import icons
 from base_functions import move_and_clic, move_and_right_clic, razbib
 from select_pers import *
 
-# mouse.move(419, 1052, 0.2)
-# mouse.click('left')
-# time.sleep(2)
-# mouse.move(877, 976, 0.2)
-# time.sleep(2)
-# mouse.click('left')
 
 def get_position():
     time.sleep(2)
@@ -148,6 +138,16 @@ def silver():
         move_and_clic(1200, 500)
     time.sleep(0.43)
 
+def iron_ore():
+    "функция нажатия на железную руду"
+    xy_tmp = images.iron_ore()
+    if xy_tmp != None:
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+        move_and_clic(x + 44, y + 7)
+    else:
+        move_and_clic(1200, 500)
+    time.sleep(0.42)
 def rukon():
     "функция нажатия на стебель рюкона"
     xy_tmp = images.rukon()
