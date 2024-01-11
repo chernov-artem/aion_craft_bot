@@ -6,6 +6,6 @@ import functions2
 import images
 
 if __name__ == '__main__':
-    # time.sleep(2)
-    # functions2.Pers1()
+    time.sleep(2)
+    functions2.Pers5.select_pers()
 

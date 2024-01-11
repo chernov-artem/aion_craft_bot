@@ -12,34 +12,6 @@ class Pers():
         self.name = name
         self.icon = icon
 
-    def pers1():
-        "функция выбора 1 перса"
-        xy_tmp = images.pers1()
-        if xy_tmp != None:
-            x, y = xy_tmp[0], xy_tmp[1]
-            print(x, y)
-            move_and_clic(x + 24, y + 8)
-            mouse.click('left')
-            mouse.click('left')
-        elif xy_tmp == None:
-            time.sleep(3)
-            xy_tmp = images.pers1()
-            x, y = xy_tmp[0], xy_tmp[1]
-            print(x, y)
-            move_and_clic(x + 24, y + 8)
-            mouse.click('left')
-            mouse.click('left')
-        else:
-            time.sleep(3)
-            xy_tmp = images.pers1()
-            x, y = xy_tmp[0], xy_tmp[1]
-            print(x, y)
-            move_and_clic(x + 24, y + 8)
-            mouse.click('left')
-            mouse.click('left')
-            move_and_clic(1200, 500)
-        time.sleep(11)
-
     def select_pers(self):
         "функция выбора перса"
         xy_tmp = self.icon
@@ -81,6 +53,5 @@ Pers6 = Pers(pers6, images.pers6())
 Pers7 = Pers(pers7, images.pers7())
 Pers8 = Pers(pers8, images.pers8())
 
-time.sleep(2)
-Pers1.select_pers()
+
 
