@@ -90,6 +90,22 @@ class Take_res():
             else:
                 move_and_clic(1200, 500)
 
+        def take60():
+            "функция взятия со склада легиона 20 шт"
+            xy_tmp = images.prinat_btn()
+            if xy_tmp != None:
+                x, y = xy_tmp[0], xy_tmp[1]
+                print(x, y)
+                # нажать на цифру 6
+                move_and_clic(x + 45, y - 88)
+                # нажать на цифру 0
+                move_and_clic(x + 86, y - 114)
+                # нажать кнопку "принять"
+                move_and_clic(x + 11, y + 7)
+            else:
+                move_and_clic(1200, 500)
+
+
 
 
 # зкземпляры класса Pers
