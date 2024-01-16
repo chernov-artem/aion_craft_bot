@@ -59,6 +59,22 @@ class Item():
             move_and_clic(1200, 500)
         time.sleep(0.5)
 
+class Take_res():
+    def take20():
+        "функция взятия со склада легиона 20 шт"
+        xy_tmp = images.prinat_btn()
+        if xy_tmp != None:
+            x, y = xy_tmp[0], xy_tmp[1]
+            print(x, y)
+            # нажать на цифру 2
+            move_and_clic(x + 17, y - 61)
+            # нажать на цифру 0
+            move_and_clic(x + 86, y - 114)
+            # нажать кнопку "принять"
+            move_and_clic(x + 11, y + 7)
+        else:
+            move_and_clic(1200, 500)
+
 
 
 # зкземпляры класса Pers
@@ -94,7 +110,12 @@ sklad_leg_btn = Item('sklad_leg_btn', images.sklad_leg_btn())
 create_all = Item('create_all', images.create_all())
 cross = Item('cross', images.cross())
 menu_btn = Item('menu_btn', images.menu_btn())
-
+ = Item('', images)
+ = Item('', images)
+ = Item('', images)
+ = Item('', images)
+ = Item('', images)
+ = Item('', images)
 
 
 
