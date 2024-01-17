@@ -61,7 +61,7 @@ class Item():
 
 class Take_res():
     def take20():
-        "функция взятия со склада легиона 20 шт"
+        "метод взятия со склада легиона 20 шт"
         xy_tmp = images.prinat_btn()
         if xy_tmp != None:
             x, y = xy_tmp[0], xy_tmp[1]
@@ -76,7 +76,7 @@ class Take_res():
             move_and_clic(1200, 500)
 
         def take40():
-            "функция взятия со склада легиона 20 шт"
+            "метод взятия со склада легиона 40 шт"
             xy_tmp = images.prinat_btn()
             if xy_tmp != None:
                 x, y = xy_tmp[0], xy_tmp[1]
@@ -91,13 +91,30 @@ class Take_res():
                 move_and_clic(1200, 500)
 
         def take60():
-            "функция взятия со склада легиона 20 шт"
+            "метод взятия со склада легиона 40 шт"
             xy_tmp = images.prinat_btn()
             if xy_tmp != None:
                 x, y = xy_tmp[0], xy_tmp[1]
                 print(x, y)
                 # нажать на цифру 6
                 move_and_clic(x + 45, y - 88)
+                # нажать на цифру 0
+                move_and_clic(x + 86, y - 114)
+                # нажать кнопку "принять"
+                move_and_clic(x + 11, y + 7)
+            else:
+                move_and_clic(1200, 500)
+
+        def take240():
+            "метод взятия со склада легиона 240 шт"
+            xy_tmp = images.prinat_btn()
+            if xy_tmp != None:
+                x, y = xy_tmp[0], xy_tmp[1]
+                print(x, y)
+                # нажать на цифру 2
+                move_and_clic(x + 17, y - 61)
+                # нажать на цифру 4
+                move_and_clic(x - 15, y - 85)
                 # нажать на цифру 0
                 move_and_clic(x + 86, y - 114)
                 # нажать кнопку "принять"
