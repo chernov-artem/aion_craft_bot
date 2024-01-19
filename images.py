@@ -7,7 +7,7 @@ def find_coordinates(tmp: str) -> tuple:
     'функция поиска шаблона на изображении. Возвращает координаты'
     # Преобразование изображения в оттенки серого
     time.sleep(0.3)
-    print('делаю скнин')
+    print('делаю скрин')
     pag.screenshot('screenshot.png')
     time.sleep(0.3)
     template = cv2.imread(tmp, cv2.IMREAD_GRAYSCALE)
@@ -18,9 +18,11 @@ def find_coordinates(tmp: str) -> tuple:
     result = cv2.matchTemplate(gray, template, cv2.TM_CCOEFF_NORMED)
     threshold = 0.9
     loc = np.where(result >= threshold)
+    print(loc)
 
     for pt in zip(*loc[::-1]):
         return pt
+
 
 def pers1():
     return find_coordinates('images/SpielSucht.png')

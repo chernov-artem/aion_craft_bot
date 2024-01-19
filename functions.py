@@ -1,8 +1,13 @@
 import pyautogui as pag
 
+
+import time
+import mouse
+
 import icons
+import images
 from base_functions import move_and_clic, move_and_right_clic, razbib
-from select_pers import *
+# from select_pers import *
 
 
 def get_position():

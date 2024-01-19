@@ -8,14 +8,14 @@ from base_functions import move_and_clic
 class Pers():
     """Класс персонажа"""
 
-    def __init__(self, name, icon):
+    def __init__(self, name, icon_name):
         self.name = name
-        self.icon = icon
+        self.icon_name = icon_name
 
     def select_pers(self):
         "функция выбора перса"
 
-        xy_tmp = self.icon
+        xy_tmp = images.find_coordinates('images/' + self.icon_name)
         if xy_tmp != None:
             x, y = xy_tmp[0], xy_tmp[1]
             print(x, y)
@@ -24,7 +24,7 @@ class Pers():
             mouse.click('left')
         elif xy_tmp == None:
             time.sleep(3)
-            xy_tmp = self.icon
+            xy_tmp = images.find_coordinates('images/' + self.icon_name)
             x, y = xy_tmp[0], xy_tmp[1]
             print(x, y)
             move_and_clic(x + 24, y + 8)
@@ -32,14 +32,14 @@ class Pers():
             mouse.click('left')
         else:
             time.sleep(3)
-            xy_tmp = self.icon
+            xy_tmp = images.find_coordinates('images/' + self.icon_name)
             x, y = xy_tmp[0], xy_tmp[1]
             print(x, y)
             move_and_clic(x + 24, y + 8)
             mouse.click('left')
             mouse.click('left')
             move_and_clic(1200, 500)
-        # time.sleep(11)
+        time.sleep(11)
 
 class Item():
     """класс игрового ресурса"""
@@ -60,7 +60,7 @@ class Item():
         time.sleep(0.5)
 
 class Take_res():
-    def take20():
+    def take20(self):
         "метод взятия со склада легиона 20 шт"
         xy_tmp = images.prinat_btn()
         if xy_tmp != None:
@@ -75,7 +75,7 @@ class Take_res():
         else:
             move_and_clic(1200, 500)
 
-        def take40():
+        def take40(self):
             "метод взятия со склада легиона 40 шт"
             xy_tmp = images.prinat_btn()
             if xy_tmp != None:
@@ -90,7 +90,7 @@ class Take_res():
             else:
                 move_and_clic(1200, 500)
 
-        def take60():
+        def take60(self):
             "метод взятия со склада легиона 40 шт"
             xy_tmp = images.prinat_btn()
             if xy_tmp != None:
@@ -105,7 +105,7 @@ class Take_res():
             else:
                 move_and_clic(1200, 500)
 
-        def take240():
+        def take240(self):
             "метод взятия со склада легиона 240 шт"
             xy_tmp = images.prinat_btn()
             if xy_tmp != None:
@@ -126,44 +126,45 @@ class Take_res():
 
 
 # зкземпляры класса Pers
-Pers1 = Pers('pers1', images.pers1())
-Pers2 = Pers('pers2', images.pers2())
-Pers3 = Pers('pers3', images.pers3())
-Pers4 = Pers('pers4', images.pers4())
-Pers5 = Pers('pers5', images.pers5())
-Pers6 = Pers('pers6', images.pers6())
-Pers7 = Pers('pers7', images.pers7())
-Pers8 = Pers('pers8', images.pers8())
+Pers1 = Pers('pers1', "SpielSucht.png")
+Pers2 = Pers('pers2', "DeadPonyClub.png")
+Pers3 = Pers('pers3', "HungaMunga.png")
+Pers4 = Pers('pers4', "Rebyata.png")
+Pers5 = Pers('pers5', "KillClericFirst.png")
+Pers6 = Pers('pers6', "Huanito.png")
+Pers7 = Pers('pers7', "Huanita.png")
+Pers8 = Pers('pers8', "spbscale.png")
 
-# экземпляры класса Item
-jelly = Item('jelly', images.jelly())
-ferera = Item('ferera', images.ferera())
-ferera_icon = Item('ferera_icon', images.ferera_icon())
-ferilla = Item('ferilla', images.ferilla())
-grifon = Item('grifon', images.grifon())
-anis = Item('anis', images.anis())
-sil_stih = Item('sil_stih', images.sil_stih())
-sil_stih_icon = Item('sil_stih_icon', images.sil_stih_icon())
-veton = Item('veton', images.veton())
-okka = Item('okka', images.okka())
-runime = Item('runime', images.runime())
-paporotnik = Item('paporotnik', images.paporotnik())
-silver = Item('silver', images.silver())
-iron_ore = Item('iron_ore', images.iron_ore())
-rukon = Item('rukon', images.rukon())
-diamond = Item('diamond', images.diamond())
-morph = Item('morph', images.morph())
-selected = Item('selected', images.selected())
-sklad_leg_btn = Item('sklad_leg_btn', images.sklad_leg_btn())
-create_all = Item('create_all', images.create_all())
-cross = Item('cross', images.cross())
-menu_btn = Item('menu_btn', images.menu_btn())
- = Item('', images)
- = Item('', images)
- = Item('', images)
- = Item('', images)
- = Item('', images)
- = Item('', images)
+# # экземпляры класса Item
+# jelly = Item('jelly', images.jelly())
+# ferera = Item('ferera', images.ferera())
+# ferera_icon = Item('ferera_icon', images.ferera_icon())
+# ferilla = Item('ferilla', images.ferilla())
+# grifon = Item('grifon', images.grifon())
+# anis = Item('anis', images.anis())
+# sil_stih = Item('sil_stih', images.sil_stih())
+# sil_stih_icon = Item('sil_stih_icon', images.sil_stih_icon())
+# veton = Item('veton', images.veton())
+# okka = Item('okka', images.okka())
+# runime = Item('runime', images.runime())
+# paporotnik = Item('paporotnik', images.paporotnik())
+# silver = Item('silver', images.silver())
+# iron_ore = Item('iron_ore', images.iron_ore())
+# rukon = Item('rukon', images.rukon())
+# diamond = Item('diamond', images.diamond())
+# morph = Item('morph', images.morph())
+# selected = Item('selected', images.selected())
+# sklad_leg_btn = Item('sklad_leg_btn', images.sklad_leg_btn())
+# create_all = Item('create_all', images.create_all())
+# cross = Item('cross', images.cross())
+# menu_btn = Item('menu_btn', images.menu_btn())
+
+ # = Item('', images)
+ # = Item('', images)
+ # = Item('', images)
+ # = Item('', images)
+ # = Item('', images)
+ # = Item('', images)
 
 
 
