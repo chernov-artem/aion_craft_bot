@@ -8,7 +8,9 @@ import images
 
 if __name__ == '__main__':
     time.sleep(2)
-    functions2.Pers1.select_pers()
+    # functions2.Pers1.select_pers()
+    # functions2.jelly.click()
+    functions2.ferera.click()
     # print(images.morph())
     # time.sleep(2)
     # functions.morph()

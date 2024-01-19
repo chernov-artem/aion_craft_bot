@@ -43,14 +43,14 @@ class Pers():
 
 class Item():
     """класс игрового ресурса"""
-    def __init__(self, name, icon):
+    def __init__(self, name, icon_name):
         "свойства игрового ресурса"
         self.name = name
-        self.icon = icon
+        self.icon_name = icon_name
 
     def click(self):
         "функция нажатия на итем"
-        xy_tmp = self.icon
+        xy_tmp = images.find_coordinates('images/' + self.icon_name)
         if xy_tmp != None:
             x, y = xy_tmp[0], xy_tmp[1]
             print(x, y)
@@ -136,8 +136,8 @@ Pers7 = Pers('pers7', "Huanita.png")
 Pers8 = Pers('pers8', "spbscale.png")
 
 # # экземпляры класса Item
-# jelly = Item('jelly', images.jelly())
-# ferera = Item('ferera', images.ferera())
+jelly = Item('jelly', 'jelly.png')
+ferera = Item('ferera', 'ferera.png')
 # ferera_icon = Item('ferera_icon', images.ferera_icon())
 # ferilla = Item('ferilla', images.ferilla())
 # grifon = Item('grifon', images.grifon())
