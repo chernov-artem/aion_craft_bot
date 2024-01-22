@@ -11,6 +11,7 @@ from base_functions import move_and_clic, move_and_right_clic, razbib
 
 
 def get_position():
+    "функция возвращает координаты курсора на экране"
     time.sleep(2)
     current_cursor = mouse.get_position()
     print(current_cursor)
