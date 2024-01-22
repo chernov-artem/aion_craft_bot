@@ -158,13 +158,12 @@ sklad_leg_btn = Item('sklad_leg_btn', "sklad_leg_btn.png")
 create_all = Item('create_all', "create_all.png")
 cross = Item('cross', "cross.png")
 menu_btn = Item('menu_btn', "menu_btn.png")
-
- # = Item('', images)
- # = Item('', images)
- # = Item('', images)
- # = Item('', images)
- # = Item('', images)
- # = Item('', images)
+sist_menu = Item('sist.menu', 'sist_menu.png')
+prinat_btn = Item('prinat_btn', 'prinat_btn.png')
+change_pers_button = Item('change_pers_button', 'change_pers_button.png')
+blue_grass_icon = Item('blue_grass_icon', 'blue_grass_icon.png')
+red_grass_icon = Item('red_grass_icon', 'red_grass_icon.png')
+vortex40g = Item('vortex40g', 'vortex40g.png')
 
 
 
