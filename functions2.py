@@ -130,6 +130,22 @@ class Take_res():
         else:
             move_and_clic(1200, 500)
 
+class Exit():
+    """класс выхода с перса"""
+    @classmethod
+    def exit(cls):
+        "функция выхода в меню выбора перса"
+        print('выход запущен')
+        pag.typewrite('o', 0)
+        print('нажал o')
+        time.sleep(0.6)
+        if images.change_pers() == None:
+            menu_btn()
+            print('нажал на меню мышкой')
+            change_pers()
+        else:
+            change_pers()
+        time.sleep(15)
 
 
 
