@@ -130,23 +130,15 @@ class Take_res():
         else:
             move_and_clic(1200, 500)
 
-class Exit():
+class Instructions():
     """класс выхода с перса"""
     @classmethod
     def exit(cls):
         "функция выхода в меню выбора перса"
-        print('выход запущен')
-        pag.typewrite('o', 0)
-        print('нажал o')
-        time.sleep(0.6)
-        if images.change_pers() == None:
-            menu_btn()
-            print('нажал на меню мышкой')
-            change_pers()
-        else:
-            change_pers()
+        menu_btn.click()
+        sist_menu.click()
+        change_pers_button.click()
         time.sleep(15)
-
 
 
 # зкземпляры класса Pers
@@ -188,6 +180,7 @@ change_pers_button = Item('change_pers_button', 'change_pers_button.png')
 blue_grass_icon = Item('blue_grass_icon', 'blue_grass_icon.png')
 red_grass_icon = Item('red_grass_icon', 'red_grass_icon.png')
 vortex40g = Item('vortex40g', 'vortex40g.png')
+makros_icon = Item('makros_icon', 'makros_icon.png')
 
 
 
