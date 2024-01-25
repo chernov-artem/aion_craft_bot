@@ -59,6 +59,9 @@ class Item():
             move_and_clic(1200, 500)
         time.sleep(0.5)
 
+    def take_res(self):
+        self.click()
+
 class Take_res():
     """Класс для взятия со склада нужного количества ресурсов
     в каждом методе поиск абсолютных координат осуществляется только один раз, далее
@@ -139,6 +142,8 @@ class Instructions():
         sist_menu.click()
         change_pers_button.click()
         time.sleep(15)
+
+
 
 
 # зкземпляры класса Pers
