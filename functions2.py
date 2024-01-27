@@ -59,7 +59,7 @@ class Item():
             move_and_clic(1200, 500)
         time.sleep(0.5)
 
-    def take_res(self):
+    def take_res(self, method_take_res):
         self.click()
 
 class Take_res():
@@ -142,6 +142,14 @@ class Instructions():
         sist_menu.click()
         change_pers_button.click()
         time.sleep(15)
+
+
+    @classmethod
+    def sklad(cls, name):
+        'функция работы со складом'
+        Item.name.click()
+
+
 
 
 

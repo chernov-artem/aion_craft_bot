@@ -7,7 +7,9 @@ import functions2
 import images
 if __name__ == '__main__':
     time.sleep(2)
-    functions2.morph.take_res()
+    functions2.makros_icon.click()
+    functions2.sklad_leg_btn.click()
+    functions2.ferera.take_res(functions2.Take_res.take20())
 
     # functions2.jelly.click()
     # functions2.ferera.click()
