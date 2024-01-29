@@ -149,6 +149,14 @@ class Instructions():
         'функция работы со складом'
         Item.name.click()
 
+    @classmethod
+    def craft(cls):
+        'метод крафта'
+        pass
+
+
+
+
 
 
 
