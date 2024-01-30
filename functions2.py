@@ -167,6 +167,13 @@ class Instructions():
         cross.click()
         Instructions.exit_to_pers_menu()
 
+    @classmethod
+    def craft_all(cls, res: object):
+        'метод крафта одного ресурса всеми 8 персонажами'
+        Instructions.craft_pers(Pers1, res)
+        Instructions.craft_pers(Pers2, res)
+
+
 
 
 
@@ -234,7 +241,7 @@ time.sleep(2)
 # Instructions.craft_pers(Pers1, ferera)
 # Instructions.craft_pers(Pers2, ferera)
 # Instructions.craft_pers(Pers7, ferera)
-
+Instructions.craft_all(ferera)
 
 
 
