@@ -48,13 +48,13 @@ class Item():
         self.name = name
         self.icon_name = icon_name
 
-    def click(self):
+    def click(self, xd = 0):
         "функция нажатия на итем"
         xy_tmp = images.find_coordinates('images/' + self.icon_name)
         if xy_tmp != None:
             x, y = xy_tmp[0], xy_tmp[1]
             print(x, y)
-            move_and_clic(x + 4, y + 4)
+            move_and_clic(x + 4 + xd, y + 4 + xd)
         else:
             move_and_clic(1200, 500)
         time.sleep(0.5)
@@ -158,12 +158,14 @@ class Instructions():
     def craft_pers(cls, pers: object, res: object):
         'метод крафта ресурса выбранным персонажем'
         pers.select_pers()
+        jelly.click()
         morph.click()
         selected.click()
         res.click()
-        create_all.click()
+        create_all.click(10)
         time.sleep(85)
         cross.click()
+        Instructions.exit_to_pers_menu()
 
 
 
@@ -229,8 +231,9 @@ vortex40g = Item('vortex40g', 'vortex40g.png')
 makros_icon = Item('makros_icon', 'makros_icon.png')
 
 time.sleep(2)
-Instructions.craft_pers(Pers1, morph)
-
+# Instructions.craft_pers(Pers1, ferera)
+# Instructions.craft_pers(Pers2, ferera)
+# Instructions.craft_pers(Pers7, ferera)
 
 
 
