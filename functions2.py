@@ -136,7 +136,7 @@ class Take_res():
 class Instructions():
     """класс выхода с перса"""
     @classmethod
-    def exit(cls):
+    def exit_to_pers_menu(cls):
         "функция выхода в меню выбора перса"
         menu_btn.click()
         sist_menu.click()
@@ -154,7 +154,32 @@ class Instructions():
         'метод крафта'
         pass
 
+    @classmethod
+    def craft_pers(cls, pers: object, res: object):
+        'метод крафта ресурса выбранным персонажем'
+        pers.select_pers()
+        morph.click()
+        selected.click()
+        res.click()
+        create_all.click()
+        time.sleep(85)
+        cross.click()
 
+
+
+
+
+
+
+
+""" сценарии крафта:
+1 крафт для жар кор фоб: 1 кор фоб, 1 св гернита 1 ромейн. Полтора часа на 960 еды 
+2 крафт для драконик еды: 1 рафион, 1 св эоде 1 час на 960 еды
+3 крафт для фереры: 30 мин для 960 еды
+4. 
+
+
+"""
 
 
 
@@ -202,6 +227,9 @@ blue_grass_icon = Item('blue_grass_icon', 'blue_grass_icon.png')
 red_grass_icon = Item('red_grass_icon', 'red_grass_icon.png')
 vortex40g = Item('vortex40g', 'vortex40g.png')
 makros_icon = Item('makros_icon', 'makros_icon.png')
+
+time.sleep(2)
+Instructions.craft_pers(Pers1, morph)
 
 
 
