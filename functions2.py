@@ -178,6 +178,7 @@ class Instructions():
         Instructions.craft_pers(Pers6, res)
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
+        time.sleep(610)
 
 
 
