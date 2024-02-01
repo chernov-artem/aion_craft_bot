@@ -54,7 +54,7 @@ class Item():
         if xy_tmp != None:
             x, y = xy_tmp[0], xy_tmp[1]
             print(x, y)
-            move_and_clic(x + 4 + xd, y + 4 + xd)
+            move_and_clic(x + 6 + xd, y + 6 + xd)
         else:
             move_and_clic(1200, 500)
         time.sleep(0.5)
@@ -248,6 +248,11 @@ time.sleep(2)
 # Instructions.craft_pers(Pers1, ferera)
 # Instructions.craft_pers(Pers2, ferera)
 # Instructions.craft_pers(Pers7, ferera)
+Instructions.craft_all(ferera)
+Instructions.craft_all(ferera)
+Instructions.craft_all(ferera)
+Instructions.craft_all(ferera)
+Instructions.craft_all(ferera)
 Instructions.craft_all(ferera)
 
 
