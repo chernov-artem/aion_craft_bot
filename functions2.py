@@ -180,6 +180,19 @@ class Instructions():
         Instructions.craft_pers(Pers8, res)
         time.sleep(610)
 
+    @classmethod
+    def craft_part(cls, res: object):
+        'метод крафта одного ресурса всеми 8 персонажами'
+        # Instructions.craft_pers(Pers1, res)
+        Instructions.craft_pers(Pers2, res)
+        Instructions.craft_pers(Pers3, res)
+        Instructions.craft_pers(Pers4, res)
+        Instructions.craft_pers(Pers5, res)
+        Instructions.craft_pers(Pers6, res)
+        Instructions.craft_pers(Pers7, res)
+        Instructions.craft_pers(Pers8, res)
+        time.sleep(610)
+
 
 
 
