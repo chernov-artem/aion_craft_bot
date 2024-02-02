@@ -243,17 +243,16 @@ blue_grass_icon = Item('blue_grass_icon', 'blue_grass_icon.png')
 red_grass_icon = Item('red_grass_icon', 'red_grass_icon.png')
 vortex40g = Item('vortex40g', 'vortex40g.png')
 makros_icon = Item('makros_icon', 'makros_icon.png')
+eode = Item('eode', 'eode.png')
+gernita = Item('gernita', 'gernita.png')
 
 time.sleep(2)
 # Instructions.craft_pers(Pers1, ferera)
 # Instructions.craft_pers(Pers2, ferera)
 # Instructions.craft_pers(Pers7, ferera)
-Instructions.craft_all(ferera)
-Instructions.craft_all(ferera)
-Instructions.craft_all(ferera)
-Instructions.craft_all(ferera)
-Instructions.craft_all(ferera)
-Instructions.craft_all(ferera)
+
+Instructions.craft_all(eode)
+
 
 
 
