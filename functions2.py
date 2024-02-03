@@ -184,7 +184,7 @@ class Instructions():
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
-        Instructions.craft_pers(Pers2, res)
+        # Instructions.craft_pers(Pers2, res)
         Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
@@ -258,13 +258,18 @@ vortex40g = Item('vortex40g', 'vortex40g.png')
 makros_icon = Item('makros_icon', 'makros_icon.png')
 eode = Item('eode', 'eode.png')
 gernita = Item('gernita', 'gernita.png')
+kor_fob = Item('kor_fob', 'kor_fob.png')
+rafion = Item('rafion', 'farion.png')
+romein = Item('romein', 'romein.png')
 
 time.sleep(2)
 # Instructions.craft_pers(Pers1, ferera)
 # Instructions.craft_pers(Pers2, ferera)
 # Instructions.craft_pers(Pers7, ferera)
 
-Instructions.craft_all(eode)
+Instructions.craft_part(eode)
+# Instructions.craft_all(gernita)
+
 
 
 
