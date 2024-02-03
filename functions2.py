@@ -207,6 +207,26 @@ class Instructions():
 
 
     @classmethod
+    def collect_3res(cls, pers: object):
+        pers.select_pers()
+        makros_icon.click()
+        sklad_leg_btn.click()
+        grass60.double_shift()
+        grass60.double_shift()
+        Instructions.exit_to_pers_menu()
+    @classmethod
+    def collect_3res_in_line(cls):
+        Instructions.collect_3res(Pers2)
+        Instructions.collect_3res(Pers3)
+        Instructions.collect_3res(Pers4)
+        Instructions.collect_3res(Pers5)
+        Instructions.collect_3res(Pers6)
+        Instructions.collect_3res(Pers7)
+        Instructions.collect_3res(Pers8)
+
+
+
+    @classmethod
     def craft_pers(cls, pers: object, res: object):
         'метод крафта ресурса выбранным персонажем'
         pers.select_pers()
@@ -322,8 +342,7 @@ grass60 = Item('grass60', 'grass60.png')
 
 time.sleep(2)
 
-grass60.double_shift()
-grass60.double_shift()
+Instructions.collect_3res(Pers3)
 
 
 # Instructions.craft_part(elit_stih)
