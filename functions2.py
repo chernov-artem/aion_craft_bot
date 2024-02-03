@@ -168,6 +168,32 @@ class Instructions():
         pass
 
     @classmethod
+    def take_vortex(cls):
+        "метод взятия эфира со склада. По дефолту берет 40 зел и 20 бел эфира"
+        makros_icon.click()
+        sklad_leg_btn.click()
+        vortex40g.take_res()
+        vortex40g.take_res_shift()
+
+    @classmethod
+    def take_vortex_pers(cls, pers:object):
+        pers.select_pers()
+        Instructions.take_vortex()
+        cross.click()
+        Instructions.exit_to_pers_menu()
+
+    @classmethod
+    def take_vortex_6pers(cls):
+        'метод взятия со склада эфира 6 персами'
+        Instructions.take_vortex_pers(Pers3)
+        Instructions.take_vortex_pers(Pers4)
+        Instructions.take_vortex_pers(Pers5)
+        Instructions.take_vortex_pers(Pers6)
+        Instructions.take_vortex_pers(Pers7)
+        Instructions.take_vortex_pers(Pers8)
+
+
+    @classmethod
     def craft_pers(cls, pers: object, res: object):
         'метод крафта ресурса выбранным персонажем'
         pers.select_pers()
@@ -206,13 +232,7 @@ class Instructions():
         Instructions.craft_pers(Pers8, res)
         time.sleep(690)
 
-    @classmethod
-    def take_vortex(cls):
-        "метод взятия эфира со склада. По дефолту берет 40 зел и 20 бел эфира"
-        makros_icon.click()
-        sklad_leg_btn.click()
-        vortex40g.take_res()
-        vortex40g.take_res_shift()
+
 
 
 
@@ -285,9 +305,11 @@ kor_fob = Item('kor_fob', 'kor_fob.png')
 rafion = Item('rafion', 'rafion.png')
 romein = Item('romein', 'romein.png')
 elit_stih = Item('elit_stih', 'elit_stih.png')
+grass60 = Item('grass60', 'grass60.png')
 
 time.sleep(2)
 
+grass60.click()
 
 
 # Instructions.craft_part(elit_stih)
