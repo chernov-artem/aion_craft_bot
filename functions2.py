@@ -3,7 +3,7 @@ import mouse
 import time
 
 import images
-from base_functions import move_and_clic, take_part
+from base_functions import move_and_clic, move_and_double_clic, take_part
 
 class Pers():
     """Класс персонажа"""
@@ -71,6 +71,19 @@ class Item():
         self.click(60, 15)
         take_part()
         Take_res.take20()
+
+    def double_shift(self):
+        'метод для взятия со склада 3 ресурсов(должны лежать в одну линиию)'
+        xy_tmp = images.find_coordinates('images/' + self.icon_name)
+        if xy_tmp != None:
+            x, y = xy_tmp[0], xy_tmp[1]
+            move_and_double_clic(x, y)
+            move_and_double_clic(x + 60, y + 15)
+            move_and_double_clic(x + 120, y + 15)
+        else:
+            move_and_clic(1200, 500)
+        time.sleep(0.5)
+
 
 
 
@@ -309,7 +322,8 @@ grass60 = Item('grass60', 'grass60.png')
 
 time.sleep(2)
 
-grass60.click()
+grass60.double_shift()
+grass60.double_shift()
 
 
 # Instructions.craft_part(elit_stih)

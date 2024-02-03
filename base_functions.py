@@ -8,6 +8,13 @@ def move_and_clic(x: int, y: int):
     mouse.click('left')
     time.sleep(0.7)
 
+def move_and_double_clic(x: int, y: int):
+    "кликает по заданным координатам"
+    mouse.move(x, y, 0.2)
+    time.sleep(0.7)
+    mouse.double_click('left')
+    time.sleep(0.7)
+
 def move_and_right_clic(x: int, y: int):
     "делает клик ПКМ по заданным координатам"
     mouse.move(x, y, 0.2)
