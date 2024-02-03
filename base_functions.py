@@ -24,3 +24,11 @@ def razbib(x: int, y: int):
     time.sleep(0.15)
     pag.keyUp('Shift')
     time.sleep(0.3)
+
+def take_part():
+    'функция позволяет начать разбивку ресурса на части'
+    pag.keyDown('Shift')
+    mouse.click('right')
+    time.sleep(0.15)
+    pag.keyUp('Shift')
+    time.sleep(0.3)

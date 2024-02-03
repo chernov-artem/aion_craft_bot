@@ -3,7 +3,7 @@ import mouse
 import time
 
 import images
-from base_functions import move_and_clic
+from base_functions import move_and_clic, take_part
 
 class Pers():
     """Класс персонажа"""
@@ -15,6 +15,7 @@ class Pers():
     def select_pers(self):
         "функция выбора перса"
 
+        print('Выбрали ', self.name)
         xy_tmp = images.find_coordinates('images/' + self.icon_name)
         if xy_tmp != None:
             x, y = xy_tmp[0], xy_tmp[1]
@@ -48,19 +49,31 @@ class Item():
         self.name = name
         self.icon_name = icon_name
 
-    def click(self, xd = 0):
+    def click(self, xdx = 0, xdy = 0):
         "функция нажатия на итем"
         xy_tmp = images.find_coordinates('images/' + self.icon_name)
         if xy_tmp != None:
             x, y = xy_tmp[0], xy_tmp[1]
             print(x, y)
-            move_and_clic(x + 6 + xd, y + 6 + xd)
+            move_and_clic(x + 6 + xdx, y + 6 + xdy)
         else:
             move_and_clic(1200, 500)
         time.sleep(0.5)
 
-    def take_res(self, method_take_res):
+    def take_res(self):
+        "метод взятия 40 шт ресурса"
         self.click()
+        take_part()
+        Take_res.take40()
+
+    def take_res_shift(self):
+        "метод для взятия эфира со сдвигом. Второй эфир должен быть справа от первого"
+        self.click(60, 15)
+        take_part()
+        Take_res.take20()
+
+
+
 
 class Take_res():
     """Класс для взятия со склада нужного количества ресурсов
@@ -178,7 +191,7 @@ class Instructions():
         Instructions.craft_pers(Pers6, res)
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
-        time.sleep(610)
+        time.sleep(635)
 
     @classmethod
     def craft_part(cls, res: object):
@@ -191,7 +204,17 @@ class Instructions():
         Instructions.craft_pers(Pers6, res)
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
-        time.sleep(610)
+        time.sleep(690)
+
+    @classmethod
+    def take_vortex(cls):
+        "метод взятия эфира со склада. По дефолту берет 40 зел и 20 бел эфира"
+        makros_icon.click()
+        sklad_leg_btn.click()
+        vortex40g.take_res()
+        vortex40g.take_res_shift()
+
+
 
 
 
@@ -217,14 +240,14 @@ class Instructions():
 
 
 # зкземпляры класса Pers
-Pers1 = Pers('pers1', "SpielSucht.png")
-Pers2 = Pers('pers2', "DeadPonyClub.png")
-Pers3 = Pers('pers3', "HungaMunga.png")
-Pers4 = Pers('pers4', "Rebyata.png")
-Pers5 = Pers('pers5', "KillClericFirst.png")
-Pers6 = Pers('pers6', "Huanito.png")
-Pers7 = Pers('pers7', "Huanita.png")
-Pers8 = Pers('pers8', "spbscale.png")
+Pers1 = Pers('SpielSucht', "SpielSucht.png")
+Pers2 = Pers('DeadPonyClub', "DeadPonyClub.png")
+Pers3 = Pers('ХунгаМунга', "HungaMunga.png")
+Pers4 = Pers('Ребята', "Rebyata.png")
+Pers5 = Pers('KillClericFirst', "KillClericFirst.png")
+Pers6 = Pers('Хуанито', "Huanito.png")
+Pers7 = Pers('Хуанита', "Huanita.png")
+Pers8 = Pers('spbscale', "spbscale.png")
 
 # # экземпляры класса Item
 jelly = Item('jelly', 'jelly.png')
@@ -259,18 +282,17 @@ makros_icon = Item('makros_icon', 'makros_icon.png')
 eode = Item('eode', 'eode.png')
 gernita = Item('gernita', 'gernita.png')
 kor_fob = Item('kor_fob', 'kor_fob.png')
-rafion = Item('rafion', 'farion.png')
+rafion = Item('rafion', 'rafion.png')
 romein = Item('romein', 'romein.png')
+elit_stih = Item('elit_stih', 'elit_stih.png')
 
 time.sleep(2)
-# Instructions.craft_pers(Pers1, ferera)
-# Instructions.craft_pers(Pers2, ferera)
-# Instructions.craft_pers(Pers7, ferera)
-
-Instructions.craft_part(eode)
-# Instructions.craft_all(gernita)
 
 
+
+# Instructions.craft_part(elit_stih)
+# Instructions.craft_all(ferera)
+# Instructions.craft_all(ferera)
 
 
 
