@@ -70,7 +70,7 @@ class Item():
         "метод для взятия эфира со сдвигом. Второй эфир должен быть справа от первого"
         self.click(60, 15)
         take_part()
-        Take_res.take20()
+        Take_res.take40()
 
     def double_shift(self):
         'метод для взятия со склада 3 ресурсов(должны лежать в одну линиию)'
@@ -186,7 +186,8 @@ class Instructions():
         makros_icon.click()
         sklad_leg_btn.click()
         vortex40g.take_res()
-        vortex40g.take_res_shift()
+        # vortex40g.take_res()
+        # vortex40g.take_res_shift()
 
     @classmethod
     def take_vortex_pers(cls, pers:object):
@@ -215,8 +216,8 @@ class Instructions():
         grass60.double_shift()
         Instructions.exit_to_pers_menu()
     @classmethod
-    def collect_3res_in_line(cls):
-        Instructions.collect_3res(Pers2)
+    def collect_3res_all(cls):
+        # Instructions.collect_3res(Pers2)
         Instructions.collect_3res(Pers3)
         Instructions.collect_3res(Pers4)
         Instructions.collect_3res(Pers5)
@@ -256,14 +257,28 @@ class Instructions():
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
-        # Instructions.craft_pers(Pers2, res)
+        Instructions.craft_pers(Pers2, res)
         Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
         Instructions.craft_pers(Pers6, res)
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
-        time.sleep(690)
+        time.sleep(730)
+
+    @classmethod
+    def fiol_ban_x3(cls):
+        "метод крафта ресурсов для фиол банок 3 итерации"
+        Instructions.craft_all(elit_stih)
+        Instructions.craft_all(elit_stih)
+        Instructions.craft_all(elit_stih)
+        Instructions.craft_all(elit_stih)
+        Instructions.craft_all(gernita)
+        Instructions.craft_all(gernita)
+        Instructions.craft_all(gernita)
+        Instructions.craft_all(eode)
+        Instructions.craft_all(eode)
+        Instructions.craft_all(eode)
 
 
 
@@ -339,16 +354,20 @@ rafion = Item('rafion', 'rafion.png')
 romein = Item('romein', 'romein.png')
 elit_stih = Item('elit_stih', 'elit_stih.png')
 grass60 = Item('grass60', 'grass60.png')
+besh = Item('besh', 'besh.png')
+binan = Item('binan', 'binan.png')
 
 time.sleep(2)
 
-Instructions.collect_3res(Pers3)
 
 
-# Instructions.craft_part(elit_stih)
-# Instructions.craft_all(ferera)
-# Instructions.craft_all(ferera)
+# Instructions.take_vortex_6pers()
 
+
+
+
+# Instructions.collect_3res_all()
+# Instructions.take_vortex_6pers()
 
 
 
