@@ -61,13 +61,13 @@ class Item():
         time.sleep(0.5)
 
     def take_res(self):
-        "метод взятия 40 шт ресурса"
+        "метод взятия 120 шт ресурса"
         self.click()
         take_part()
         Take_res.take120()
 
     def take_res_shift(self):
-        "метод для взятия эфира со сдвигом. Второй эфир должен быть справа от первого"
+        "метод для взятия 140 эфира со сдвигом. Второй эфир должен быть справа от первого"
         self.click(60, 15)
         take_part()
         Take_res.take140()
@@ -199,12 +199,11 @@ class Instructions():
 
     @classmethod
     def take_vortex(cls):
-        "метод взятия эфира со склада. По дефолту берет 40 зел и 20 бел эфира"
+        "метод взятия эфира со склада. По дефолту берет 120 зел и 140 бел эфира"
         makros_icon.click()
         sklad_leg_btn.click()
         vortex40g.take_res()
-        # vortex40g.take_res()
-        # vortex40g.take_res_shift()
+        vortex40g.take_res_shift()
 
     @classmethod
     def take_vortex_pers(cls, pers:object):
@@ -215,7 +214,10 @@ class Instructions():
 
     @classmethod
     def take_vortex_6pers(cls):
-        'метод взятия со склада эфира 6 персами'
+        """метод взятия со склада эфира 6 персами
+           берет 120 зел и 140 белого эфира
+           для 8 персов нужно 960 зел эфира и 1120 белого
+        """
         Instructions.take_vortex_pers(Pers3)
         Instructions.take_vortex_pers(Pers4)
         Instructions.take_vortex_pers(Pers5)
