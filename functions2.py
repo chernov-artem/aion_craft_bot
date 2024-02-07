@@ -64,13 +64,13 @@ class Item():
         "метод взятия 40 шт ресурса"
         self.click()
         take_part()
-        Take_res.take40()
+        Take_res.take120()
 
     def take_res_shift(self):
         "метод для взятия эфира со сдвигом. Второй эфир должен быть справа от первого"
         self.click(60, 15)
         take_part()
-        Take_res.take40()
+        Take_res.take140()
 
     def double_shift(self):
         'метод для взятия со склада 3 ресурсов(должны лежать в одну линиию)'
@@ -141,23 +141,40 @@ class Take_res():
         else:
             move_and_clic(1200, 500)
 
-    @classmethod
-    def take240(cls):
-        "метод взятия со склада легиона 240 шт"
+    def take120(cls):
+        "метод взятия со склада легиона 120 шт"
         xy_tmp = images.prinat_btn()
         if xy_tmp != None:
             x, y = xy_tmp[0], xy_tmp[1]
             print(x, y)
+            # нажать на цифру 1
+            move_and_clic(x - 12, y - 57)
             # нажать на цифру 2
             move_and_clic(x + 17, y - 61)
-            # нажать на цифру 4
-            move_and_clic(x - 15, y - 85)
             # нажать на цифру 0
             move_and_clic(x + 86, y - 114)
             # нажать кнопку "принять"
             move_and_clic(x + 11, y + 7)
         else:
             move_and_clic(1200, 500)
+
+    def take140(cls):
+        "метод взятия со склада легиона 140 шт"
+        xy_tmp = images.prinat_btn()
+        if xy_tmp != None:
+            x, y = xy_tmp[0], xy_tmp[1]
+            print(x, y)
+            # нажать на цифру 1
+            move_and_clic(x - 12, y - 57)
+            # нажать на цифру 4
+            move_and_clic(x - 12, y - 85)
+            # нажать на цифру 0
+            move_and_clic(x + 86, y - 114)
+            # нажать кнопку "принять"
+            move_and_clic(x + 11, y + 7)
+        else:
+            move_and_clic(1200, 500)
+
 
 class Instructions():
     """класс выхода с перса"""
@@ -257,18 +274,19 @@ class Instructions():
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
-        Instructions.craft_pers(Pers2, res)
-        Instructions.craft_pers(Pers3, res)
-        Instructions.craft_pers(Pers4, res)
+        # Instructions.craft_pers(Pers2, res)
+        # Instructions.craft_pers(Pers3, res)
+        # Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
         Instructions.craft_pers(Pers6, res)
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
-        time.sleep(730)
+        time.sleep(830)
 
     @classmethod
     def fiol_ban_x3(cls):
-        "метод крафта ресурсов для фиол банок 3 итерации"
+        """етод крафта ресурсов для фиол банок 3 итерации(всего 10 итераций)
+         960 зел эфира и 640 белого эфира"""
         Instructions.craft_all(elit_stih)
         Instructions.craft_all(elit_stih)
         Instructions.craft_all(elit_stih)
@@ -359,9 +377,18 @@ binan = Item('binan', 'binan.png')
 
 time.sleep(2)
 
-
-
-# Instructions.take_vortex_6pers()
+# Instructions.craft_part(elit_stih)
+time.sleep(635)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(gernita)
+Instructions.craft_all(gernita)
+Instructions.craft_all(gernita)
+Instructions.craft_all(eode)
+Instructions.craft_all(eode)
+Instructions.craft_all(eode)
+Instructions.craft_all(romein)
+Instructions.craft_all(besh)
+Instructions.craft_all(binan)
 
 
 
