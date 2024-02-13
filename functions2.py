@@ -379,19 +379,14 @@ binan = Item('binan', 'binan.png')
 
 time.sleep(2)
 
-# Instructions.craft_part(elit_stih)
-time.sleep(635)
-Instructions.craft_all(elit_stih)
+# Instructions.fiol_ban_x3()
+# Instructions.craft_all(romein)
+# Instructions.craft_all(besh)
+# Instructions.craft_all(binan)
 Instructions.craft_all(gernita)
 Instructions.craft_all(gernita)
 Instructions.craft_all(gernita)
-Instructions.craft_all(eode)
-Instructions.craft_all(eode)
-Instructions.craft_all(eode)
-Instructions.craft_all(romein)
-Instructions.craft_all(besh)
-Instructions.craft_all(binan)
-
+Instructions.craft_all(gernita)
 
 
 
