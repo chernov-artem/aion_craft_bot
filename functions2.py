@@ -300,6 +300,27 @@ class Instructions():
         Instructions.craft_all(eode)
         Instructions.craft_all(eode)
 
+    @classmethod
+    def food_pack(cls):
+        """метод крафтит ресурсы на 3 вида еды и 1 вид коктейлей
+           требуется 1280 бел эф и 960 зел эф"""
+        Instructions.craft_all(eode)
+        Instructions.craft_all(gernita)
+        Instructions.craft_all(gernita)
+        Instructions.craft_all(kor_fob)
+        Instructions.craft_all(romein)
+        Instructions.craft_all(fenes)
+        Instructions.craft_all(daikon)
+        Instructions.craft_all(tetra)
+        Instructions.craft_all(rafion)
+        Instructions.craft_all(besh)
+        Instructions.craft_all(binan)
+        Instructions.craft_all(eode)
+        Instructions.craft_all(gernita)
+        Instructions.craft_all(gernita)
+        time.sleep(20)
+        Pers7.select_pers()
+
 
 
 
@@ -376,6 +397,9 @@ elit_stih = Item('elit_stih', 'elit_stih.png')
 grass60 = Item('grass60', 'grass60.png')
 besh = Item('besh', 'besh.png')
 binan = Item('binan', 'binan.png')
+daikon = Item('daikon', 'daikon.png')
+tetra = Item('tetra', 'tetra.png')
+fenes = Item('fenes', 'fenes.png')
 
 time.sleep(2)
 
@@ -383,11 +407,6 @@ time.sleep(2)
 # Instructions.craft_all(romein)
 # Instructions.craft_all(besh)
 # Instructions.craft_all(binan)
-Instructions.craft_all(gernita)
-Instructions.craft_all(gernita)
-Instructions.craft_all(gernita)
-Instructions.craft_all(gernita)
-
 
 
 # Instructions.collect_3res_all()
