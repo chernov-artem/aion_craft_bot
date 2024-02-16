@@ -328,6 +328,13 @@ class Instructions():
         Instructions.craft_all(tetra)
         Instructions.craft_all(rafion)
 
+    @classmethod
+    def mag_food(cls):
+        "метод для крафта ресурсов для магов"
+        Instructions.craft_all(eode)
+        Instructions.craft_all(fenes)
+        Instructions.craft_all(daikon)
+
 
 
 
