@@ -321,6 +321,13 @@ class Instructions():
         time.sleep(20)
         Pers7.select_pers()
 
+    @classmethod
+    def phis_food(cls):
+        "метод для крафта ресурсов для физиков"
+        Instructions.craft_all(gernita)
+        Instructions.craft_all(tetra)
+        Instructions.craft_all(rafion)
+
 
 
 
@@ -400,9 +407,16 @@ binan = Item('binan', 'binan.png')
 daikon = Item('daikon', 'daikon.png')
 tetra = Item('tetra', 'tetra.png')
 fenes = Item('fenes', 'fenes.png')
+nosfe = Item('nosfe', 'nosfe.png')
 
 time.sleep(2)
 
+Instructions.craft_all(tetra)
+Instructions.craft_all(rafion)
+Instructions.craft_all(ferera)
+Instructions.craft_all(ferera)
+time.sleep(20)
+Pers7.select_pers()
 # Instructions.fiol_ban_x3()
 # Instructions.craft_all(romein)
 # Instructions.craft_all(besh)
