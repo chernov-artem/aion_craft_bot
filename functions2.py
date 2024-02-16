@@ -323,17 +323,24 @@ class Instructions():
 
     @classmethod
     def phis_food(cls):
-        "метод для крафта ресурсов для физиков"
+        "метод для крафта ресурсов для физиков. Требует 320 б.эф/160 з.эф"
         Instructions.craft_all(gernita)
         Instructions.craft_all(tetra)
         Instructions.craft_all(rafion)
 
     @classmethod
     def mag_food(cls):
-        "метод для крафта ресурсов для магов"
+        "метод для крафта ресурсов для магов. Требует 320 б.эф/160 з.эф"
         Instructions.craft_all(eode)
         Instructions.craft_all(fenes)
         Instructions.craft_all(daikon)
+
+    @classmethod
+    def chant_food(cls):
+        "метод для крафта ресурсов для чантов. Требует 320 б.эф/160 з.эф"
+        Instructions.craft_all(gernita)
+        Instructions.craft_all(kor_fob)
+        Instructions.craft_all(romein)
 
 
 
