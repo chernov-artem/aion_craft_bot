@@ -273,6 +273,19 @@ class Instructions():
         time.sleep(635)
 
     @classmethod
+    def craft_all_half(cls, res: object, res2: object):
+        'метод крафта одного ресурса всеми 8 персонажами'
+        Instructions.craft_pers(Pers1, res)
+        Instructions.craft_pers(Pers2, res)
+        Instructions.craft_pers(Pers3, res)
+        Instructions.craft_pers(Pers4, res)
+        Instructions.craft_pers(Pers5, res2)
+        Instructions.craft_pers(Pers6, res2)
+        Instructions.craft_pers(Pers7, res2)
+        Instructions.craft_pers(Pers8, res2)
+        time.sleep(635)
+
+    @classmethod
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
@@ -334,6 +347,13 @@ class Instructions():
         Instructions.craft_all(eode)
         Instructions.craft_all(fenes)
         Instructions.craft_all(daikon)
+
+    @classmethod
+    def mix_food(cls):
+        "метод крафтит 1/2 на физ и 1/2 на маг. Требует 320 б.эф/160 з.эф"
+        Instructions.craft_all_half(gernita, eode)
+        Instructions.craft_all_half(tetra, fenes)
+        Instructions.craft_all_half(rafion, daikon)
 
     @classmethod
     def chant_food(cls):
@@ -425,10 +445,8 @@ nosfe = Item('nosfe', 'nosfe.png')
 
 time.sleep(2)
 
-Instructions.craft_all(tetra)
-Instructions.craft_all(rafion)
-Instructions.craft_all(ferera)
-Instructions.craft_all(ferera)
+Instructions.craft_all(elit_stih)
+
 time.sleep(20)
 Pers7.select_pers()
 # Instructions.fiol_ban_x3()
