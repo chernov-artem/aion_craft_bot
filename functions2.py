@@ -362,6 +362,12 @@ class Instructions():
         Instructions.craft_all(kor_fob)
         Instructions.craft_all(romein)
 
+    @classmethod
+    def cocktail(cls):
+        'метот крафтит ресы для коктейлей. тр 320 бел эф'
+        Instructions.craft_all(besh)
+        Instructions.craft_all(binan)
+
 
 
 
@@ -445,7 +451,11 @@ nosfe = Item('nosfe', 'nosfe.png')
 
 time.sleep(2)
 
-Instructions.craft_all(elit_stih)
+Instructions.phis_food()
+Instructions.mag_food()
+Instructions.mag_food()
+Instructions.cocktail()
+
 
 time.sleep(20)
 Pers7.select_pers()
