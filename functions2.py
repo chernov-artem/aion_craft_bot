@@ -448,13 +448,11 @@ daikon = Item('daikon', 'daikon.png')
 tetra = Item('tetra', 'tetra.png')
 fenes = Item('fenes', 'fenes.png')
 nosfe = Item('nosfe', 'nosfe.png')
+skin = Item('skin', 'skin.png')
 
 time.sleep(2)
 
-Instructions.phis_food()
-Instructions.mag_food()
-Instructions.mag_food()
-Instructions.cocktail()
+
 
 
 time.sleep(20)
