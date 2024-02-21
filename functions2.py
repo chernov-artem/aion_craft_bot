@@ -452,7 +452,7 @@ skin = Item('skin', 'skin.png')
 
 time.sleep(2)
 
-
+Instructions.craft_all(gernita)
 
 
 time.sleep(20)
