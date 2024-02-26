@@ -291,7 +291,7 @@ class Instructions():
         # Instructions.craft_pers(Pers1, res)
         # Instructions.craft_pers(Pers2, res)
         # Instructions.craft_pers(Pers3, res)
-        # Instructions.craft_pers(Pers4, res)
+        Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
         Instructions.craft_pers(Pers6, res)
         Instructions.craft_pers(Pers7, res)
@@ -299,19 +299,12 @@ class Instructions():
         time.sleep(830)
 
     @classmethod
-    def fiol_ban_x3(cls):
-        """етод крафта ресурсов для фиол банок 3 итерации(всего 10 итераций)
+    def fiol_ban(cls):
+        """метод крафта ресурсов для фиол банок 1 итерации
          960 зел эфира и 640 белого эфира"""
+        Instructions.craft_all_half(eode, gernita)
+        Instructions.craft_all_half(eode, gernita)
         Instructions.craft_all(elit_stih)
-        Instructions.craft_all(elit_stih)
-        Instructions.craft_all(elit_stih)
-        Instructions.craft_all(elit_stih)
-        Instructions.craft_all(gernita)
-        Instructions.craft_all(gernita)
-        Instructions.craft_all(gernita)
-        Instructions.craft_all(eode)
-        Instructions.craft_all(eode)
-        Instructions.craft_all(eode)
 
     @classmethod
     def food_pack(cls):
@@ -452,7 +445,14 @@ skin = Item('skin', 'skin.png')
 
 time.sleep(2)
 
-Instructions.craft_all(gernita)
+Instructions.mag_food() #320 / 160
+Instructions.phis_food() #320 / 160
+Instructions.mix_food() #320 / 160
+Instructions.fiol_ban() #160 / 320
+Instructions.fiol_ban() #160 / 320
+# 1280 / 1120
+
+
 
 
 time.sleep(20)
