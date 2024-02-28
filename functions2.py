@@ -290,7 +290,7 @@ class Instructions():
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
         # Instructions.craft_pers(Pers2, res)
-        # Instructions.craft_pers(Pers3, res)
+        Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
         Instructions.craft_pers(Pers6, res)
@@ -445,11 +445,11 @@ skin = Item('skin', 'skin.png')
 
 time.sleep(2)
 
-Instructions.mag_food() #320 / 160
-Instructions.phis_food() #320 / 160
-Instructions.mix_food() #320 / 160
-Instructions.fiol_ban() #160 / 320
-Instructions.fiol_ban() #160 / 320
+Instructions.fiol_ban()
+Instructions.fiol_ban()
+Instructions.fiol_ban()
+
+
 # 1280 / 1120
 
 
