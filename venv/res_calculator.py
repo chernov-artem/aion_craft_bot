@@ -24,12 +24,14 @@ def opora(n: int):
     ingot = nail * 2 + rod * 4
     dren_alloy = rod * 2
     sum_ignot = n * 65
+    sum_ignot1 = sum_ignot // 10 + 1
+    sum_ignot2 = sum_ignot1 * 12
     print('Опора:')
     print('нужно ', nail, 'гвоздей и ', rod, 'стержней')
     print('это ', ingot, ' слитков', ingot, ' атрацита и ', dren_alloy, ' дрен сплава')
     print('себ слит: ', ingot*(631+1747))
     print('или: ', ingot*(631+1747)*12/10)
-    print('всего слитков надо: ', sum_ignot)
+    print('всего слитков надо: ', sum_ignot, ' или ', sum_ignot1, 'пакетов, если фастом(',  sum_ignot2, ')')
 
 
 def kozhuh(n: int):
