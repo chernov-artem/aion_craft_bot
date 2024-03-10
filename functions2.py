@@ -177,7 +177,7 @@ class Take_res():
 
 
 class Instructions():
-    """класс выхода с перса"""
+    """класс инструкций"""
     @classmethod
     def exit_to_pers_menu(cls):
         "функция выхода в меню выбора перса"
@@ -445,9 +445,7 @@ skin = Item('skin', 'skin.png')
 
 time.sleep(2)
 
-Instructions.fiol_ban()
-Instructions.fiol_ban()
-Instructions.fiol_ban()
+Instructions.craft_part(elit_stih)
 
 
 # 1280 / 1120

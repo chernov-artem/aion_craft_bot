@@ -78,11 +78,24 @@ def fuel(n: int):
     cold_water = n * 100
     fuel_seb = vortex30 * cost_v30 + vortex40 * cost_v40 + vortex50 * cost_v50 + cold_water * 27
     print('Топливо:')
-    print('Нужно: ', vortex30, ' оск эфира', vortex40, ' обыч эфира и ', vortex50, ' маг эфира + ', cold_water, ' хол воды')
+    print('Нужно: ', vortex30, ' оск эфира', vortex40, ' обыч эфира и ', vortex50, ' маг эфира + ', cold_water * 2, ' хол воды')
     print('это ', fuel_seb, ' кинар')
 
     return  fuel_seb
 
+def art_stone(n: int):
+    'функция расчета количества камней акт арт из стих камней'
+    res = n // 22
+    mag_kr = res * 3
+    wis_stone = res * 5
+    kat = 11 + mag_kr + wis_stone
+    vortex = res * 16
+    print("Всего получится ", res, 'камней акт арт. Остается стих камней: ', res % 22)
+    print('маг кристаллов: ', mag_kr)
+    print('кам мудрости: ', wis_stone)
+    print('катализаторов: ', kat)
+    print('эфира: ', vortex)
 
 
-calculate(1)
+calculate(12)
+# art_stone(210)
