@@ -1,8 +1,8 @@
 """модуль для рассчета количества ресурсов для крафта осадных орудий"""
 
-cost_v30 = 1048
-cost_v40 = 1492
-cost_v50 = 1642
+cost_v30 = 828
+cost_v40 = 990
+cost_v50 = 1572
 
 def calculate(n: int):
     opora(n)
@@ -32,6 +32,8 @@ def opora(n: int):
     print('себ слит: ', ingot*(631+1747))
     print('или: ', ingot*(631+1747)*12/10)
     print('всего слитков надо: ', sum_ignot, ' или ', sum_ignot1, 'пакетов, если фастом(',  sum_ignot2, ')')
+    print('Гвоздей ', nail)
+    print('Стержней ', rod, ' и дрен сплава ', rod * 2)
 
 
 def kozhuh(n: int):
@@ -43,6 +45,9 @@ def kozhuh(n: int):
     print('Кожух:')
     print('нужно ', little_plate, 'малых и больших пластин и ', big_plate, ' больших пластин')
     print('это ', ingot, ' слитков', ingot, ' атрацита и ', dren_alloy, ' дрен сплава')
+    print('Малая пластина ', little_plate, ' днер сплава ', little_plate)
+    print('Средняя пластина ', medium_plate,' днер сплава ', medium_plate * 2)
+    print('Большая пластина ', big_plate, ' днер сплава ', big_plate * 2)
 
 def truba(n: int):
     kl_nosf_nit = n * 10
@@ -104,8 +109,5 @@ def ore(n: int):
     print('Можно сделать ', kol_op, ' опор или ', kol_kozh, ' кожухов')
     print('Или ', kol_sum, ' кожухов и опор')
 
-# opora(1)
-# kozhuh(1)
-ore(1080)
-# calculate(12)
+calculate(24)
 # art_stone(210)
