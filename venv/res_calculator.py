@@ -96,6 +96,16 @@ def art_stone(n: int):
     print('катализаторов: ', kat)
     print('эфира: ', vortex)
 
+def ore(n: int):
+    'функция расчета количества итемов, которые можно произвести из n слитков дрен руды'
+    kol_op = n // 36
+    kol_kozh = n // 29
+    kol_sum = n // 65
+    print('Можно сделать ', kol_op, ' опор или ', kol_kozh, ' кожухов')
+    print('Или ', kol_sum, ' кожухов и опор')
 
-calculate(12)
+# opora(1)
+# kozhuh(1)
+ore(1080)
+# calculate(12)
 # art_stone(210)
