@@ -57,8 +57,8 @@ def truba(n: int):
     print('это ', kl_nosf_nit * 2, ' стеблей носфе и ', kach_kozh * 2, 'кач недуб кожи')
 
 def org_sub(n: int):
-    wis_stone = n * 4
-    mag_krist = n * 5
+    wis_stone = n * 5
+    mag_krist = n * 4
     el_water = wis_stone * 20
     el_powder = mag_krist * 4
     elit_stih = wis_stone * 4 + mag_krist * 2
@@ -96,8 +96,8 @@ def art_stone(n: int):
     kat = 11 + mag_kr + wis_stone
     vortex = res * 16
     print("Всего получится ", res, 'камней акт арт. Остается стих камней: ', res % 22)
-    print('маг кристаллов: ', mag_kr)
-    print('кам мудрости: ', wis_stone)
+    print('маг кристаллов: ', mag_kr, '(', mag_kr * 4, ' иттераций воды)')
+    print('кам мудрости: ', wis_stone, '(', wis_stone * 2, ' иттераций порошка)')
     print('катализаторов: ', kat)
     print('эфира: ', vortex)
 
@@ -110,4 +110,4 @@ def ore(n: int):
     print('Или ', kol_sum, ' кожухов и опор')
 
 calculate(24)
-# art_stone(210)
+# art_stone(250)
