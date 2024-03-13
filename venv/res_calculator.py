@@ -1,6 +1,11 @@
 """модуль для рассчета количества ресурсов для крафта осадных орудий"""
 mage_vortex_gold = 36000
+mage_vortex_blue = 11500
 dren_ore = (mage_vortex_gold * 20 + 2600) / 1080
+gems_cost = (mage_vortex_blue * 40 + 2600) / 180
+elit_stih_cos = 1550
+nosfe = 1900
+kach_skin = 1100
 cost_v30 = 828
 cost_v40 = 990
 cost_v50 = 1572
@@ -8,7 +13,7 @@ cost_v50 = 1572
 antracide = 1765
 dren_fusion = 3531
 sew_ing = 1412
-grind_powder = 0
+grind_powder = 13860
 catalyst = 1471
 elit_catalyst = 10063
 
@@ -25,6 +30,9 @@ def calculate(n: int):
     core(n)
     print()
     fuel(n)
+    sum_seb = opora(n) + kozhuh(n) + truba(n) + org_sub(n) + core(n) + fuel(n)
+    print()
+    print('общ себестоимость: ',sum_seb, ' или (', sum_seb / n, ' за 1 шт)')
 
 
 def opora(n: int):
@@ -46,6 +54,8 @@ def opora(n: int):
     print('или фастом: ', ingot * (dren_ore + antracide) * 12 / 10)
     print('себестоимость ', n, ' опор = ', opora_seb, ' (или ', round(opora_seb / n, 1), ' за 1 шт)')
 
+    return opora_seb
+
 
 def kozhuh(n: int):
     little_plate = n * 4
@@ -62,12 +72,17 @@ def kozhuh(n: int):
     print('Большая пластина ', big_plate, ' днер сплава ', big_plate * 2)
     print('себестоимость ', n, ' кожухов = ', kozhuh_seb, ' (или ', round(kozhuh_seb / n, 1), ' за 1 шт)')
 
+    return kozhuh_seb
+
 def truba(n: int):
     kl_nosf_nit = n * 10
     kach_kozh = n * 8
+    truba_seb = kl_nosf_nit * nosfe * 2 + sew_ing * 10 + kach_kozh * kach_skin * 4 + sew_ing * 8 * 2 + n * 12 * cost_v50
     print('Труба:')
     print('Нужно: ', kl_nosf_nit, 'клубков носф нити и ', kach_kozh, ' кач кожи')
     print('это ', kl_nosf_nit * 2, ' стеблей носфе и ', kach_kozh * 2, 'кач недуб кожи')
+    print('себестоимость ', n, ' труб = ', truba_seb, ' (или ', round(truba_seb / n, 1), ' за 1 шт)')
+    return truba_seb
 
 def org_sub(n: int):
     wis_stone = n * 5
@@ -75,17 +90,21 @@ def org_sub(n: int):
     el_water = wis_stone * 20
     el_powder = mag_krist * 4
     elit_stih = wis_stone * 4 + mag_krist * 2
+    org_sub_seb = elit_stih * elit_stih_cos + n * 9 * elit_catalyst + n * 12 * cost_v50
     print('Орг субстанция:')
     print('Нужно: ', wis_stone, ' камней мудрости и ', mag_krist, ' магических кристаллов')
     print('это ', elit_stih, ' элитных стих камней', el_water, ' воды и ', el_powder, ' порошка' )
+    print('себестоимость ', n, ' орг субст = ', org_sub_seb, ' (или ', round(org_sub_seb / n, 1), ' за 1 шт)')
+
+    return org_sub_seb
 
 def core(n: int):
     gems = n * 3
-    el_polirol = 13900
-    core_seb = 0
+    core_seb = gems * 3 * grind_powder + n * 15 * cost_v50
     print('Ядро:')
     print('Нужно: ', gems, ' каждого камня')
-    print('это ', gems * 3, ' полир порошка или ', gems * 3 * el_polirol, ' кинар + ', n*12, ' эфира')
+    print('это ', gems * 3, ' полир порошка или ', gems * 3 * grind_powder, ' кинар + ', n*12, ' эфира')
+    print('Себестоимость ', n, ' ядер ', core_seb, ' (или ', core_seb / n, ' за 1 шт)')
 
     return core_seb
 
