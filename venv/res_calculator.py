@@ -1,8 +1,17 @@
 """модуль для рассчета количества ресурсов для крафта осадных орудий"""
-
+mage_vortex_gold = 36000
+dren_ore = (mage_vortex_gold * 20 + 2600) / 1080
 cost_v30 = 828
 cost_v40 = 990
 cost_v50 = 1572
+
+antracide = 1765
+dren_fusion = 3531
+sew_ing = 1412
+grind_powder = 0
+catalyst = 1471
+elit_catalyst = 10063
+
 
 def calculate(n: int):
     opora(n)
@@ -26,14 +35,16 @@ def opora(n: int):
     sum_ignot = n * 65
     sum_ignot1 = sum_ignot // 10 + 1
     sum_ignot2 = sum_ignot1 * 12
+    opora_seb = round(ingot*(dren_ore + antracide) + dren_alloy * dren_fusion + n * 9 * cost_v50, 1)
     print('Опора:')
     print('нужно ', nail, 'гвоздей и ', rod, 'стержней')
     print('это ', ingot, ' слитков', ingot, ' атрацита и ', dren_alloy, ' дрен сплава')
-    print('себ слит: ', ingot*(631+1747))
-    print('или: ', ingot*(631+1747)*12/10)
     print('всего слитков надо: ', sum_ignot, ' или ', sum_ignot1, 'пакетов, если фастом(',  sum_ignot2, ')')
     print('Гвоздей ', nail)
     print('Стержней ', rod, ' и дрен сплава ', rod * 2)
+    print('себ слит: ', ingot*(dren_ore + antracide))
+    print('или фастом: ', ingot * (dren_ore + antracide) * 12 / 10)
+    print('себестоимость ', n, ' опор = ', opora_seb, ' (или ', round(opora_seb / n, 1), ' за 1 шт)')
 
 
 def kozhuh(n: int):
@@ -42,12 +53,14 @@ def kozhuh(n: int):
     big_plate = n * 3
     dren_alloy = little_plate + medium_plate * 2 + big_plate * 2
     ingot = little_plate * 2 + medium_plate * 3 + big_plate * 3
+    kozhuh_seb = ingot * antracide + dren_alloy * dren_fusion + n * 12 * cost_v50
     print('Кожух:')
     print('нужно ', little_plate, 'малых и больших пластин и ', big_plate, ' больших пластин')
     print('это ', ingot, ' слитков', ingot, ' атрацита и ', dren_alloy, ' дрен сплава')
     print('Малая пластина ', little_plate, ' днер сплава ', little_plate)
     print('Средняя пластина ', medium_plate,' днер сплава ', medium_plate * 2)
     print('Большая пластина ', big_plate, ' днер сплава ', big_plate * 2)
+    print('себестоимость ', n, ' кожухов = ', kozhuh_seb, ' (или ', round(kozhuh_seb / n, 1), ' за 1 шт)')
 
 def truba(n: int):
     kl_nosf_nit = n * 10
@@ -109,5 +122,5 @@ def ore(n: int):
     print('Можно сделать ', kol_op, ' опор или ', kol_kozh, ' кожухов')
     print('Или ', kol_sum, ' кожухов и опор')
 
-calculate(24)
-# art_stone(250)
+calculate(50)
+# art_stone(535)
