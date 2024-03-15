@@ -148,4 +148,4 @@ def ore(n: int):
     print('Или ', kol_sum, ' кожухов и опор')
 
 calculate(25)
-# art_stone(535)
+# art_stone(320)

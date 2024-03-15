@@ -42,6 +42,18 @@ class Pers():
             move_and_clic(1200, 500)
         time.sleep(11)
 
+    def select_tmp(self):
+        "функция выбора перса"
+
+        print('Выбрали ', self.name)
+        xy_tmp = images.find_coordinates('images/' + self.icon_name)
+        if xy_tmp != None:
+            x, y = xy_tmp[0], xy_tmp[1]
+            print(x, y)
+            move_and_clic(x + 24, y + 8)
+            # mouse.click('left')
+        time.sleep(2)
+
 class Item():
     """класс игрового ресурса"""
     def __init__(self, name, icon_name):
@@ -389,14 +401,14 @@ class Instructions():
 
 
 # зкземпляры класса Pers
-Pers1 = Pers('SpielSucht', "SpielSucht.png")
-Pers2 = Pers('DeadPonyClub', "DeadPonyClub.png")
-Pers3 = Pers('ХунгаМунга', "HungaMunga.png")
-Pers4 = Pers('Ребята', "Rebyata.png")
-Pers5 = Pers('KillClericFirst', "KillClericFirst.png")
-Pers6 = Pers('Хуанито', "Huanito.png")
-Pers7 = Pers('Хуанита', "Huanita.png")
-Pers8 = Pers('spbscale', "spbscale.png")
+Pers1 = Pers('pers1', "pers1.png")
+Pers2 = Pers('pers2', "pers2.png")
+Pers3 = Pers('pers3', "pers3.png")
+Pers4 = Pers('pers4', "pers4.png")
+Pers5 = Pers('pers5', "pers5.png")
+Pers6 = Pers('pers6', "pers6.png")
+Pers7 = Pers('pers7', "pers7.png")
+Pers8 = Pers('pers8', "pers8.png")
 
 # # экземпляры класса Item
 jelly = Item('jelly', 'jelly.png')
@@ -433,6 +445,7 @@ gernita = Item('gernita', 'gernita.png')
 kor_fob = Item('kor_fob', 'kor_fob.png')
 rafion = Item('rafion', 'rafion.png')
 romein = Item('romein', 'romein.png')
+pr_stih = Item('pr_stih', 'pr_stih.png')
 elit_stih = Item('elit_stih', 'elit_stih.png')
 grass60 = Item('grass60', 'grass60.png')
 besh = Item('besh', 'besh.png')
@@ -445,7 +458,7 @@ skin = Item('skin', 'skin.png')
 
 time.sleep(2)
 
-Instructions.craft_part(elit_stih)
+Instructions.craft_all(pr_stih)
 
 
 # 1280 / 1120
@@ -453,8 +466,11 @@ Instructions.craft_part(elit_stih)
 
 
 
-time.sleep(20)
-Pers7.select_pers()
+
+
+
+
+
 # Instructions.fiol_ban_x3()
 # Instructions.craft_all(romein)
 # Instructions.craft_all(besh)
