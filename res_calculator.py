@@ -43,14 +43,16 @@ def opora(n: int):
     sum_ignot = n * 65
     sum_ignot1 = sum_ignot // 10 + 1
     sum_ignot2 = sum_ignot1 * 12
+    vortex_cost = n * 9 * cost_v50
     opora_seb = round(ingot*(dren_ore + antracide) + dren_alloy * dren_fusion + n * 9 * cost_v50, 1)
-    print('Опора:')
+    print('Опора(крафтер оптимист):')
     print('нужно ', nail, 'гвоздей и ', rod, 'стержней')
-    print('это ', ingot, ' слитков', ingot, ' атрацита и ', dren_alloy, ' дрен сплава')
+    print('это ', ingot, ' слитков', ingot, ' атрацита и ', dren_alloy, ' дрен сплава. Это ', dren_alloy * dren_fusion, ' кинар')
     print('всего слитков надо: ', sum_ignot, ' или ', sum_ignot1, 'пакетов, если фастом(',  sum_ignot2, ')')
     print('Гвоздей ', nail)
     print('Стержней ', rod, ' и дрен сплава ', rod * 2)
-    print('Маг эфира: ', n * 9, ' (', n * 9 * cost_v50, ' кинар)')
+    print('Маг эфира: ', n * 9, ' (', vortex_cost, ' кинар)')
+    print('Цена эфира и дрен сплава: ', rod * 2 * dren_fusion + vortex_cost)
     print('себ слит: ', ingot*(dren_ore + antracide))
     print('или фастом: ', ingot * (dren_ore + antracide) * 12 / 10)
     print('себестоимость ', n, ' опор = ', opora_seb, ' (или ', round(opora_seb / n, 1), ' за 1 шт)')
@@ -63,15 +65,18 @@ def kozhuh(n: int):
     medium_plate = n * 4
     big_plate = n * 3
     dren_alloy = little_plate + medium_plate * 2 + big_plate * 2
+    dren_alloy_cost = dren_alloy * dren_fusion
     ingot = little_plate * 2 + medium_plate * 3 + big_plate * 3
     kozhuh_seb = ingot * antracide + dren_alloy * dren_fusion + n * 12 * cost_v50
-    print('Кожух:')
+    vortex_cost = n * 12 * cost_v50
+    print('Кожух(крафтер девочка):')
     print('нужно ', little_plate, 'малых и больших пластин и ', big_plate, ' больших пластин')
-    print('это ', ingot, ' слитков', ingot, ' атрацита и ', dren_alloy, ' дрен сплава')
+    print('это ', ingot, ' слитков', ingot, ' атрацита и ', dren_alloy, ' дрен сплава. Это ', dren_alloy_cost, ' кинар')
     print('Малая пластина ', little_plate, ' днер сплава ', little_plate)
     print('Средняя пластина ', medium_plate,' днер сплава ', medium_plate * 2)
     print('Большая пластина ', big_plate, ' днер сплава ', big_plate * 2)
-    print('Маг эфира: ', n * 12, ' (', n * 12 * cost_v50, ' кинар)')
+    print('Маг эфира: ', n * 12, ' (', vortex_cost, ' кинар)')
+    print('Цена эфира и дрен сплава: ', dren_alloy_cost + vortex_cost)
     print('себестоимость ', n, ' кожухов = ', kozhuh_seb, ' (или ', round(kozhuh_seb / n, 1), ' за 1 шт)')
 
     return kozhuh_seb
@@ -89,16 +94,20 @@ def truba(n: int):
     return truba_seb
 
 def org_sub(n: int):
-    wis_stone = n * 4
-    mag_krist = n * 5
+    mag_krist = n * 4
+    wis_stone = n * 5
     el_water = wis_stone * 20
     el_powder = mag_krist * 4
     elit_stih = wis_stone * 4 + mag_krist * 2
     org_sub_seb = elit_stih * elit_stih_cos + n * 9 * elit_catalyst + n * 12 * cost_v50
-    print('Орг субстанция:')
+    vortex_cost = n * 12 * cost_v50
+    catalyst_cost = (wis_stone + mag_krist) * elit_catalyst
+    print('Орг субстанция(крафтер RnnS):')
     print('Нужно: ', wis_stone, ' камней мудрости и ', mag_krist, ' магических кристаллов')
-    print('это ', elit_stih, ' элитных стих камней', el_water, ' воды и ', el_powder, ' порошка' )
-    print('Маг эфира: ', n * 12, ' (', n * 12 * cost_v50, ' кинар)')
+    print('это ', elit_stih, ' элитных стих камней', el_water, ' воды и ', el_powder, ' порошка')
+    print('или фастом: ', elit_stih * 1.2, ' элитных стих камней', el_water / 50, 'итераций воды и ', el_powder / 20, 'итераций порошка')
+    print('Маг эфира: ', n * 12, ' (', vortex_cost, ' кинар)')
+    print('Катализаторов ', wis_stone + mag_krist, ' это ', catalyst_cost, ' кинар. С маг эфиром: ', vortex_cost + catalyst_cost)
     print('себестоимость ', n, ' орг субст = ', org_sub_seb, ' (или ', round(org_sub_seb / n, 1), ' за 1 шт)')
 
     return org_sub_seb
@@ -147,5 +156,6 @@ def ore(n: int):
     print('Можно сделать ', kol_op, ' опор или ', kol_kozh, ' кожухов')
     print('Или ', kol_sum, ' кожухов и опор')
 
-calculate(25)
-# art_stone(320)
+calculate(50)
+# art_stone(407)
+# ore(3253)

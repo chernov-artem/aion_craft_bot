@@ -459,6 +459,7 @@ skin = Item('skin', 'skin.png')
 time.sleep(2)
 
 Instructions.craft_all(pr_stih)
+Instructions.craft_all(pr_stih)
 
 
 # 1280 / 1120
