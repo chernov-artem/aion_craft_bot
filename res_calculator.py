@@ -6,9 +6,9 @@ gems_cost = (mage_vortex_blue * 40 + 2600) / 180
 elit_stih_cos = 1500
 nosfe = 1900
 kach_skin = 1100
-cost_v30 = 828
-cost_v40 = 990
-cost_v50 = 1572
+cost_v30 = 850
+cost_v40 = 958
+cost_v50 = 1490
 
 antracide = 1765
 dren_fusion = 3531
@@ -66,7 +66,7 @@ def kozhuh(n: int):
     big_plate = n * 3
     dren_alloy = little_plate + medium_plate * 2 + big_plate * 2
     dren_alloy_cost = dren_alloy * dren_fusion
-    ingot = little_plate * 2 + medium_plate * 3 + big_plate * 3
+    ingot = little_plate * 2 + medium_plate * 3 + big_plate * 4
     kozhuh_seb = ingot * antracide + dren_alloy * dren_fusion + n * 12 * cost_v50
     vortex_cost = n * 12 * cost_v50
     print('Кожух(крафтер девочка):')
@@ -96,8 +96,8 @@ def truba(n: int):
 def org_sub(n: int):
     mag_krist = n * 4
     wis_stone = n * 5
-    el_water = wis_stone * 20
-    el_powder = mag_krist * 4
+    el_water = mag_krist * 20
+    el_powder = wis_stone  * 4
     elit_stih = wis_stone * 4 + mag_krist * 2
     org_sub_seb = elit_stih * elit_stih_cos + n * 9 * elit_catalyst + n * 12 * cost_v50
     vortex_cost = n * 12 * cost_v50
@@ -132,6 +132,7 @@ def fuel(n: int):
     print('Топливо:')
     print('Нужно: ', vortex30, ' оск эфира', vortex40, ' обыч эфира и ', vortex50, ' маг эфира + ', cold_water * 2, ' хол воды')
     print('это ', fuel_seb, ' кинар')
+    print()
 
     return  fuel_seb
 
