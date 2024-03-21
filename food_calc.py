@@ -2,6 +2,7 @@
 
 cost_v50 = 1572
 cost_v50_green = 4050
+drag_meat = 25000
 jelly = 2600
 
 cook_ing = 117
@@ -20,6 +21,10 @@ def gold_food(n: int, ing1: int, ing2: int, ing3: int) -> float:
     print('себестоимость всей еды: ', food_cost * n)
 
     return food_cost * n
+
+def drag_food(n: int, ing1: int, ing2: int, ing3: int) -> float:
+    'функция рассчета драконик еды'
+    pass
 
 gold_food(60, 1800, 1523, 2087)
 gold_food(60, res, res, res_green)

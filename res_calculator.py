@@ -6,9 +6,9 @@ gems_cost = (mage_vortex_blue * 40 + 2600) / 180
 elit_stih_cos = 1500
 nosfe = 1900
 kach_skin = 1100
-cost_v30 = 850
-cost_v40 = 958
-cost_v50 = 1490
+cost_v30 = 1100
+cost_v40 = 966
+cost_v50 = 1400
 
 antracide = 1765
 dren_fusion = 3531
@@ -158,5 +158,5 @@ def ore(n: int):
     print('Или ', kol_sum, ' кожухов и опор')
 
 calculate(50)
-# art_stone(407)
+# art_stone(1201)
 # ore(3253)
