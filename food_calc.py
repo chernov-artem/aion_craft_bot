@@ -22,10 +22,13 @@ def gold_food(n: int, ing1: int, ing2: int, ing3: int) -> float:
 
     return food_cost * n
 
-def drag_food(n: int, ing1: int, ing2: int, ing3: int) -> float:
+def drag_food_salad(n: int) -> float:
     'функция рассчета драконик еды'
-    pass
+    food_cost = drag_meat + res_green * 1.33 + cook_ing * 16 + cost_v50
+    print('себестоимость 1 салата: ', food_cost / 2)
+    print('себестоимость всей еды: ', food_cost * n)
 
 gold_food(60, 1800, 1523, 2087)
 gold_food(60, res, res, res_green)
+drag_food_salad(20)
 
