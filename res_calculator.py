@@ -76,6 +76,7 @@ def kozhuh(n: int):
     print('Средняя пластина ', medium_plate,' днер сплава ', medium_plate * 2)
     print('Большая пластина ', big_plate, ' днер сплава ', big_plate * 2)
     print('Маг эфира: ', n * 12, ' (', vortex_cost, ' кинар)')
+    print('Дрен сплава: ', dren_alloy, ' (', dren_alloy_cost, ' кинар)')
     print('Цена эфира и дрен сплава: ', dren_alloy_cost + vortex_cost)
     print('себестоимость ', n, ' кожухов = ', kozhuh_seb, ' (или ', round(kozhuh_seb / n, 1), ' за 1 шт)')
 
@@ -157,6 +158,6 @@ def ore(n: int):
     print('Можно сделать ', kol_op, ' опор или ', kol_kozh, ' кожухов')
     print('Или ', kol_sum, ' кожухов и опор')
 
-# calculate(50)
-art_stone(0, 0, 0, 1920, 640)
+calculate(80)
+# art_stone(0, 0, 0, 1920, 640)
 # ore(3253)
