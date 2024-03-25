@@ -158,6 +158,6 @@ def ore(n: int):
     print('Можно сделать ', kol_op, ' опор или ', kol_kozh, ' кожухов')
     print('Или ', kol_sum, ' кожухов и опор')
 
-calculate(80)
+calculate(100)
 # art_stone(0, 0, 0, 1920, 640)
 # ore(3253)
