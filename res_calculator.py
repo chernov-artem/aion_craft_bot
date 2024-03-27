@@ -153,11 +153,14 @@ def art_stone(n: int, mk: int = 0, ws: int = 0, water: int = 0, powder: int = 0)
 def ore(n: int):
     'функция расчета количества итемов, которые можно произвести из n слитков дрен руды'
     kol_op = n // 36
-    kol_kozh = n // 29
-    kol_sum = n // 65
+    kol_kozh = n // 32
+    kol_sum = n // 68
+    print('Себестоимость слитков = ', n * antracide)
     print('Можно сделать ', kol_op, ' опор или ', kol_kozh, ' кожухов')
     print('Или ', kol_sum, ' кожухов и опор')
+    print(kol_sum * 36, ' слитков на опоры')
+    print(kol_sum * 32, ' слитков на кожухи')
 
-calculate(100)
+calculate(79)
 # art_stone(0, 0, 0, 1920, 640)
-# ore(3253)
+# ore(1080)

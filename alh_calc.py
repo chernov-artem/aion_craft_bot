@@ -7,5 +7,6 @@ cost_v50 = 0
 jelly = 2600
 
 pr_stih = (cost_v20 * 20 + jelly) / 40
+el_stih = (cost_v50 * 20 + jelly) / 40
 
 print(pr_stih)
