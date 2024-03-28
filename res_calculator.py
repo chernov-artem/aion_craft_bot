@@ -155,12 +155,12 @@ def ore(n: int):
     kol_op = n // 36
     kol_kozh = n // 32
     kol_sum = n // 68
-    print('Себестоимость слитков = ', n * antracide)
+    print('Себестоимость слитков(только атрацита) = ', n * antracide)
     print('Можно сделать ', kol_op, ' опор или ', kol_kozh, ' кожухов')
     print('Или ', kol_sum, ' кожухов и опор')
     print(kol_sum * 36, ' слитков на опоры')
     print(kol_sum * 32, ' слитков на кожухи')
 
-calculate(79)
+# calculate(79)
 # art_stone(0, 0, 0, 1920, 640)
-# ore(1080)
+ore(2700)
