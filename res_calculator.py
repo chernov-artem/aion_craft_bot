@@ -161,6 +161,6 @@ def ore(n: int):
     print(kol_sum * 36, ' слитков на опоры')
     print(kol_sum * 32, ' слитков на кожухи')
 
-# calculate(79)
+calculate(50)
 # art_stone(0, 0, 0, 1920, 640)
-ore(2700)
+# ore(2700)

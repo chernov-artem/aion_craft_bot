@@ -455,13 +455,21 @@ tetra = Item('tetra', 'tetra.png')
 fenes = Item('fenes', 'fenes.png')
 nosfe = Item('nosfe', 'nosfe.png')
 skin = Item('skin', 'skin.png')
+dren_ore = Item('dren_ore', 'dren_ore.png')
 
 time.sleep(2)
 
-Instructions.craft_all(pr_stih)
-Instructions.craft_all(pr_stih)
+
+Instructions.craft_all(dren_ore)
 
 
+
+
+
+
+# Instructions.craft_all(rafion)
+# Instructions.craft_all(tetra)
+# Instructions.craft_all(gernita)
 # 1280 / 1120
 
 
