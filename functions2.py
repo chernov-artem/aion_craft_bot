@@ -461,6 +461,8 @@ time.sleep(2)
 
 
 Instructions.craft_all(dren_ore)
+Instructions.craft_all(dren_ore)
+
 
 
 

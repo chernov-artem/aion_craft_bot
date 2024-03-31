@@ -52,7 +52,7 @@ def opora(n: int):
     print('Гвоздей ', nail)
     print('Стержней ', rod, ' и дрен сплава ', rod * 2)
     print('Маг эфира: ', n * 9, ' (', vortex_cost, ' кинар)')
-    print('Цена эфира и дрен сплава: ', rod * 2 * dren_fusion + vortex_cost)
+    print('Цена эфира и дрен сплава: ', rod * 2 * dren_fusion + vortex_cost, ' только дрен сплав: ', rod * 2 * dren_fusion)
     print('себ слит: ', ingot*(dren_ore + antracide))
     print('или фастом: ', ingot * (dren_ore + antracide) * 12 / 10)
     print('себестоимость ', n, ' опор = ', opora_seb, ' (или ', round(opora_seb / n, 1), ' за 1 шт)')
@@ -161,6 +161,6 @@ def ore(n: int):
     print(kol_sum * 36, ' слитков на опоры')
     print(kol_sum * 32, ' слитков на кожухи')
 
-calculate(50)
+calculate(30)
 # art_stone(0, 0, 0, 1920, 640)
-# ore(2700)
+# ore(2880)
