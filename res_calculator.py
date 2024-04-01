@@ -139,16 +139,22 @@ def fuel(n: int):
 
 def art_stone(n: int, mk: int = 0, ws: int = 0, water: int = 0, powder: int = 0):
     'функция расчета количества камней акт арт из стих камней'
+    n_pack = n // 12
+    print('Посчитать фастом: введи значение: ', n_pack * 10)
     res = n // 22
     mag_kr = res * 3 + mk + water // 20
     wis_stone = res * 5 + ws + powder // 4
     kat = 11 * res + mag_kr + water // 20 + wis_stone + powder // 4
     vortex = res * 16
+
+
     print("Всего получится ", res, 'камней акт арт. Остается стих камней: ', res % 22)
     print('маг кристаллов: ', mag_kr, '(', mag_kr * 4, ' иттераций воды)')
     print('кам мудрости: ', wis_stone, '(', wis_stone * 2, ' иттераций порошка)')
     print('катализаторов: ', kat)
     print('эфира: ', vortex)
+
+
 
 def ore(n: int):
     'функция расчета количества итемов, которые можно произвести из n слитков дрен руды'
@@ -161,6 +167,6 @@ def ore(n: int):
     print(kol_sum * 36, ' слитков на опоры')
     print(kol_sum * 32, ' слитков на кожухи')
 
-calculate(30)
-# art_stone(0, 0, 0, 1920, 640)
+# calculate(30)
+art_stone(2650)
 # ore(2880)
