@@ -12,8 +12,10 @@ el_stih = (cost_v50 * 20 + jelly) / 40
 el_water = el_stih * 12 / 50
 
 gernita = (cost_v50_green * 20 + jelly) / 180
+fiol_poition = (el_water * 3 + gernita * 4 + 58 * 3) / 3
 manna_poition = el_water + gernita + 58
 manna_sale_cost = 990
+fion_poition_cost = 1600
 
 
 print(pr_stih)
@@ -21,3 +23,5 @@ print(el_water)
 print(gernita)
 print('зелье манны =', manna_poition)
 print('зелье манны  маржа=', manna_sale_cost - manna_poition)
+print('фиол банки', fiol_poition)
+print('фиол банки маржа', fion_poition_cost - fiol_poition)
