@@ -137,6 +137,30 @@ def fuel(n: int):
 
     return  fuel_seb
 
+def vendor_res(n: int):
+    "функция для подсчета количества ресурсов для заданного количества осадок"
+    dren_alloy = n * 10 + n * 18
+    paint_cost = sew_ing * n * 10
+    elit_catalyst_cost = elit_catalyst * n * 9
+    grind_powder_cost = grind_powder * n * 9
+    print('всего дрен сплава:', dren_alloy, ' это ', dren_alloy * dren_fusion, ' кинар')
+    print(n * 10, 'сплава  для оптимиста и', n * 9, ' эфира')
+    print(n * 18, ' сплава для девочки и ', n * 12, ' эфира')
+    print()
+    print(n * 10, ' элитной краски + столько же эл кож усил для GoodVibes (', paint_cost * 2,' кинар) и ', n * 12, ' эфира')
+    print(n * 9, ' элитных катализаторов для RnnS (', elit_catalyst_cost,' кинар) и ', n * 12, ' эфира')
+    print()
+    print(n * 9, ' элит. шлиф материала для Осадок (', grind_powder_cost,' кинар) и ', n * 12, ' эфира')
+    print()
+    print(n * 22, ' эфира 30, ', n * 26, ' эфира 40 и ', n * 30, ' эфира 50 для МелкойГальки')
+
+    print('Всего маг эфира: ', n * 87)
+    print('Всего кинар на ресурсы для ', n, ' осадок: ',
+          dren_alloy * dren_fusion + paint_cost * 2 + elit_catalyst_cost + grind_powder_cost, ' кинар')
+
+
+
+
 def art_stone(n: int, mk: int = 0, ws: int = 0, water: int = 0, powder: int = 0):
     'функция расчета количества камней акт арт из стих камней'
     n_pack = n // 12
@@ -167,6 +191,8 @@ def ore(n: int):
     print(kol_sum * 36, ' слитков на опоры')
     print(kol_sum * 32, ' слитков на кожухи')
 
-calculate(56)
+
 # art_stone(3849)
-# ore(3849)
+# ore(2880)
+# calculate(55)
+vendor_res(55)

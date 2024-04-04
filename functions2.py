@@ -268,7 +268,7 @@ class Instructions():
         res.click()
         create_all.click(10)
         time.sleep(85)
-        cross.click()
+        morph.click(693, -45)
         Instructions.exit_to_pers_menu()
 
     @classmethod
@@ -301,7 +301,7 @@ class Instructions():
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
-        # Instructions.craft_pers(Pers2, res)
+        Instructions.craft_pers(Pers2, res)
         Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
@@ -459,8 +459,13 @@ dren_ore = Item('dren_ore', 'dren_ore.png')
 
 time.sleep(2)
 
+morph.click(693, -45)
 
-Instructions.craft_all(dren_ore)
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(skin)
+# Instructions.craft_all(skin)
 
 
 
