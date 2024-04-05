@@ -459,26 +459,8 @@ dren_ore = Item('dren_ore', 'dren_ore.png')
 
 time.sleep(2)
 
-morph.click(693, -45)
-
-# Instructions.craft_all(nosfe)
-# Instructions.craft_all(nosfe)
-# Instructions.craft_all(nosfe)
-# Instructions.craft_all(skin)
-# Instructions.craft_all(skin)
-
-
-
-
-
-
-
-
-
 # Instructions.craft_all(rafion)
-# Instructions.craft_all(tetra)
-# Instructions.craft_all(gernita)
-# 1280 / 1120
+Instructions.craft_all(tetra)
 
 
 

@@ -2,7 +2,7 @@
 
 cost_v50 = 1100
 cost_v50_green = 3850
-drag_meat = 25000
+drag_meat = 35000
 jelly = 2600
 
 cook_ing = 117
@@ -35,7 +35,7 @@ def drag_food_ragout(n: int) -> float:
     print('себестоимость всей еды: ', food_cost * n)
 
 # gold_food(60, 1800, 1523, 2087)
-gold_food(60, res, res, res_green)
-# drag_food_salad(20)
+# gold_food(60, res, res, res_green)
+drag_food_salad(20)
 # drag_food_ragout(20)
 
