@@ -459,8 +459,10 @@ dren_ore = Item('dren_ore', 'dren_ore.png')
 
 time.sleep(2)
 
-# Instructions.craft_all(rafion)
-Instructions.craft_all(tetra)
+Instructions.craft_all(gernita)
+Instructions.craft_all(gernita)
+# Instructions.craft_all(elit_stih)
+
 
 
 
