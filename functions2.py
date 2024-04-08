@@ -301,7 +301,7 @@ class Instructions():
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
-        Instructions.craft_pers(Pers2, res)
+        # Instructions.craft_pers(Pers2, res)
         Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
@@ -429,6 +429,7 @@ rukon = Item('rukon', "rukon.png")
 diamond = Item('diamond', "diamond.png")
 morph = Item('morph', "morph.png")
 selected = Item('selected', "selected.png")
+sklad_btn = Item('stock', 'stock.png')
 sklad_leg_btn = Item('sklad_leg_btn', "sklad_leg_btn.png")
 create_all = Item('create_all', "create_all.png")
 cross = Item('cross', "cross.png")
@@ -459,9 +460,13 @@ dren_ore = Item('dren_ore', 'dren_ore.png')
 
 time.sleep(2)
 
-Instructions.craft_all(gernita)
-Instructions.craft_all(gernita)
-# Instructions.craft_all(elit_stih)
+# sklad_btn.click()
+
+
+# Instructions.craft_all(skin)
+Instructions.craft_all(elit_stih)
+# Instructions.craft_all(nosfe)
+
 
 
 
