@@ -2,6 +2,9 @@
 import mouse
 import time
 
+import pyautogui
+
+import base_functions
 import images
 from base_functions import move_and_clic, move_and_double_clic, take_part
 
@@ -152,7 +155,7 @@ class Take_res():
             move_and_clic(x + 11, y + 7)
         else:
             move_and_clic(1200, 500)
-
+    @classmethod
     def take120(cls):
         "метод взятия со склада легиона 120 шт"
         xy_tmp = images.prinat_btn()
@@ -169,7 +172,7 @@ class Take_res():
             move_and_clic(x + 11, y + 7)
         else:
             move_and_clic(1200, 500)
-
+    @classmethod
     def take140(cls):
         "метод взятия со склада легиона 140 шт"
         xy_tmp = images.prinat_btn()
@@ -186,6 +189,31 @@ class Take_res():
             move_and_clic(x + 11, y + 7)
         else:
             move_and_clic(1200, 500)
+
+    @classmethod
+    def put_morph_res_to_main_stock(self, n, big = False):
+        """метод позволяет положить все скрафченные ресурсы на главный склад
+        желе должно лежать ячейке инвентаря[1] ресурсны складываются начиная с
+        ячейки_общ_склада[1][2]
+        n - количество складываемых ресурсов
+        big - если количество стих камней больше 1000"""
+        makros_icon.click()
+        sklad_btn.click()
+
+        xy_tmp = images.find_coordinates('images/stock_sign.png')
+        x, y = xy_tmp[0], xy_tmp[1]
+        print(x, y)
+
+
+        for i in range(n):
+            base_functions.move_and_clic(x - 67 + i * 45, y + 350)
+            mouse.double_click()
+        for i in range(n):
+            base_functions.move_and_clic(x - 67 + i * 45, y + 470)
+            pyautogui.drag(0, -120, 0.6, button='left')
+        if big == True:
+            base_functions.move_and_clic(x - 157, y + 470)
+            pyautogui.drag(0, -165, 0.6, button='left')
 
 
 class Instructions():
@@ -302,7 +330,7 @@ class Instructions():
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
         # Instructions.craft_pers(Pers2, res)
-        Instructions.craft_pers(Pers3, res)
+        # Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
         Instructions.craft_pers(Pers6, res)
@@ -431,6 +459,7 @@ morph = Item('morph', "morph.png")
 selected = Item('selected', "selected.png")
 sklad_btn = Item('stock', 'stock.png')
 sklad_leg_btn = Item('sklad_leg_btn', "sklad_leg_btn.png")
+stock_sign = Item('stock_sign', 'stock_sign.png')
 create_all = Item('create_all', "create_all.png")
 cross = Item('cross', "cross.png")
 menu_btn = Item('menu_btn', "menu_btn.png")
@@ -457,14 +486,37 @@ fenes = Item('fenes', 'fenes.png')
 nosfe = Item('nosfe', 'nosfe.png')
 skin = Item('skin', 'skin.png')
 dren_ore = Item('dren_ore', 'dren_ore.png')
+gernita_icon = Item('gernita_icon', 'grass50.png')
+
 
 time.sleep(2)
 
+Take_res.put_morph_res_to_main_stock(3)
+
+
+
+# makros_icon.click()
 # sklad_btn.click()
 
+# for i in range(2):
+    # romein.click()
+    # gernita_icon.click()
+    # elit_stih.click()
+    # skin.click()
+    # nosfe.click()
 
+
+# Instructions.craft_all(romein)
+# Instructions.craft_all(gernita)
+# Instructions.craft_all(gernita)
 # Instructions.craft_all(skin)
-Instructions.craft_all(elit_stih)
+# Instructions.craft_all(skin)
+# Instructions.craft_all(skin)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(nosfe)
 # Instructions.craft_all(nosfe)
 
 
