@@ -214,6 +214,7 @@ class Take_res():
         if big == True:
             base_functions.move_and_clic(x - 157, y + 470)
             pyautogui.drag(0, -165, 0.6, button='left')
+        base_functions.move_and_clic(x + 215, y + 3)
 
 
 class Instructions():
@@ -267,22 +268,21 @@ class Instructions():
 
 
     @classmethod
-    def collect_3res(cls, pers: object):
+    def collect_3res(cls, pers: object, n = 1):
         pers.select_pers()
         makros_icon.click()
         sklad_leg_btn.click()
-        grass60.double_shift()
-        grass60.double_shift()
+        Take_res.put_morph_res_to_main_stock(n)
         Instructions.exit_to_pers_menu()
     @classmethod
-    def collect_3res_all(cls):
-        # Instructions.collect_3res(Pers2)
-        Instructions.collect_3res(Pers3)
-        Instructions.collect_3res(Pers4)
-        Instructions.collect_3res(Pers5)
-        Instructions.collect_3res(Pers6)
-        Instructions.collect_3res(Pers7)
-        Instructions.collect_3res(Pers8)
+    def collect_res_all(cls, n):
+        Instructions.collect_3res(Pers2, n)
+        Instructions.collect_3res(Pers3, n)
+        Instructions.collect_3res(Pers4, n)
+        Instructions.collect_3res(Pers5, n)
+        Instructions.collect_3res(Pers6, n)
+        Instructions.collect_3res(Pers7, n)
+        Instructions.collect_3res(Pers8, n)
 
 
 
@@ -491,7 +491,7 @@ gernita_icon = Item('gernita_icon', 'grass50.png')
 
 time.sleep(2)
 
-Take_res.put_morph_res_to_main_stock(3)
+# Take_res.put_morph_res_to_main_stock(5, True)
 
 
 
@@ -512,8 +512,8 @@ Take_res.put_morph_res_to_main_stock(3)
 # Instructions.craft_all(skin)
 # Instructions.craft_all(skin)
 # Instructions.craft_all(skin)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(nosfe)
