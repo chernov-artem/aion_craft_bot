@@ -72,7 +72,7 @@ class Item():
             print(x, y)
             move_and_clic(x + 6 + xdx, y + 6 + xdy)
         else:
-            move_and_clic(1200, 500)
+            move_and_clic(1024, 959)
         time.sleep(0.5)
 
     def take_res(self):
@@ -275,8 +275,8 @@ class Instructions():
         Take_res.put_morph_res_to_main_stock(n)
         Instructions.exit_to_pers_menu()
     @classmethod
-    def collect_res_all(cls, n):
-        Instructions.collect_3res(Pers2, n)
+    def collect_res_all(cls, n = 1):
+        # Instructions.collect_3res(Pers2, n)
         Instructions.collect_3res(Pers3, n)
         Instructions.collect_3res(Pers4, n)
         Instructions.collect_3res(Pers5, n)
@@ -493,17 +493,9 @@ time.sleep(2)
 
 # Take_res.put_morph_res_to_main_stock(5, True)
 
+Instructions.collect_res_all(1)
 
 
-# makros_icon.click()
-# sklad_btn.click()
-
-# for i in range(2):
-    # romein.click()
-    # gernita_icon.click()
-    # elit_stih.click()
-    # skin.click()
-    # nosfe.click()
 
 
 # Instructions.craft_all(romein)
@@ -512,8 +504,6 @@ time.sleep(2)
 # Instructions.craft_all(skin)
 # Instructions.craft_all(skin)
 # Instructions.craft_all(skin)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(nosfe)
