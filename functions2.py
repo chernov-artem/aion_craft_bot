@@ -75,6 +75,11 @@ class Item():
             move_and_clic(1024, 959)
         time.sleep(0.5)
 
+    def take_peace_of_vortex(self):
+        "метод взятия эфира из 1 ячейки склада"
+        self.click()
+        mouse.double_click()
+
     def take_res(self):
         "метод взятия 120 шт ресурса"
         self.click()
@@ -240,25 +245,26 @@ class Instructions():
 
     @classmethod
     def take_vortex(cls):
-        "метод взятия эфира со склада. По дефолту берет 120 зел и 140 бел эфира"
+        "метод взятия эфира со склада. Берет 1 часть эфира. Эфир нужно предварительно разбить на 7 ячеек"
         makros_icon.click()
-        sklad_leg_btn.click()
-        vortex40g.take_res()
-        vortex40g.take_res_shift()
+        time.sleep(1)
+        sklad_btn.click()
+        vortex40g.take_peace_of_vortex()
+        stock_sign.click(215, 3)
 
     @classmethod
     def take_vortex_pers(cls, pers:object):
         pers.select_pers()
         Instructions.take_vortex()
-        cross.click()
         Instructions.exit_to_pers_menu()
 
     @classmethod
-    def take_vortex_6pers(cls):
-        """метод взятия со склада эфира 6 персами
-           берет 120 зел и 140 белого эфира
-           для 8 персов нужно 960 зел эфира и 1120 белого
+    def take_vortex_7pers(cls):
+        """метод взятия со склада эфира 7 персами
+            эфир нужно предварительно разбить на 7 ячеек
+
         """
+        Instructions.take_vortex_pers(Pers2)
         Instructions.take_vortex_pers(Pers3)
         Instructions.take_vortex_pers(Pers4)
         Instructions.take_vortex_pers(Pers5)
@@ -276,7 +282,7 @@ class Instructions():
         Instructions.exit_to_pers_menu()
     @classmethod
     def collect_res_all(cls, n = 1):
-        # Instructions.collect_3res(Pers2, n)
+        Instructions.collect_3res(Pers2, n)
         Instructions.collect_3res(Pers3, n)
         Instructions.collect_3res(Pers4, n)
         Instructions.collect_3res(Pers5, n)
@@ -493,9 +499,8 @@ time.sleep(2)
 
 # Take_res.put_morph_res_to_main_stock(5, True)
 
-Instructions.collect_res_all(1)
-
-
+# Instructions.collect_res_all(1)
+Instructions.take_vortex()
 
 
 # Instructions.craft_all(romein)
