@@ -233,15 +233,6 @@ class Instructions():
         time.sleep(15)
 
 
-    @classmethod
-    def sklad(cls, name):
-        'функция работы со складом'
-        Item.name.click()
-
-    @classmethod
-    def craft(cls):
-        'метод крафта'
-        pass
 
     @classmethod
     def take_vortex(cls):
@@ -277,6 +268,7 @@ class Instructions():
     def collect_3res(cls, pers: object, n = 1):
         pers.select_pers()
         makros_icon.click()
+        time.sleep(1)
         sklad_leg_btn.click()
         Take_res.put_morph_res_to_main_stock(n)
         Instructions.exit_to_pers_menu()
@@ -497,10 +489,23 @@ gernita_icon = Item('gernita_icon', 'grass50.png')
 
 time.sleep(2)
 
+# Instructions.collect_res_all(1)
+# Instructions.collect_3res(Pers7, 1)
+# Instructions.collect_3res(Pers8, 1)
+
+
 # Take_res.put_morph_res_to_main_stock(5, True)
 
-# Instructions.collect_res_all(1)
-Instructions.take_vortex()
+Instructions.collect_res_all(2)
+# Instructions.take_vortex_7pers()
+
+Instructions.craft_all(romein)
+Instructions.craft_all(skin)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
 
 
 # Instructions.craft_all(romein)
@@ -511,9 +516,7 @@ Instructions.take_vortex()
 # Instructions.craft_all(skin)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
-# Instructions.craft_all(nosfe)
-# Instructions.craft_all(nosfe)
-
+#
 
 
 
