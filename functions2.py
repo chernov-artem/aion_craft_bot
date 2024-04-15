@@ -240,6 +240,7 @@ class Instructions():
         makros_icon.click()
         time.sleep(1)
         sklad_btn.click()
+        # проблема выбора кнопки склада возникает на 7 персе. Возможно его нужно переставить
         vortex40g.take_peace_of_vortex()
         stock_sign.click(215, 3)
 
@@ -259,7 +260,7 @@ class Instructions():
         Instructions.take_vortex_pers(Pers3)
         Instructions.take_vortex_pers(Pers4)
         Instructions.take_vortex_pers(Pers5)
-        Instructions.take_vortex_pers(Pers6)
+        Instructions.take_vortex_pers(Pers1)
         Instructions.take_vortex_pers(Pers7)
         Instructions.take_vortex_pers(Pers8)
 
@@ -496,27 +497,26 @@ time.sleep(2)
 
 # Take_res.put_morph_res_to_main_stock(5, True)
 
-Instructions.collect_res_all(2)
+# Instructions.collect_res_all(4)
 # Instructions.take_vortex_7pers()
 
 Instructions.craft_all(romein)
+Instructions.craft_all(tetra)
+Instructions.craft_all(kor_fob)
+Instructions.craft_all(daikon)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
 Instructions.craft_all(skin)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
+Instructions.craft_all(skin)
+Instructions.craft_all(skin)
 
 
-# Instructions.craft_all(romein)
-# Instructions.craft_all(gernita)
-# Instructions.craft_all(gernita)
-# Instructions.craft_all(skin)
-# Instructions.craft_all(skin)
-# Instructions.craft_all(skin)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-#
+
 
 
 
