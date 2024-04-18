@@ -328,7 +328,7 @@ class Instructions():
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
-        Instructions.craft_pers(Pers2, res)
+        # Instructions.craft_pers(Pers2, res)
         Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
@@ -436,6 +436,7 @@ Pers5 = Pers('pers5', "pers5.png")
 Pers6 = Pers('pers6', "pers6.png")
 Pers7 = Pers('pers7', "pers7.png")
 Pers8 = Pers('pers8', "pers8.png")
+Pers9 = Pers('pers9', "pers9.png")
 
 # # экземпляры класса Item
 jelly = Item('jelly', 'jelly.png')
@@ -491,8 +492,20 @@ gernita_icon = Item('gernita_icon', 'grass50.png')
 time.sleep(2)
 
 # Instructions.collect_res_all(1)
-# Instructions.collect_3res(Pers7, 1)
-# Instructions.collect_3res(Pers8, 1)
+
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(skin)
+Instructions.craft_all(skin)
+Instructions.craft_all(skin)
+
+
+
 
 
 # Take_res.put_morph_res_to_main_stock(5, True)
@@ -500,41 +513,7 @@ time.sleep(2)
 # Instructions.collect_res_all(4)
 # Instructions.take_vortex_7pers()
 
-Instructions.craft_all(romein)
-Instructions.craft_all(tetra)
-Instructions.craft_all(kor_fob)
-Instructions.craft_all(daikon)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(skin)
-Instructions.craft_all(skin)
-Instructions.craft_all(skin)
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Instructions.fiol_ban_x3()
-# Instructions.craft_all(romein)
-# Instructions.craft_all(besh)
-# Instructions.craft_all(binan)
-
-
-# Instructions.collect_3res_all()
-# Instructions.take_vortex_6pers()
+щ
 
 
 
