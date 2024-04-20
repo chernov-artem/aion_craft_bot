@@ -300,7 +300,7 @@ class Instructions():
 
     @classmethod
     def craft_all(cls, res: object):
-        'метод крафта одного ресурса всеми 8 персонажами'
+        'метод крафта одного ресурса всеми 9 персонажами'
         Instructions.craft_pers(Pers1, res)
         Instructions.craft_pers(Pers2, res)
         Instructions.craft_pers(Pers3, res)
@@ -309,20 +309,25 @@ class Instructions():
         Instructions.craft_pers(Pers6, res)
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
-        time.sleep(635)
+        Instructions.craft_pers(Pers9, res)
+        time.sleep(550)
 
     @classmethod
     def craft_all_half(cls, res: object, res2: object):
-        'метод крафта одного ресурса всеми 8 персонажами'
+        """
+        метод крафта одного ресурса всеми 9 персонажами.
+        первый ресурс делается 5 раз, второй четыре раза
+        """
         Instructions.craft_pers(Pers1, res)
         Instructions.craft_pers(Pers2, res)
         Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
-        Instructions.craft_pers(Pers5, res2)
+        Instructions.craft_pers(Pers5, res)
         Instructions.craft_pers(Pers6, res2)
         Instructions.craft_pers(Pers7, res2)
         Instructions.craft_pers(Pers8, res2)
-        time.sleep(635)
+        Instructions.craft_pers(Pers9, res2)
+        time.sleep(550)
 
     @classmethod
     def craft_part(cls, res: object):
@@ -493,17 +498,8 @@ time.sleep(2)
 
 # Instructions.collect_res_all(1)
 
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(skin)
-Instructions.craft_all(skin)
-Instructions.craft_all(skin)
-
+Instructions.craft_all_half(gernita, eode)
+Instructions.craft_all(rafion)
 
 
 
@@ -513,7 +509,7 @@ Instructions.craft_all(skin)
 # Instructions.collect_res_all(4)
 # Instructions.take_vortex_7pers()
 
-щ
+
 
 
 
