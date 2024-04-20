@@ -340,7 +340,8 @@ class Instructions():
         Instructions.craft_pers(Pers6, res)
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
-        time.sleep(830)
+        Instructions.craft_pers(Pers9, res)
+        time.sleep(745)
 
     @classmethod
     def fiol_ban(cls):
