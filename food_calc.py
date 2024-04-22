@@ -1,10 +1,9 @@
 "рассчет себестоимости еды"
 
-cost_v50 = 1100
+cost_v50 = 1340
 cost_v50_green = 3850
-drag_meat = 35000
-jelly = 2600
-
+drag_meat = 21000
+jelly = 2550
 cook_ing = 117
 
 res = round((cost_v50 * 20 + jelly) / 60, 1)
@@ -17,7 +16,7 @@ print(res_green)
 def gold_food(n: int, ing1: int, ing2: int, ing3: int) -> float:
     'функция рассчета стоимости голд еды'
     food_cost =  ing1 + ing2 + ing3 + cook_ing * 16
-    print('себестоимость 1 еды: ', food_cost)
+    print('себестоимость 1 еды: ', food_cost / 2)
     print('себестоимость всей еды: ', food_cost * n)
 
     return food_cost * n
@@ -34,8 +33,14 @@ def drag_food_ragout(n: int) -> float:
     print('себестоимость 1 рагу: ', food_cost / 2)
     print('себестоимость всей еды: ', food_cost * n)
 
+def cocktail(n:int):
+    'функция рассчитывает себестоимость коктейлся'
+    food_cost = res * 2 + cook_ing * 12
+    print('себестоимость 1 коктейля: ', food_cost / 2)
+    print('себестоимость всех коктейлей: ', food_cost * n)
+
 # gold_food(60, 1800, 1523, 2087)
 # gold_food(60, res, res, res_green)
-drag_food_salad(20)
+# drag_food_salad(20)
 # drag_food_ragout(20)
-
+cocktail(480)

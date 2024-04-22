@@ -329,6 +329,7 @@ class Instructions():
         Instructions.craft_pers(Pers9, res2)
         time.sleep(550)
 
+
     @classmethod
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
@@ -497,10 +498,21 @@ gernita_icon = Item('gernita_icon', 'grass50.png')
 
 time.sleep(2)
 
-# Instructions.collect_res_all(1)
+Instructions.craft_all(gernita)
+Instructions.craft_all(binan)
+Instructions.craft_all(besh)
+Instructions.craft_all(kor_fob)
+Instructions.craft_all(romein)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(skin)
+Instructions.craft_all(skin)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
 
-Instructions.craft_all_half(gernita, eode)
-Instructions.craft_all(rafion)
 
 
 
