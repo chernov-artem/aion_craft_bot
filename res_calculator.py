@@ -40,7 +40,7 @@ def opora(n: int):
     rod = n * 5
     ingot = nail * 2 + rod * 4
     dren_alloy = rod * 2
-    sum_ignot = n * 65
+    sum_ignot = n * 68
     sum_ignot1 = sum_ignot // 10 + 1
     sum_ignot2 = sum_ignot1 * 12
     vortex_cost = n * 9 * cost_v50
@@ -194,5 +194,5 @@ def ore(n: int):
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(6021)
-# calculate(45)
-vendor_res(60)
+calculate(60)
+# vendor_res(60)

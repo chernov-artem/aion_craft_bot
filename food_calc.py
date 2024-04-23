@@ -33,14 +33,16 @@ def drag_food_ragout(n: int) -> float:
     print('себестоимость 1 рагу: ', food_cost / 2)
     print('себестоимость всей еды: ', food_cost * n)
 
-def cocktail(n:int):
+def cocktail(n:int, cost: int = 0):
     'функция рассчитывает себестоимость коктейлся'
     food_cost = res * 2 + cook_ing * 12
+    marge = cost - (food_cost / 2)
     print('себестоимость 1 коктейля: ', food_cost / 2)
     print('себестоимость всех коктейлей: ', food_cost * n)
+    print('прибыль с 1 коктейля ', marge,' всего прибыль ', marge * n )
 
 # gold_food(60, 1800, 1523, 2087)
 # gold_food(60, res, res, res_green)
 # drag_food_salad(20)
 # drag_food_ragout(20)
-cocktail(480)
+cocktail(480, 3550)
