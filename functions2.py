@@ -407,6 +407,24 @@ class Instructions():
         Instructions.craft_all(besh)
         Instructions.craft_all(binan)
 
+    @classmethod
+    def buy_water(cls, n, x: int = 0, y: int = 0):
+        'метод ускоренной покупки воды у вендора n = 1000 шт'
+        for i in range(n):
+            mouse.move(255, 394)
+            time.sleep(0.1)
+            take_part()
+            time.sleep(0.1)
+            mouse.move(517, 339)
+            time.sleep(0.1)
+            mouse.click('left')
+            time.sleep(0.1)
+            mouse.move(561, 374)
+            time.sleep(0.1)
+            mouse.click('left')
+
+
+
 
 
 
@@ -497,20 +515,21 @@ gernita_icon = Item('gernita_icon', 'grass50.png')
 
 
 time.sleep(2)
+time.sleep(2)
 
-Instructions.craft_all(gernita)
-Instructions.craft_all(gernita)
-Instructions.craft_all(gernita)
-Instructions.craft_all(eode)
-Instructions.craft_all(romein)
-Instructions.craft_all(besh)
-Instructions.craft_all(binan)
-Instructions.craft_all(tetra)
-Instructions.craft_all(romein)
-Instructions.craft_all(tetra)
-Instructions.craft_all(kor_fob)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
+# Instructions.buy_water(20)
+
+# Instructions.craft_all(gernita)
+# Instructions.craft_all(gernita)
+# Instructions.craft_all(gernita)
+# Instructions.craft_all(tetra)
+# Instructions.craft_all(romein)
+# Instructions.craft_all(kor_fob)
+# Instructions.craft_all(besh)
+# Instructions.craft_all(binan)
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(nosfe)
 
 
 

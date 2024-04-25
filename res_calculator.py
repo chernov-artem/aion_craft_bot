@@ -146,6 +146,7 @@ def vendor_res(n: int):
     print('всего дрен сплава:', dren_alloy, ' это ', dren_alloy * dren_fusion, ' кинар')
     print(n * 10, 'сплава  для оптимиста и', n * 9, ' эфира')
     print(n * 18, ' сплава для девочки и ', n * 12, ' эфира')
+    print('Всего слитков нужно: ', n * 68)
     print()
     print(n * 10, ' элитной краски + столько же эл кож усил для GoodVibes (', paint_cost * 2,' кинар) и ', n * 12, ' эфира')
     print(n * 9, ' элитных катализаторов для RnnS (', elit_catalyst_cost,' кинар) и ', n * 12, ' эфира')
@@ -194,5 +195,5 @@ def ore(n: int):
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(6021)
-calculate(60)
-# vendor_res(60)
+calculate(100)
+# vendor_res(100)
