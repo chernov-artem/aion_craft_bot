@@ -111,27 +111,8 @@ def okka():
         move_and_clic(1200, 500)
     time.sleep(0.44)
 
-def runime():
-    "функция нажатия на рунимэ "
-    xy_tmp = images.runime()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 44, y + 7)
-    else:
-        move_and_clic(1200, 500)
-    time.sleep(0.45)
 
-def paporotnik():
-    "функция нажатия на свежий папоротник "
-    xy_tmp = images.paporotnik()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 44, y + 7)
-    else:
-        move_and_clic(1200, 500)
-    time.sleep(0.44)
+
 
 def silver():
     "функция нажатия на серебряную руду"
