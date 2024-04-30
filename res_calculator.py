@@ -5,7 +5,7 @@ dren_ore = (mage_vortex_blue * 20 + 2600) / 360
 gems_cost = (mage_vortex_blue * 40 + 2600) / 180
 cost_v30 = 1500
 cost_v40 = 1299
-cost_v50 = 1600
+cost_v50 = 1900
 elit_stih_cos = (cost_v50 * 20 + 2600) / 40
 nosfe = (cost_v50 * 20 + 2600) / 40
 kach_skin = (cost_v50 * 20 + 2600) / 40
@@ -195,5 +195,5 @@ def ore(n: int):
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(6021)
-calculate(100)
-# vendor_res(100)
+calculate(60)
+# vendor_res(60)
