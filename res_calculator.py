@@ -195,5 +195,5 @@ def ore(n: int):
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(6021)
-calculate(100)
-# vendor_res(100)
+# calculate(100)
+vendor_res(100)

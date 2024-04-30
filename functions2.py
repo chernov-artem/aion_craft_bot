@@ -519,17 +519,15 @@ time.sleep(2)
 
 # Instructions.buy_water(20)
 
-# Instructions.craft_all(gernita)
-# Instructions.craft_all(gernita)
-# Instructions.craft_all(gernita)
-# Instructions.craft_all(tetra)
-# Instructions.craft_all(romein)
-# Instructions.craft_all(kor_fob)
-# Instructions.craft_all(besh)
-# Instructions.craft_all(binan)
-# Instructions.craft_all(nosfe)
-# Instructions.craft_all(nosfe)
-# Instructions.craft_all(nosfe)
+Instructions.craft_all(dren_ore)
+Instructions.craft_all(dren_ore)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
 
 
 
