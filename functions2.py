@@ -410,6 +410,7 @@ class Instructions():
     @classmethod
     def buy_water(cls, n, x: int = 0, y: int = 0):
         'метод ускоренной покупки воды у вендора n = 1000 шт'
+        time.sleep(2)
         for i in range(n):
             mouse.move(255, 394)
             time.sleep(0.1)
@@ -513,21 +514,22 @@ skin = Item('skin', 'skin.png')
 dren_ore = Item('dren_ore', 'dren_ore.png')
 gernita_icon = Item('gernita_icon', 'grass50.png')
 
-
-time.sleep(2)
 time.sleep(2)
 
 # Instructions.buy_water(20)
 
-Instructions.craft_all(dren_ore)
-Instructions.craft_all(dren_ore)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(nosfe)
+Instructions.craft_all(kor_fob)
+Instructions.craft_all(kor_fob)
+Instructions.craft_all(gernita)
+Instructions.craft_all(rafion)
+Instructions.craft_all(romein)
+Instructions.craft_all(tetra)
+Instructions.craft_all(besh)
+Instructions.craft_all(binan)
 Instructions.craft_all(elit_stih)
 Instructions.craft_all(elit_stih)
+
+
 
 
 

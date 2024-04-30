@@ -1,14 +1,14 @@
 """модуль для рассчета количества ресурсов для крафта осадных орудий"""
-mage_vortex_gold = 36000
-mage_vortex_blue = 11500
-dren_ore = (mage_vortex_gold * 20 + 2600) / 1080
+mage_vortex_gold = 39000
+mage_vortex_blue = 13500
+dren_ore = (mage_vortex_blue * 20 + 2600) / 360
 gems_cost = (mage_vortex_blue * 40 + 2600) / 180
-elit_stih_cos = 1500
-nosfe = 1900
-kach_skin = 1100
-cost_v30 = 1100
-cost_v40 = 966
-cost_v50 = 1400
+cost_v30 = 1500
+cost_v40 = 1299
+cost_v50 = 1600
+elit_stih_cos = (cost_v50 * 20 + 2600) / 40
+nosfe = (cost_v50 * 20 + 2600) / 40
+kach_skin = (cost_v50 * 20 + 2600) / 40
 
 antracide = 1765
 dren_fusion = 3531
@@ -195,5 +195,5 @@ def ore(n: int):
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(6021)
-# calculate(100)
-vendor_res(100)
+calculate(100)
+# vendor_res(100)
