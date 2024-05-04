@@ -89,16 +89,7 @@ def sil_stih():
         move_and_clic(1200, 500)
     time.sleep(0.42)
 
-def veton():
-    "функция нажатия на свежий ветон "
-    xy_tmp = images.veton()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 44, y + 7)
-    else:
-        move_and_clic(1200, 500)
-    time.sleep(0.43)
+
 
 
 

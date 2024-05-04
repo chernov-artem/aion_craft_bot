@@ -1,11 +1,11 @@
 """модуль для рассчета количества ресурсов для крафта осадных орудий"""
 mage_vortex_gold = 39000
-mage_vortex_blue = 13500
+mage_vortex_blue = 14500
 dren_ore = (mage_vortex_blue * 20 + 2600) / 360
 gems_cost = (mage_vortex_blue * 40 + 2600) / 180
 cost_v30 = 1500
 cost_v40 = 1299
-cost_v50 = 1900
+cost_v50 = 2000
 elit_stih_cos = (cost_v50 * 20 + 2600) / 40
 nosfe = (cost_v50 * 20 + 2600) / 40
 kach_skin = (cost_v50 * 20 + 2600) / 40
@@ -132,7 +132,7 @@ def fuel(n: int):
     fuel_seb = vortex30 * cost_v30 + vortex40 * cost_v40 + vortex50 * cost_v50 + cold_water * 27
     print('Топливо:')
     print('Нужно: ', vortex30, ' оск эфира', vortex40, ' обыч эфира и ', vortex50, ' маг эфира + ', cold_water * 2, ' хол воды')
-    print('это ', fuel_seb, ' кинар')
+    print('это ', fuel_seb, ' кинар или ', fuel_seb / (n * 2), ' за 1 шт(для сборки нужно 2 шт)')
     print()
 
     return  fuel_seb
@@ -195,5 +195,5 @@ def ore(n: int):
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(6021)
-calculate(60)
+calculate(31)
 # vendor_res(60)
