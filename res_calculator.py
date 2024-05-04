@@ -33,6 +33,7 @@ def calculate(n: int):
     sum_seb = opora(n) + kozhuh(n) + truba(n) + org_sub(n) + core(n) + fuel(n)
     print()
     print('общ себестоимость: ',sum_seb, ' или (', sum_seb / n, ' за 1 шт)')
+    print('Всего маг эфира нужно: ', n * 87)
 
 
 def opora(n: int):
@@ -192,8 +193,14 @@ def ore(n: int):
     print(kol_sum * 36, ' слитков на опоры')
     print(kol_sum * 32, ' слитков на кожухи')
 
+def transfer(n: int):
+    "Функция рассчитывает потери при трансфере валюты на другой сервер. Сумма вводится в миллионах (n = 1kk )"
+    n1 = n * 0.975 * 1000000
+    print('Потери при перебросе через аук: ', n * 0.025 * 1000000, ' остается сумма: ', n1)
+
 
 # art_stone(0, 0, 0, 6720, 2240)
-# ore(6021)
-calculate(31)
-# vendor_res(60)
+# ore(3054)
+# calculate(80)
+# vendor_res(80)
+transfer(10)
