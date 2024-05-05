@@ -310,7 +310,7 @@ class Instructions():
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
         Instructions.craft_pers(Pers9, res)
-        time.sleep(550)
+        time.sleep(590)
 
     @classmethod
     def craft_all_half(cls, res: object, res2: object):
@@ -518,15 +518,18 @@ time.sleep(2)
 
 # Instructions.buy_water(18)
 
-Instructions.craft_all(gernita)
-Instructions.craft_all(gernita)
+Instructions.craft_all(dren_ore)
 Instructions.craft_all(elit_stih)
 Instructions.craft_all(elit_stih)
 Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
 Instructions.craft_all(nosfe)
 Instructions.craft_all(nosfe)
 Instructions.craft_all(nosfe)
-Instructions.craft_all(nosfe)
+Instructions.craft_all(skin)
+Instructions.craft_all(skin)
+Instructions.craft_all(skin)
+Instructions.craft_all(skin)
 
 
 
