@@ -199,10 +199,12 @@ def transfer(n: int):
     n1 = n * 0.025
     print('Потери при перебросе через аук: ', n1, ' для передачи нужно : ', n1 + n)
     kom_kun = 605
+    kun_price = 105
+
 
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(3054)
-calculate(60)
+# calculate(60)
 # vendor_res(60)
-# transfer(1)
+transfer(1)
