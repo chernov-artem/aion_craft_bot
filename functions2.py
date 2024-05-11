@@ -516,17 +516,26 @@ gernita_icon = Item('gernita_icon', 'grass50.png')
 
 time.sleep(2)
 
-# Instructions.buy_water(11)
 
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(elit_stih)
-Instructions.craft_all(besh)
-Instructions.craft_all(besh)
-Instructions.craft_all(binan)
-Instructions.craft_all(binan)
+# Instructions.buy_water(4)
 
+# Instructions.craft_all(eode)
+# Instructions.craft_all(gernita)
+# Instructions.craft_all(gernita)
+# Instructions.craft_all(gernita)
+# Instructions.craft_all(kor_fob)
+# Instructions.craft_all(kor_fob)
+# Instructions.craft_all(romein)
+# # Instructions.craft_all(romein)
+# Instructions.craft_all(rafion)
+# Instructions.craft_all(rafion)
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
 
 
 

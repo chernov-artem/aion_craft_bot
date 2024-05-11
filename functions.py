@@ -34,16 +34,7 @@ def jelly():
         move_and_clic(1200, 500)
     time.sleep(0.5)
 
-def ferera():
-    "функция нажатия на фереру"
-    xy_tmp = images.ferera()
-    if xy_tmp != None:
-        x, y = xy_tmp[0], xy_tmp[1]
-        print(x, y)
-        move_and_clic(x + 44, y + 7)
-    else:
-        move_and_clic(1200, 500)
-    time.sleep(0.4)
+
 
 def ferilla():
     "функция нажатия на свежую фериллу"
