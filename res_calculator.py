@@ -30,9 +30,9 @@ def calculate(n: int):
     core(n)
     print()
     fuel(n)
-    sum_seb = opora(n) + kozhuh(n) + truba(n) + org_sub(n) + core(n) + fuel(n)
-    print()
-    print('общ себестоимость: ',sum_seb, ' или (', sum_seb / n, ' за 1 шт)')
+    # sum_seb = opora(n) + kozhuh(n) + truba(n) + org_sub(n) + core(n) + fuel(n)
+    # print()
+    # print('общ себестоимость: ',sum_seb, ' или (', sum_seb / n, ' за 1 шт)')
     print('Всего маг эфира нужно: ', n * 87)
 
 
@@ -205,6 +205,6 @@ def transfer(n: int):
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(1403)
-# calculate(80)
-vendor_res(80)
+calculate(30)
+# vendor_res(80)
 # transfer(1)
