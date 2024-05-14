@@ -345,6 +345,20 @@ class Instructions():
         time.sleep(745)
 
     @classmethod
+    def craft_jems(cls):
+        'метод крафта одного ресурса всеми 9 персонажами'
+        Instructions.craft_pers(Pers1, biruza)
+        Instructions.craft_pers(Pers2, turmalin)
+        Instructions.craft_pers(Pers3, kelfarat)
+        Instructions.craft_pers(Pers4, dren_ore)
+        Instructions.craft_pers(Pers5, dren_ore)
+        Instructions.craft_pers(Pers6, dren_ore)
+        Instructions.craft_pers(Pers7, dren_ore)
+        Instructions.craft_pers(Pers8, dren_ore)
+        Instructions.craft_pers(Pers9, dren_ore)
+        time.sleep(590)
+
+    @classmethod
     def fiol_ban(cls):
         """метод крафта ресурсов для фиол банок 1 итерации
          960 зел эфира и 640 белого эфира"""
@@ -513,6 +527,9 @@ nosfe = Item('nosfe', 'nosfe.png')
 skin = Item('skin', 'skin.png')
 dren_ore = Item('dren_ore', 'dren_ore.png')
 gernita_icon = Item('gernita_icon', 'grass50.png')
+biruza = Item('biruza', 'biruza.png')
+turmalin = Item('turmalin', 'turmalin.png')
+kelfarat = Item('kelfarat', 'kelfarat.png')
 
 time.sleep(2)
 
