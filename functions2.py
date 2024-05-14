@@ -295,7 +295,7 @@ class Instructions():
         res.click()
         create_all.click(10)
         time.sleep(85)
-        morph.click(693, -45)
+        morph.click(684, -45)
         Instructions.exit_to_pers_menu()
 
     @classmethod
@@ -334,7 +334,7 @@ class Instructions():
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
-        # Instructions.craft_pers(Pers2, res)
+        Instructions.craft_pers(Pers2, res)
         Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
@@ -516,10 +516,16 @@ gernita_icon = Item('gernita_icon', 'grass50.png')
 
 time.sleep(2)
 
-Instructions.buy_water(6)
+# Instructions.buy_water(14)
 
 
-# Instructions.craft_all(nosfe)
+# Instructions.craft_part(elit_stih)
+# Instructions.craft_all(elit_stih)
+
+
+
+
+# Instructions.craft_all(dren_ore)
 # Instructions.craft_all(nosfe)
 
 

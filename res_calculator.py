@@ -205,6 +205,6 @@ def transfer(n: int):
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(1403)
-calculate(30)
-# vendor_res(80)
+calculate(100)
+# vendor_res(100)
 # transfer(1)
