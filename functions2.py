@@ -533,12 +533,14 @@ kelfarat = Item('kelfarat', 'kelfarat.png')
 
 time.sleep(2)
 
-Instructions.buy_water(20)
+# Instructions.buy_water(20)
 
 
 
 
-# Instructions.craft_all(nosfe)
+Instructions.craft_part(nosfe)
+Instructions.craft_all(nosfe)
+Instructions.craft_all(nosfe)
 
 
 

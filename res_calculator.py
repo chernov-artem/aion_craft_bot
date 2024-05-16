@@ -201,14 +201,27 @@ def transfer(n: int):
     kom_kun = 605
     kun_price = 105
 
-def convert_kun(n: int):
-    'функция для конвертации валюты'
-    pass
+def convert_kun(n: int, price: int = 105) -> None:
+    '''функция для конвертации валюты
+    n - количество валюты в кк
+    price - цена в кюнах за 1 кк
+    '''
+    kun_kom = 605
+    komm = n * 105 * kun_kom
+    n1 = (n * 1000000 - komm) // 1000000
+    n2 = n1 * price * 0.92
+    n3 = n2 // price
+    n3_ost = n2 % price
+
+    print(n, komm, n1, n2)
+    print(n3, n3_ost)
 
 
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(1403)
-calculate(100)
+# calculate(100)
 # vendor_res(100)
 # transfer(1)
+
+convert_kun(100)
