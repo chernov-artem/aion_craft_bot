@@ -201,6 +201,10 @@ def transfer(n: int):
     kom_kun = 605
     kun_price = 105
 
+def convert_kun(n: int):
+    'функция для конвертации валюты'
+    pass
+
 
 
 # art_stone(0, 0, 0, 6720, 2240)
