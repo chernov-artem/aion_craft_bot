@@ -538,16 +538,16 @@ time.sleep(2)
 
 
 
-Instructions.craft_part(nosfe)
-Instructions.craft_all(nosfe)
-Instructions.craft_all(nosfe)
+
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
+Instructions.craft_all(elit_stih)
 
 
 
 
 
-# Instructions.craft_all(dren_ore)
-# Instructions.craft_all(nosfe)
 
 
 

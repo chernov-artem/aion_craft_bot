@@ -160,6 +160,13 @@ def vendor_res(n: int):
     print('Всего кинар на ресурсы для ', n, ' осадок: ',
           dren_alloy * dren_fusion + paint_cost * 2 + elit_catalyst_cost + grind_powder_cost, ' кинар')
 
+    morph_res(n)
+
+def morph_res(n: int):
+    'подсчет количества иттераций ресурсов'
+    n1 = n // 10 if n >= 10 else 1
+    print('n1 = ', n1)
+
 
 
 
@@ -220,8 +227,8 @@ def convert_kun(n: int, price: int = 105) -> None:
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(1403)
-# calculate(100)
-# vendor_res(100)
+calculate(10)
+# vendor_res(10)
 # transfer(1)
 
-convert_kun(100)
+# convert_kun(100, 96)
