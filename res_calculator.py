@@ -106,7 +106,7 @@ def org_sub(n: int):
     catalyst_cost = (wis_stone + mag_krist) * elit_catalyst
     print('Орг субстанция(крафтер RnnS):')
     print('Нужно: ', wis_stone, ' камней мудрости и ', mag_krist, ' магических кристаллов')
-    print('это ', elit_stih, ' элитных стих камней', el_water, ' воды и ', el_powder, ' порошка')
+    print('это ', elit_stih, ' элитных стих камней', el_water, ' воды\33[31m(', el_water / 5, ')\33[0m и ', el_powder, ' порошка\33[31m(', el_powder / 2, ')\33[0m')
     print('или фастом: ', elit_stih * 1.2, ' элитных стих камней', el_water / 50, 'итераций воды и ', el_powder / 20, 'итераций порошка')
     print('Маг эфира: ', n * 12, ' (', vortex_cost, ' кинар)')
     print('Катализаторов ', wis_stone + mag_krist, ' это ', catalyst_cost, ' кинар. С маг эфиром: ', vortex_cost + catalyst_cost)
@@ -227,8 +227,8 @@ def convert_kun(n: int, price: int = 105) -> None:
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(1403)
-calculate(10)
-# vendor_res(10)
+calculate(65)
+# vendor_res(65)
 # transfer(1)
 
 # convert_kun(100, 96)
