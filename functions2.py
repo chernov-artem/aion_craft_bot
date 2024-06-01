@@ -533,17 +533,11 @@ kelfarat = Item('kelfarat', 'kelfarat.png')
 
 time.sleep(2)
 
-Instructions.buy_water(9)
+# Instructions.buy_water(11)
 
-
-
-
-# Instructions.craft_all(besh)
-# Instructions.craft_all(binan)
-
-
-
-
+Instructions.craft_jems()
+Instructions.craft_all(dren_ore)
+Instructions.craft_all(gernita)
 
 
 # Take_res.put_morph_res_to_main_stock(5, True)

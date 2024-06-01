@@ -19,7 +19,9 @@ elit_catalyst = 10063
 
 
 def calculate(n: int):
-    it_nosfe = n // 18 +1
+    it_nosfe = n // 18
+    it_el_stih = n // 12
+    it_jems = n // 60
     opora(n)
     print()
     kozhuh(n)
@@ -36,7 +38,9 @@ def calculate(n: int):
     # print('общ себестоимость: ',sum_seb, ' или (', sum_seb / n, ' за 1 шт)')
     print('Всего маг эфира нужно: ', n * 87)
     print()
-    print('Иттераций носфе: ', it_nosfe)
+    print('Иттераций носфе: ', it_nosfe, ' остаток ', n % 18)
+    print('Иттераций эл стих: ', it_el_stih, ' остаток ', n % 12)
+    print('Иттераций драг камней: ', it_jems, ' остаток ', n % 60)
 
 
 def opora(n: int):
@@ -230,8 +234,8 @@ def convert_kun(n: int, price: int = 105) -> None:
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(1403)
-calculate(55)
-# vendor_res(45)
+calculate(80)
+# vendor_res(55)
 # transfer(1)
 # org_sub(21)
 # convert_kun(100, 96)
