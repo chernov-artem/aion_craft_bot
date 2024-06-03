@@ -22,6 +22,7 @@ def calculate(n: int):
     it_nosfe = n // 18
     it_el_stih = n // 12
     it_jems = n // 60
+    it_dren = n // 47
     opora(n)
     print()
     kozhuh(n)
@@ -41,6 +42,8 @@ def calculate(n: int):
     print('Иттераций носфе: ', it_nosfe, ' остаток ', n % 18)
     print('Иттераций эл стих: ', it_el_stih, ' остаток ', n % 12)
     print('Иттераций драг камней: ', it_jems, ' остаток ', n % 60)
+    print('Иттераций дрен руд: ', it_dren, ' остаток ', n % 47)
+
 
 
 def opora(n: int):
@@ -235,7 +238,7 @@ def convert_kun(n: int, price: int = 105) -> None:
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(1403)
 calculate(80)
-# vendor_res(55)
+# vendor_res(80)
 # transfer(1)
 # org_sub(21)
 # convert_kun(100, 96)

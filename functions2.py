@@ -334,8 +334,8 @@ class Instructions():
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
-        Instructions.craft_pers(Pers2, res)
-        Instructions.craft_pers(Pers3, res)
+        # Instructions.craft_pers(Pers2, res)
+        # Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
         Instructions.craft_pers(Pers6, res)
@@ -533,12 +533,21 @@ kelfarat = Item('kelfarat', 'kelfarat.png')
 
 time.sleep(2)
 
-# Instructions.buy_water(11)
+# Instructions.buy_water(16)
 
-Instructions.craft_jems()
-Instructions.craft_all(dren_ore)
-Instructions.craft_all(gernita)
 
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(nosfe)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(skin)
+# Instructions.craft_all(skin)
+#
 
 # Take_res.put_morph_res_to_main_stock(5, True)
 
