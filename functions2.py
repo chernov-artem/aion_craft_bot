@@ -310,7 +310,9 @@ class Instructions():
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
         Instructions.craft_pers(Pers9, res)
-        time.sleep(590)
+        for i in range(10):
+            time.sleep(59)
+            print('прошло ', i, ' минут')
 
     @classmethod
     def craft_all_half(cls, res: object, res2: object):
@@ -536,18 +538,9 @@ time.sleep(2)
 # Instructions.buy_water(16)
 
 
-# Instructions.craft_all(nosfe)
-# Instructions.craft_all(nosfe)
-# Instructions.craft_all(nosfe)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(skin)
-# Instructions.craft_all(skin)
-#
+
+Instructions.craft_all()
+
 
 # Take_res.put_morph_res_to_main_stock(5, True)
 
