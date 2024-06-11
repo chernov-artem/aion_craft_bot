@@ -224,6 +224,8 @@ def convert_kun(n: int, price: int = 105) -> None:
     '''функция для конвертации валюты
     n - количество валюты в кк
     price - цена в кюнах за 1 кк
+    на вход идет количество лямов и цена за 1 кк на бирже кюн
+    на выходе - сколько кк получилось и остаток в кюнах
     '''
     kun_kom = 605
     komm = n * 105 * kun_kom
@@ -239,8 +241,8 @@ def convert_kun(n: int, price: int = 105) -> None:
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(1403)
-calculate(50)
-# vendor_res(50)
+calculate(100)
+# vendor_res(100)
 # transfer(1)
 # org_sub(21)
-# convert_kun(100, 96)
+convert_kun(100, 75)
