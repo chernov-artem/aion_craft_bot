@@ -454,6 +454,10 @@ class Instructions():
 
 
 
+
+
+
+
 """ сценарии крафта:
 1 крафт для жар кор фоб: 1 кор фоб, 1 св гернита 1 ромейн. Полтора часа на 960 еды 
 2 крафт для драконик еды: 1 рафион, 1 св эоде 1 час на 960 еды
@@ -535,22 +539,20 @@ kelfarat = Item('kelfarat', 'kelfarat.png')
 
 time.sleep(2)
 
-Instructions.buy_water(20)
+Instructions.buy_water(16)
 
-
-
-# Instructions.craft_all(nosfe)
-# Instructions.craft_all(nosfe)
+# Instructions.craft_jems()
 # Instructions.craft_all(nosfe)
 # Instructions.craft_all(nosfe)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(skin)
-# Instructions.craft_all(skin)
+# Instructions.craft_all_half(eode, gernita)
+# Instructions.craft_all(gernita)
+# Instructions.craft_all(besh)
+# Instructions.craft_all(binan)
+# Instructions.craft_all()
+# Instructions.craft_all()
 
 
 

@@ -1,11 +1,11 @@
 """модуль для рассчета количества ресурсов для крафта осадных орудий"""
-mage_vortex_gold = 39000
-mage_vortex_blue = 14500
+mage_vortex_gold = 42000
+mage_vortex_blue = 15500
 dren_ore = (mage_vortex_blue * 20 + 2600) / 360
 gems_cost = (mage_vortex_blue * 40 + 2600) / 180
 cost_v30 = 1500
 cost_v40 = 1299
-cost_v50 = 2000
+cost_v50 = 1800
 elit_stih_cos = (cost_v50 * 20 + 2600) / 40
 nosfe = (cost_v50 * 20 + 2600) / 40
 kach_skin = (cost_v50 * 20 + 2600) / 40
@@ -37,7 +37,7 @@ def calculate(n: int):
     # sum_seb = opora(n) + kozhuh(n) + truba(n) + org_sub(n) + core(n) + fuel(n)
     # print()
     # print('общ себестоимость: ',sum_seb, ' или (', sum_seb / n, ' за 1 шт)')
-    print('Всего маг эфира нужно: ', n * 87)
+    print('Всего маг эфира нужно: ', n * 87, ' или \33[34m', (n * 87 // 9) + 1, ' чист маг эфира\33[0m')
     print()
     print('Иттераций носфе: ', it_nosfe, ' остаток ', n % 18)
     print('Иттераций эл стих: ', it_el_stih, ' остаток ', n % 12)
@@ -241,8 +241,8 @@ def convert_kun(n: int, price: int = 105) -> None:
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(1403)
-calculate(100)
-# vendor_res(100)
+calculate(60)
+# vendor_res(80)
 # transfer(1)
 # org_sub(21)
-convert_kun(100, 75)
+# convert_kun(100, 75)
