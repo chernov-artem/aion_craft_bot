@@ -483,6 +483,16 @@ Pers6 = Pers('pers6', "pers6.png")
 Pers7 = Pers('pers7', "pers7.png")
 Pers8 = Pers('pers8', "pers8.png")
 Pers9 = Pers('pers9', "pers9.png")
+Pers10 = Pers('pers10', "pers.png")
+Pers11 = Pers('pers11', "pers.png")
+Pers12 = Pers('pers12', "pers.png")
+Pers13 = Pers('pers13', "pers.png")
+Pers14 = Pers('pers14', "pers.png")
+Pers15 = Pers('pers15', "pers.png")
+Pers16 = Pers('pers16', "pers.png")
+Pers17 = Pers('pers17', "pers.png")
+Pers18 = Pers('pers18', "pers.png")
+
 
 # # экземпляры класса Item
 jelly = Item('jelly', 'jelly.png')
