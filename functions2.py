@@ -546,10 +546,13 @@ gernita_icon = Item('gernita_icon', 'grass50.png')
 biruza = Item('biruza', 'biruza.png')
 turmalin = Item('turmalin', 'turmalin.png')
 kelfarat = Item('kelfarat', 'kelfarat.png')
+neg_almaz = Item('neg_almaz', "neg_almaz.png")
+neg_ruby = Item('neg_ruby', "neg_ruby.png")
+neg_sapfire = Item('neg_sapfire', "neg_sapfire.png")
 
 time.sleep(2)
 
-Instructions.buy_water(16)
+Instructions.buy_water(12)
 
 # Instructions.craft_jems()
 # Instructions.craft_all(nosfe)
