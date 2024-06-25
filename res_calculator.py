@@ -145,7 +145,7 @@ def fuel(n: int):
     cold_water = n * 100
     fuel_seb = vortex30 * cost_v30 + vortex40 * cost_v40 + vortex50 * cost_v50 + cold_water * 27
     print('Топливо:')
-    print('Нужно: ', vortex30, ' оск эфира', vortex40, ' обыч эфира и ', vortex50, ' маг эфира + ', cold_water * 2, ' хол воды')
+    print('Нужно: ', vortex30, ' оск эфира\33[34m(',vortex30 // 9, ')\33[0m', vortex40, ' обыч эфира и ', vortex50, ' маг эфира + ', cold_water * 2, ' хол воды')
     print('это ', fuel_seb, ' кинар или ', fuel_seb / (n * 2), ' за 1 шт(для сборки нужно 2 шт)')
     print()
 
@@ -242,8 +242,12 @@ def convert_kun(n: int, price: int = 105) -> None:
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(1403)
-calculate(1)
-# vendor_res(60)
+calculate(80)
+# vendor_res(80)
+# calculate(30)
+# vendor_res(30)
+
+
 # transfer(1)
 # org_sub(21)
 # convert_kun(100, 75)

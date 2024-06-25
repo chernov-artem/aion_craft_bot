@@ -552,7 +552,9 @@ neg_sapfire = Item('neg_sapfire', "neg_sapfire.png")
 
 time.sleep(2)
 
-Instructions.buy_water(12)
+# Instructions.buy_water(12)
+
+neg_almaz.click()
 
 # Instructions.craft_jems()
 # Instructions.craft_all(nosfe)
