@@ -45,7 +45,7 @@ def calculate(n: int):
     print('Иттераций дрен руд: ', it_dren, ' остаток ', n % 47)
     print()
     print('На преобразование маг эфира: ', (it_nosfe + it_el_stih) * 180, ' чист маг эфира: ', it_dren * 180 + it_jems * 120)
-    print('Всего синего эфира понадобится: ', (it_nosfe + it_el_stih) * 20 + it_dren * 180 + it_jems * 120 + (n * 87 // 9) + 1)
+    print('Всего синего эфира (НА ВСЁ) понадобится: ', (it_nosfe + it_el_stih) * 20 + it_dren * 180 + it_jems * 120 + (n * 87 // 9) + 1)
 
 
 
@@ -241,11 +241,11 @@ def convert_kun(n: int, price: int = 105) -> None:
 
 
 # art_stone(0, 0, 0, 6720, 2240)
-# ore(1403)
-calculate(80)
-# vendor_res(80)
+# ore(4622)
+calculate(50)
+# vendor_res(50)
 # calculate(30)
-# vendor_res(30)
+# vendor_res(20)
 
 
 # transfer(1)
