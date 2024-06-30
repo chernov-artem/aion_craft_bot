@@ -299,7 +299,7 @@ class Instructions():
         Instructions.exit_to_pers_menu()
 
     @classmethod
-    def craft_all(cls, res: object):
+    def craft_all(cls, res: object, ras = True):
         'метод крафта одного ресурса всеми 9 персонажами'
         Instructions.craft_pers(Pers1, res)
         Instructions.craft_pers(Pers2, res)
@@ -310,6 +310,22 @@ class Instructions():
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
         Instructions.craft_pers(Pers9, res)
+        for i in range(10):
+            time.sleep(59)
+            print('прошло ', i, ' минут')
+
+    @classmethod
+    def craft_all_as(cls, res: object, ras = True):
+        'метод крафта одного ресурса всеми 9 персонажами'
+        Instructions.craft_pers(Pers01, res)
+        Instructions.craft_pers(Pers02, res)
+        Instructions.craft_pers(Pers03, res)
+        Instructions.craft_pers(Pers04, res)
+        Instructions.craft_pers(Pers05, res)
+        Instructions.craft_pers(Pers06, res)
+        Instructions.craft_pers(Pers07, res)
+        Instructions.craft_pers(Pers08, res)
+        Instructions.craft_pers(Pers09, res)
         for i in range(10):
             time.sleep(59)
             print('прошло ', i, ' минут')
@@ -483,15 +499,15 @@ Pers6 = Pers('pers6', "pers6.png")
 Pers7 = Pers('pers7', "pers7.png")
 Pers8 = Pers('pers8', "pers8.png")
 Pers9 = Pers('pers9', "pers9.png")
-Pers10 = Pers('pers10', "pers.png")
-Pers11 = Pers('pers11', "pers.png")
-Pers12 = Pers('pers12', "pers.png")
-Pers13 = Pers('pers13', "pers.png")
-Pers14 = Pers('pers14', "pers.png")
-Pers15 = Pers('pers15', "pers.png")
-Pers16 = Pers('pers16', "pers.png")
-Pers17 = Pers('pers17', "pers.png")
-Pers18 = Pers('pers18', "pers.png")
+Pers01 = Pers('pers01', "pers01.png")
+Pers02 = Pers('pers02', "pers02.png")
+Pers03 = Pers('pers03', "pers03.png")
+Pers04 = Pers('pers04', "pers04.png")
+Pers05 = Pers('pers05', "pers05.png")
+Pers06 = Pers('pers06', "pers06.png")
+Pers07 = Pers('pers07', "pers07.png")
+Pers08 = Pers('pers08', "pers08.png")
+Pers09 = Pers('pers09', "pers09.png")
 
 
 # # экземпляры класса Item
@@ -552,12 +568,10 @@ neg_sapfire = Item('neg_sapfire', "neg_sapfire.png")
 
 time.sleep(2)
 
-# Instructions.buy_water(12)
+# Instructions.buy_water(10)
 
-
-# Instructions.craft_jems()
 # Instructions.craft_all(nosfe)
-# Instructions.craft_all(nosfe)
+Instructions.craft_all_as(nosfe)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
