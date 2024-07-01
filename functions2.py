@@ -377,6 +377,20 @@ class Instructions():
         time.sleep(590)
 
     @classmethod
+    def craft_jems_scroll(cls):
+        'метод крафта одного ресурса всеми 9 персонажами'
+        Instructions.craft_pers(Pers01, neg_almaz)
+        Instructions.craft_pers(Pers02, neg_almaz)
+        Instructions.craft_pers(Pers03, neg_almaz)
+        Instructions.craft_pers(Pers04, neg_almaz)
+        Instructions.craft_pers(Pers05, neg_almaz)
+        Instructions.craft_pers(Pers06, neg_ruby)
+        Instructions.craft_pers(Pers07, neg_ruby)
+        Instructions.craft_pers(Pers08, neg_sapfire)
+        Instructions.craft_pers(Pers09, neg_sapfire)
+        time.sleep(590)
+
+    @classmethod
     def fiol_ban(cls):
         """метод крафта ресурсов для фиол банок 1 итерации
          960 зел эфира и 640 белого эфира"""
@@ -565,13 +579,23 @@ kelfarat = Item('kelfarat', 'kelfarat.png')
 neg_almaz = Item('neg_almaz', "neg_almaz.png")
 neg_ruby = Item('neg_ruby', "neg_ruby.png")
 neg_sapfire = Item('neg_sapfire', "neg_sapfire.png")
+riko = Item('riko', "riko.png")
+foliata = Item('foliata', "foliata.png")
+runas = Item('runas', "runas.png")
+kano = Item('kano', "kano.png")
+
 
 time.sleep(2)
 
 # Instructions.buy_water(10)
 
+# Instructions.craft_jems_scroll()
+
+Instructions.craft_all_as(elit_stih)
+# Instructions.craft_all_as(skin)
+
 # Instructions.craft_all(nosfe)
-Instructions.craft_all_as(nosfe)
+# Instructions.craft_all_as(nosfe)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
