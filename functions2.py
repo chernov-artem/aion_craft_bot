@@ -299,7 +299,7 @@ class Instructions():
         Instructions.exit_to_pers_menu()
 
     @classmethod
-    def craft_all(cls, res: object, ras = True):
+    def craft_all(cls, res: object):
         'метод крафта одного ресурса всеми 9 персонажами'
         Instructions.craft_pers(Pers1, res)
         Instructions.craft_pers(Pers2, res)
@@ -315,7 +315,7 @@ class Instructions():
             print('прошло ', i, ' минут')
 
     @classmethod
-    def craft_all_as(cls, res: object, ras = True):
+    def craft_all_as(cls, res: object):
         'метод крафта одного ресурса всеми 9 персонажами'
         Instructions.craft_pers(Pers01, res)
         Instructions.craft_pers(Pers02, res)
@@ -594,25 +594,36 @@ tibaf = Item('tibaf', "tibaf.png")
 
 time.sleep(2)
 
-# Instructions.buy_water(12)
+# Instructions.craft_pers(Pers02, tibaf)
+# Instructions.craft_pers(Pers03, tibaf)
+# Instructions.craft_pers(Pers04, jiraka)
+# Instructions.craft_pers(Pers05, rabeno)
+# Instructions.craft_pers(Pers06, nalim)
+# Instructions.craft_pers(Pers07, sibas)
+# Instructions.craft_pers(Pers08, serin)
+# Instructions.craft_pers(Pers09, menze)
+
+
+# Instructions.buy_water(4)
 
 # Instructions.craft_jems_scroll()
+Instructions.craft_all_as()
 
-Instructions.craft_all_as(kano)
-Instructions.craft_all_as(kano)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
-Instructions.craft_all_as(skin)
+# Instructions.craft_all_as(nalim)
+# Instructions.craft_all_as(sibas)
+# Instructions.craft_all_as(jiraka)
+# Instructions.craft_all_as(tibaf)
+# Instructions.craft_all_as(tibaf)
+# Instructions.craft_all_as(rabeno)
+# Instructions.craft_all_as(rabeno)
+
+# Instructions.craft_jems_scroll()
+# Instructions.craft_jems_scroll()
+
+# Instructions.craft_all_as(kano)
+# Instructions.craft_all_as(skin)
+# Instructions.craft_all_as(riko)
+# Instructions.craft_all_as(foliata)
 
 # Instructions.craft_all(nosfe)
 # Instructions.craft_all_as(nosfe)

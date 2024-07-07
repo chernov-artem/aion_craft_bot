@@ -242,9 +242,9 @@ def convert_kun(n: int, price: int = 105) -> None:
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(4622)
-calculate(60)
+# calculate(24)
 # vendor_res(60)
-# calculate(30)
+calculate(20)
 # vendor_res(20)
 
 
