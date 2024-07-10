@@ -23,6 +23,36 @@ def find_coordinates(tmp: str) -> tuple:
     for pt in zip(*loc[::-1]):
         return pt
 
+def find_second_coordinates(tmp: str) -> tuple:
+    """функция поиска на изображении координат второго объекта
+    сначала ищет координаты первого объекта, потом делает скриншот на 30 пикселей ниже найденых координат
+    и снова ищет координаты шаблона"""
+    x,y = find_coordinates(tmp)
+    sc = pag.screenshot(region=(0, int(y + 30), int(1650 - x), int(1050 - y)))
+    sc.save('screenshot2.png')
+    # дальше идет код из find_coordinates
+    time.sleep(0.3)
+    template = cv2.imread(tmp, cv2.IMREAD_GRAYSCALE)
+    image = cv2.imread('screenshot2.png')
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Поиск совпадения
+    result = cv2.matchTemplate(gray, template, cv2.TM_CCOEFF_NORMED)
+    threshold = 0.9
+    loc = np.where(result >= threshold)
+    print(loc)
+    # добавляем координаты старые координаты y к новым координатам y
+    for pt0 in zip(*loc[::-1]):
+        pass
+
+    pt = (pt0[0] + 2, pt0[1] + y + 30)
+
+    return pt
+
+
+
+
+
 
 def pers1():
     return find_coordinates('images/SpielSucht.png')

@@ -244,8 +244,8 @@ def convert_kun(n: int, price: int = 105) -> None:
 # ore(4622)
 # calculate(24)
 # vendor_res(60)
-calculate(20)
-# vendor_res(20)
+calculate(40)
+# vendor_res(40)
 
 
 # transfer(1)

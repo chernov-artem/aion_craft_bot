@@ -75,6 +75,17 @@ class Item():
             move_and_clic(1024, 959)
         time.sleep(0.5)
 
+    def click2(self, xdx = 0, xdy = 0):
+        "функция нажатия на второй итем по координатам (кликает по вторым найденым координатам объекта)"
+        xy_tmp = images.find_second_coordinates('images/' + self.icon_name)
+        if xy_tmp != None:
+            x, y = xy_tmp[0], xy_tmp[1]
+            print(x, y)
+            move_and_clic(x + 6 + xdx, y + 6 + xdy)
+        else:
+            move_and_clic(1024, 959)
+        time.sleep(0.5)
+
     def take_peace_of_vortex(self):
         "метод взятия эфира из 1 ячейки склада"
         self.click()
@@ -352,8 +363,8 @@ class Instructions():
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
-        # Instructions.craft_pers(Pers2, res)
-        # Instructions.craft_pers(Pers3, res)
+        Instructions.craft_pers(Pers2, res)
+        Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
         Instructions.craft_pers(Pers6, res)
@@ -590,9 +601,13 @@ rabeno = Item('rabeno', "rabeno.png")
 serin = Item('serin', "serin.png")
 sibas = Item('sibas', "sibas.png")
 tibaf = Item('tibaf', "tibaf.png")
-
+gray = Item('', 'gray.png')
+# fgfd
 
 time.sleep(2)
+
+
+gray.click2()
 
 # Instructions.craft_pers(Pers02, tibaf)
 # Instructions.craft_pers(Pers03, tibaf)
@@ -604,10 +619,12 @@ time.sleep(2)
 # Instructions.craft_pers(Pers09, menze)
 
 
-# Instructions.buy_water(4)
+# Instructions.buy_water(8)
 
 # Instructions.craft_jems_scroll()
-Instructions.craft_all_as()
+# Instructions.craft_all_as(riko)
+# Instructions.craft_all_as(foliata)
+# Instructions.craft_all_as(elit_stih)
 
 # Instructions.craft_all_as(nalim)
 # Instructions.craft_all_as(sibas)
@@ -625,17 +642,14 @@ Instructions.craft_all_as()
 # Instructions.craft_all_as(riko)
 # Instructions.craft_all_as(foliata)
 
+# Instructions.craft_all(dren_ore)
 # Instructions.craft_all(nosfe)
-# Instructions.craft_all_as(nosfe)
 # Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
+# Instructions.craft_all(skin)
+
 # Instructions.craft_all_half(eode, gernita)
 # Instructions.craft_all(gernita)
-# Instructions.craft_all(besh)
-# Instructions.craft_all(binan)
-# Instructions.craft_all()
-# Instructions.craft_all()
+# Instructions.craft_all(eode)
 
 
 
