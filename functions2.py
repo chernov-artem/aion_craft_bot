@@ -363,15 +363,15 @@ class Instructions():
     def craft_part(cls, res: object):
         'метод крафта одного ресурса всеми 8 персонажами'
         # Instructions.craft_pers(Pers1, res)
-        Instructions.craft_pers(Pers2, res)
-        Instructions.craft_pers(Pers3, res)
+        # Instructions.craft_pers(Pers2, res)
+        # Instructions.craft_pers(Pers3, res)
         Instructions.craft_pers(Pers4, res)
         Instructions.craft_pers(Pers5, res)
         Instructions.craft_pers(Pers6, res)
         Instructions.craft_pers(Pers7, res)
         Instructions.craft_pers(Pers8, res)
         Instructions.craft_pers(Pers9, res)
-        time.sleep(745)
+        time.sleep(945)
 
     @classmethod
     def craft_jems(cls):
@@ -573,16 +573,20 @@ kor_fob = Item('kor_fob', 'kor_fob.png')
 rafion = Item('rafion', 'rafion.png')
 romein = Item('romein', 'romein.png')
 pr_stih = Item('pr_stih', 'pr_stih.png')
-elit_stih = Item('elit_stih', 'elit_stih.png')
+elit_stih_icon = Item('elit_stih_icon', 'elit_stih_icon.png')
+elit_stih = Item(elit_stih_icon, 'elit_stih.png')
 grass60 = Item('grass60', 'grass60.png')
 besh = Item('besh', 'besh.png')
 binan = Item('binan', 'binan.png')
 daikon = Item('daikon', 'daikon.png')
 tetra = Item('tetra', 'tetra.png')
 fenes = Item('fenes', 'fenes.png')
-nosfe = Item('nosfe', 'nosfe.png')
-skin = Item('skin', 'skin.png')
-dren_ore = Item('dren_ore', 'dren_ore.png')
+nosfe_icon = Item('nosfe_icon', 'nosfe_icon.png')
+nosfe = Item(nosfe_icon, 'nosfe.png')
+skin_icon = Item('skin_icon', 'skin_icon.png')
+skin = Item(skin_icon, 'skin.png')
+dren_ore_icon = Item('dren_ore_icon', 'dren_ore_icon.png')
+dren_ore = Item(dren_ore_icon, 'dren_ore.png')
 gernita_icon = Item('gernita_icon', 'grass50.png')
 biruza = Item('biruza', 'biruza.png')
 turmalin = Item('turmalin', 'turmalin.png')
@@ -604,10 +608,23 @@ tibaf = Item('tibaf', "tibaf.png")
 gray = Item('', 'gray.png')
 # fgfd
 
+
+def drag_res(res: object):
+    x, y = images.find_coordinates(f'images/{res.name.icon_name}')
+    print('x y = ', x, y)
+    move_and_clic(x, y)
+    mouse.double_click('left')
+    time.sleep(0.9)
+    mouse.move(50, 45)
+    time.sleep(0.9)
+    print(res.name)
+    res.name.click()
+    pyautogui.dragTo(int(x), int(y), 0.6, button='left')
+    mouse.move(35, 41)
+
 time.sleep(2)
 
 
-gray.click2()
 
 # Instructions.craft_pers(Pers02, tibaf)
 # Instructions.craft_pers(Pers03, tibaf)
@@ -644,6 +661,8 @@ gray.click2()
 
 # Instructions.craft_all(dren_ore)
 # Instructions.craft_all(nosfe)
+# Instructions.craft_part(elit_stih)
+# Instructions.craft_all(elit_stih)
 # Instructions.craft_all(elit_stih)
 # Instructions.craft_all(skin)
 
