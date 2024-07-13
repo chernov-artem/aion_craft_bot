@@ -3,12 +3,13 @@ import time
 import cv2
 import numpy as np
 
-def find_coordinates(tmp: str) -> tuple:
+def find_coordinates(tmp: str, y : int = 0) -> tuple:
     'функция поиска шаблона на изображении. Возвращает координаты'
     # Преобразование изображения в оттенки серого
     time.sleep(0.3)
     print('делаю скрин')
-    pag.screenshot('screenshot.png')
+    sc = pag.screenshot(region=(0, int(y), 1650, int(1050 - y)))
+    sc.save('screenshot.png')
     time.sleep(0.3)
     template = cv2.imread(tmp, cv2.IMREAD_GRAYSCALE)
     image = cv2.imread('screenshot.png')
@@ -48,7 +49,6 @@ def find_second_coordinates(tmp: str) -> tuple:
     pt = (pt0[0] + 2, pt0[1] + y + 30)
 
     return pt
-
 
 
 

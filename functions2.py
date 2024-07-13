@@ -64,9 +64,9 @@ class Item():
         self.name = name
         self.icon_name = icon_name
 
-    def click(self, xdx = 0, xdy = 0):
+    def click(self, xdx = 0, xdy = 0, cut = 0):
         "функция нажатия на итем"
-        xy_tmp = images.find_coordinates('images/' + self.icon_name)
+        xy_tmp = images.find_coordinates('images/' + self.icon_name, cut)
         if xy_tmp != None:
             x, y = xy_tmp[0], xy_tmp[1]
             print(x, y)
@@ -556,6 +556,7 @@ morph = Item('morph', "morph.png")
 selected = Item('selected', "selected.png")
 sklad_btn = Item('stock', 'stock.png')
 sklad_leg_btn = Item('sklad_leg_btn', "sklad_leg_btn.png")
+sklad_leg_npc = Item('sklad_leg_npc', "sklad_leg_npc.png")
 stock_sign = Item('stock_sign', 'stock_sign.png')
 create_all = Item('create_all', "create_all.png")
 cross = Item('cross', "cross.png")
@@ -624,7 +625,9 @@ def drag_res(res: object):
 
 time.sleep(2)
 
-
+# makros_icon.click()
+# sklad_leg_npc.click(0, 225)
+vortex40g.click(0, 560, 560)
 
 # Instructions.craft_pers(Pers02, tibaf)
 # Instructions.craft_pers(Pers03, tibaf)
