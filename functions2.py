@@ -627,7 +627,7 @@ time.sleep(2)
 
 # makros_icon.click()
 # sklad_leg_npc.click(0, 225)
-vortex40g.click(0, 560, 560)
+# vortex40g.click(0, 560, 560)
 
 # Instructions.craft_pers(Pers02, tibaf)
 # Instructions.craft_pers(Pers03, tibaf)
@@ -639,7 +639,7 @@ vortex40g.click(0, 560, 560)
 # Instructions.craft_pers(Pers09, menze)
 
 
-# Instructions.buy_water(8)
+# Instructions.buy_water(6)
 
 # Instructions.craft_jems_scroll()
 # Instructions.craft_all_as(riko)
