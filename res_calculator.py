@@ -238,7 +238,7 @@ def convert_kun(n: int, price: int = 105) -> None:
     print(n, komm, n1, n2)
     print(n3, n3_ost)
 
-def price_kun(price: int, n :int = 1) -> None:
+def price_kun(price: int, n :int = 1, goods: int = 1) -> None:
     'Функция рассчитывает сколько кинар стоит 1 кюна'
     kin = 1 + price * 605 * 0.000001
     print(kin)
@@ -247,15 +247,18 @@ def price_kun(price: int, n :int = 1) -> None:
     price_one_kun = round((kin /38) * 1000000)
     print('1 кюна равна ', price_one_kun, ' кинар')
     print(f'{n} кюн равно ', price_one_kun * n, ' кинар')
+    n_kun_clear = int(round(n * 0.92)) // 1
+    print(n_kun_clear, ' кюн равно ', n_kun_clear * price_one_kun, ' кинар')
+    print(f'При продаже {goods} шт, 1 шт стоит {int(round((price_one_kun * n_kun_clear) / goods))} кинар')
 
 
-price_kun(42, 100)
+# price_kun(42, 25, 148)
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(4622)
 # calculate(24)
 # vendor_res(60)
-# calculate(30)
+calculate(21)
 # vendor_res(30)
 
 

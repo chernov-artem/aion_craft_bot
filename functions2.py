@@ -310,6 +310,37 @@ class Instructions():
         Instructions.exit_to_pers_menu()
 
     @classmethod
+    def craft_pers_pro(cls, pers: object, res: object):
+        'метод крафта ресурса выбранным персонажем'
+        pers.select_pers()
+        #берем эфир со склада лега
+        makros_icon.click()
+        sklad_leg_npc.click(0, 225)
+        vortex40g.click()
+        base_functions.take_part()
+        Take_res.take20()
+        pyautogui.press('Esc', 2, 0.75)
+        #крафтим ресурсы
+        jelly.click()
+        morph.click()
+        selected.click()
+        res.click()
+        create_all.click(10)
+        time.sleep(85)
+        morph.click(684, -45)
+        #кладем ресурсы на склад лега
+        pyautogui.press('z', 2, 0.75)
+        makros_icon.click()
+        sklad_leg_npc.click(0, 225)
+        res.name.click(0, 590, 590)
+        mouse.double_click()
+        time.sleep(0.9)
+        pyautogui.press('Esc', 2, 0.75)
+        #выходим на выбор перса
+        Instructions.exit_to_pers_menu()
+
+
+    @classmethod
     def craft_all(cls, res: object):
         'метод крафта одного ресурса всеми 9 персонажами'
         Instructions.craft_pers(Pers1, res)
@@ -337,6 +368,22 @@ class Instructions():
         Instructions.craft_pers(Pers07, res)
         Instructions.craft_pers(Pers08, res)
         Instructions.craft_pers(Pers09, res)
+        for i in range(10):
+            time.sleep(59)
+            print('прошло ', i, ' минут')
+
+    @classmethod
+    def craft_all_pro_as(cls, res: object):
+        'метод крафта одного ресурса всеми 9 персонажами'
+        Instructions.craft_pers_pro(Pers01, res)
+        Instructions.craft_pers_pro(Pers02, res)
+        Instructions.craft_pers_pro(Pers03, res)
+        Instructions.craft_pers_pro(Pers04, res)
+        Instructions.craft_pers_pro(Pers05, res)
+        Instructions.craft_pers_pro(Pers06, res)
+        Instructions.craft_pers_pro(Pers07, res)
+        Instructions.craft_pers_pro(Pers08, res)
+        Instructions.craft_pers_pro(Pers09, res)
         for i in range(10):
             time.sleep(59)
             print('прошло ', i, ' минут')
@@ -483,37 +530,6 @@ class Instructions():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-""" сценарии крафта:
-1 крафт для жар кор фоб: 1 кор фоб, 1 св гернита 1 ромейн. Полтора часа на 960 еды 
-2 крафт для драконик еды: 1 рафион, 1 св эоде 1 час на 960 еды
-3 крафт для фереры: 30 мин для 960 еды
-4. 
-
-
-"""
-
-
-
-
-
-
-
 # зкземпляры класса Pers
 Pers1 = Pers('pers1', "pers1.png")
 Pers2 = Pers('pers2', "pers2.png")
@@ -566,7 +582,8 @@ prinat_btn = Item('prinat_btn', 'prinat_btn.png')
 change_pers_button = Item('change_pers_button', 'change_pers_button.png')
 blue_grass_icon = Item('blue_grass_icon', 'blue_grass_icon.png')
 red_grass_icon = Item('red_grass_icon', 'red_grass_icon.png')
-vortex40g = Item('vortex40g', 'vortex40g.png')
+vortex40g_icon = Item('vortex40g', 'vortex40g.png')
+vortex40g = Item(vortex40g_icon, 'vortex40g.png')
 makros_icon = Item('makros_icon', 'makros_icon.png')
 eode = Item('eode', 'eode.png')
 gernita = Item('gernita', 'gernita.png')
@@ -625,9 +642,17 @@ def drag_res(res: object):
 
 time.sleep(2)
 
+Instructions.craft_all_pro_as(elit_stih)
+
 # makros_icon.click()
 # sklad_leg_npc.click(0, 225)
-# vortex40g.click(0, 560, 560)
+# vortex40g.click()
+# base_functions.take_part()
+# Take_res.take20()
+# pyautogui.press('Esc', 2, 0.75)
+#
+# vortex40g.click(0, 590, 590)
+
 
 # Instructions.craft_pers(Pers02, tibaf)
 # Instructions.craft_pers(Pers03, tibaf)
