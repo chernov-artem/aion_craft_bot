@@ -421,6 +421,22 @@ class Instructions():
         time.sleep(945)
 
     @classmethod
+    def craft_part_pro_as(cls, res: object):
+        'метод крафта одного ресурса всеми 9 персонажами'
+        # Instructions.craft_pers_pro(Pers01, res)
+        # Instructions.craft_pers_pro(Pers02, res)
+        # Instructions.craft_pers_pro(Pers03, res)
+        Instructions.craft_pers_pro(Pers04, res)
+        Instructions.craft_pers_pro(Pers05, res)
+        Instructions.craft_pers_pro(Pers06, res)
+        Instructions.craft_pers_pro(Pers07, res)
+        Instructions.craft_pers_pro(Pers08, res)
+        Instructions.craft_pers_pro(Pers09, res)
+        for i in range(10):
+            time.sleep(59)
+            print('прошло ', i, ' минут')
+
+    @classmethod
     def craft_jems(cls):
         'метод крафта одного ресурса всеми 9 персонажами'
         Instructions.craft_pers(Pers1, biruza)
@@ -585,8 +601,9 @@ red_grass_icon = Item('red_grass_icon', 'red_grass_icon.png')
 vortex40g_icon = Item('vortex40g', 'vortex40g.png')
 vortex40g = Item(vortex40g_icon, 'vortex40g.png')
 makros_icon = Item('makros_icon', 'makros_icon.png')
-eode = Item('eode', 'eode.png')
-gernita = Item('gernita', 'gernita.png')
+top_grass = Item('top_grass', 'top_grass.png')
+eode = Item(top_grass, 'eode.png')
+gernita = Item(top_grass, 'gernita.png')
 kor_fob = Item('kor_fob', 'kor_fob.png')
 rafion = Item('rafion', 'rafion.png')
 romein = Item('romein', 'romein.png')
@@ -612,17 +629,26 @@ kelfarat = Item('kelfarat', 'kelfarat.png')
 neg_almaz = Item('neg_almaz', "neg_almaz.png")
 neg_ruby = Item('neg_ruby', "neg_ruby.png")
 neg_sapfire = Item('neg_sapfire', "neg_sapfire.png")
-riko = Item('riko', "riko.png")
-foliata = Item('foliata', "foliata.png")
-runas = Item('runas', "runas.png")
-kano = Item('kano', "kano.png")
-jiraka = Item('jiraka', "Jiraka.png")
-menze = Item('menze', "menze.png")
-nalim = Item('nalim', "nalim.png")
-rabeno = Item('rabeno', "rabeno.png")
-serin = Item('serin', "serin.png")
-sibas = Item('sibas', "sibas.png")
-tibaf = Item('tibaf', "tibaf.png")
+riko = Item(top_grass, "riko.png")
+foliata = Item(top_grass, "foliata.png")
+runas_icon = Item('runas_icon', "runas_icon.png")
+runas = Item(runas_icon, "runas.png")
+kano_icon = Item('kano_icon', "kano_icon.png")
+kano = Item(kano_icon, "kano.png")
+jiraka_icon = Item('jiraka_icon', "jiraka_icon.png")
+jiraka = Item(jiraka_icon, "Jiraka.png")
+menze_icon = Item('menze_icon', "menze_icon.png")
+menze = Item(menze_icon, "menze.png")
+nalim_icon = Item('nalim_icon', "nalim_icon.png")
+nalim = Item(nalim_icon, "nalim.png")
+rabeno_icon = Item('rabeno_icon', "rabeno_icon.png")
+rabeno = Item(rabeno_icon, "rabeno.png")
+serin_icon = Item('serin_icon', "serin_icon.png")
+serin = Item(serin_icon, "serin.png")
+sibas_icon = Item('sibas_icon', "sibas_icon.png")
+sibas = Item(sibas_icon, "sibas.png")
+tibaf_icon = Item('tibaf_icon', "tibaf_icon.png")
+tibaf = Item(tibaf_icon, "tibaf.png")
 gray = Item('', 'gray.png')
 # fgfd
 
@@ -642,7 +668,21 @@ def drag_res(res: object):
 
 time.sleep(2)
 
+# nalim_icon.click()
+
+
+Instructions.craft_all_pro_as(runas)
+Instructions.craft_all_pro_as(runas)
+Instructions.craft_all_pro_as(skin)
+Instructions.craft_all_pro_as(skin)
+Instructions.craft_all_pro_as(serin)
+Instructions.craft_all_pro_as(menze)
 Instructions.craft_all_pro_as(elit_stih)
+Instructions.craft_all_pro_as(elit_stih)
+Instructions.craft_all_pro_as(elit_stih)
+
+
+
 
 # makros_icon.click()
 # sklad_leg_npc.click(0, 225)
