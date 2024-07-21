@@ -314,11 +314,14 @@ class Instructions():
         'метод крафта ресурса выбранным персонажем'
         pers.select_pers()
         #берем эфир со склада лега
+        pyautogui.press('u')
+        time.sleep(0.9)
         makros_icon.click()
         sklad_leg_npc.click(0, 225)
         vortex40g.click()
         base_functions.take_part()
         Take_res.take20()
+        # Take_res.take40()
         pyautogui.press('Esc', 2, 0.75)
         #крафтим ресурсы
         jelly.click()
@@ -424,8 +427,8 @@ class Instructions():
     def craft_part_pro_as(cls, res: object):
         'метод крафта одного ресурса всеми 9 персонажами'
         # Instructions.craft_pers_pro(Pers01, res)
-        # Instructions.craft_pers_pro(Pers02, res)
-        # Instructions.craft_pers_pro(Pers03, res)
+        Instructions.craft_pers_pro(Pers02, res)
+        Instructions.craft_pers_pro(Pers03, res)
         Instructions.craft_pers_pro(Pers04, res)
         Instructions.craft_pers_pro(Pers05, res)
         Instructions.craft_pers_pro(Pers06, res)
@@ -453,15 +456,15 @@ class Instructions():
     @classmethod
     def craft_jems_scroll(cls):
         'метод крафта одного ресурса всеми 9 персонажами'
-        Instructions.craft_pers(Pers01, neg_almaz)
-        Instructions.craft_pers(Pers02, neg_almaz)
-        Instructions.craft_pers(Pers03, neg_almaz)
-        Instructions.craft_pers(Pers04, neg_almaz)
-        Instructions.craft_pers(Pers05, neg_almaz)
-        Instructions.craft_pers(Pers06, neg_ruby)
-        Instructions.craft_pers(Pers07, neg_ruby)
-        Instructions.craft_pers(Pers08, neg_sapfire)
-        Instructions.craft_pers(Pers09, neg_sapfire)
+        Instructions.craft_pers_pro(Pers01, neg_almaz)
+        Instructions.craft_pers_pro(Pers02, neg_almaz)
+        Instructions.craft_pers_pro(Pers03, neg_almaz)
+        Instructions.craft_pers_pro(Pers04, neg_almaz)
+        Instructions.craft_pers_pro(Pers05, neg_almaz)
+        Instructions.craft_pers_pro(Pers06, neg_ruby)
+        Instructions.craft_pers_pro(Pers07, neg_ruby)
+        Instructions.craft_pers_pro(Pers08, neg_sapfire)
+        Instructions.craft_pers_pro(Pers09, neg_sapfire)
         time.sleep(590)
 
     @classmethod
@@ -626,9 +629,12 @@ gernita_icon = Item('gernita_icon', 'grass50.png')
 biruza = Item('biruza', 'biruza.png')
 turmalin = Item('turmalin', 'turmalin.png')
 kelfarat = Item('kelfarat', 'kelfarat.png')
-neg_almaz = Item('neg_almaz', "neg_almaz.png")
-neg_ruby = Item('neg_ruby', "neg_ruby.png")
-neg_sapfire = Item('neg_sapfire', "neg_sapfire.png")
+neg_almaz_icon = Item('neg_almaz_icon', "neg_almaz_icon.png")
+neg_almaz = Item(neg_almaz_icon, "neg_almaz.png")
+neg_ruby_icon = Item('neg_ruby_icon', "neg_ruby_icon.png")
+neg_ruby = Item(neg_ruby_icon, "neg_ruby.png")
+neg_sapfire_icon = Item('neg_sapfire_icon', "neg_sapfire_icon.png")
+neg_sapfire = Item(neg_sapfire_icon, "neg_sapfire.png")
 riko = Item(top_grass, "riko.png")
 foliata = Item(top_grass, "foliata.png")
 runas_icon = Item('runas_icon', "runas_icon.png")
@@ -650,6 +656,8 @@ sibas = Item(sibas_icon, "sibas.png")
 tibaf_icon = Item('tibaf_icon', "tibaf_icon.png")
 tibaf = Item(tibaf_icon, "tibaf.png")
 gray = Item('', 'gray.png')
+botle_icon = Item('botle_icon', 'botle_icon.png')
+
 # fgfd
 
 
@@ -668,83 +676,35 @@ def drag_res(res: object):
 
 time.sleep(2)
 
-# nalim_icon.click()
-
-
-Instructions.craft_all_pro_as(runas)
-Instructions.craft_all_pro_as(runas)
-Instructions.craft_all_pro_as(skin)
-Instructions.craft_all_pro_as(skin)
-Instructions.craft_all_pro_as(serin)
-Instructions.craft_all_pro_as(menze)
-Instructions.craft_all_pro_as(elit_stih)
-Instructions.craft_all_pro_as(elit_stih)
-Instructions.craft_all_pro_as(elit_stih)
-
-
-
-
-# makros_icon.click()
-# sklad_leg_npc.click(0, 225)
-# vortex40g.click()
-# base_functions.take_part()
-# Take_res.take20()
-# pyautogui.press('Esc', 2, 0.75)
-#
-# vortex40g.click(0, 590, 590)
-
-
-# Instructions.craft_pers(Pers02, tibaf)
-# Instructions.craft_pers(Pers03, tibaf)
-# Instructions.craft_pers(Pers04, jiraka)
-# Instructions.craft_pers(Pers05, rabeno)
-# Instructions.craft_pers(Pers06, nalim)
-# Instructions.craft_pers(Pers07, sibas)
-# Instructions.craft_pers(Pers08, serin)
-# Instructions.craft_pers(Pers09, menze)
-
-
-# Instructions.buy_water(6)
-
-# Instructions.craft_jems_scroll()
-# Instructions.craft_all_as(riko)
-# Instructions.craft_all_as(foliata)
-# Instructions.craft_all_as(elit_stih)
-
-# Instructions.craft_all_as(nalim)
-# Instructions.craft_all_as(sibas)
-# Instructions.craft_all_as(jiraka)
-# Instructions.craft_all_as(tibaf)
-# Instructions.craft_all_as(tibaf)
-# Instructions.craft_all_as(rabeno)
-# Instructions.craft_all_as(rabeno)
-
-# Instructions.craft_jems_scroll()
 # Instructions.craft_jems_scroll()
 
-# Instructions.craft_all_as(kano)
-# Instructions.craft_all_as(skin)
-# Instructions.craft_all_as(riko)
-# Instructions.craft_all_as(foliata)
 
-# Instructions.craft_all(dren_ore)
-# Instructions.craft_all(nosfe)
-# Instructions.craft_part(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(elit_stih)
-# Instructions.craft_all(skin)
+# Instructions.craft_all_pro_as(riko)
+# Instructions.craft_all_pro_as(foliata)
+# Instructions.craft_all_pro_as(tibaf)
+# Instructions.craft_all_pro_as(jiraka)
+# Instructions.craft_all_pro_as(serin)
+# Instructions.craft_all_pro_as(menze)
+# Instructions.craft_all_pro_as(elit_stih)
+# Instructions.craft_all_pro_as(elit_stih)
+# Instructions.craft_all_pro_as(elit_stih)
+# Instructions.craft_all_pro_as(elit_stih)
+# Instructions.craft_all_pro_as(runas)
+# Instructions.craft_all_pro_as(skin)
+# Instructions.craft_all_pro_as(skin)
+# Instructions.craft_all_pro_as(serin)
+# Instructions.craft_all_pro_as(menze)
+# Instructions.craft_all_pro_as(elit_stih)
+# Instructions.craft_all_pro_as(elit_stih)
+# Instructions.craft_all_pro_as(elit_stih)
 
-# Instructions.craft_all_half(eode, gernita)
-# Instructions.craft_all(gernita)
-# Instructions.craft_all(eode)
+
+# botle_icon.click()
 
 
 
-# Take_res.put_morph_res_to_main_stock(5, True)
 
-# Instructions.collect_res_all(4)
-# Instructions.take_vortex_7pers()
-
+# Instructions.buy_water(12)
 
 
 
