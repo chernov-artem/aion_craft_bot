@@ -312,13 +312,28 @@ class Instructions():
     @classmethod
     def craft_pers_pro(cls, pers: object, res: object):
         'метод крафта ресурса выбранным персонажем'
+
+        def sklad_leg():
+            'функция открытия склада легиона'
+            pyautogui.press('u')
+            time.sleep(1.2)
+            makros_icon.click()
+            time.sleep(1)
+            mouse.double_click('left')
+            time.sleep(1.5)
+            sklad_leg_npc.click(0, 225)
+            pyautogui.press('u')
+
         pers.select_pers()
         #берем эфир со склада лега
-        pyautogui.press('u')
-        time.sleep(0.9)
-        makros_icon.click()
-        sklad_leg_npc.click(0, 225)
-        vortex40g.click()
+        time.sleep(1.9)
+        sklad_leg()
+        if res == dren_ore:
+            vortex50b.click()
+            'синий эфир'
+        else:
+            vortex40g.click()
+            'обычный эфир'
         base_functions.take_part()
         Take_res.take20()
         # Take_res.take40()
@@ -333,8 +348,7 @@ class Instructions():
         morph.click(684, -45)
         #кладем ресурсы на склад лега
         pyautogui.press('z', 2, 0.75)
-        makros_icon.click()
-        sklad_leg_npc.click(0, 225)
+        sklad_leg()
         res.name.click(0, 590, 590)
         mouse.double_click()
         time.sleep(0.9)
@@ -601,6 +615,7 @@ prinat_btn = Item('prinat_btn', 'prinat_btn.png')
 change_pers_button = Item('change_pers_button', 'change_pers_button.png')
 blue_grass_icon = Item('blue_grass_icon', 'blue_grass_icon.png')
 red_grass_icon = Item('red_grass_icon', 'red_grass_icon.png')
+vortex50b = Item("vortex50b", 'vortex50b.png')
 vortex40g_icon = Item('vortex40g', 'vortex40g.png')
 vortex40g = Item(vortex40g_icon, 'vortex40g.png')
 makros_icon = Item('makros_icon', 'makros_icon.png')
@@ -676,7 +691,8 @@ def drag_res(res: object):
 
 time.sleep(2)
 
-# Instructions.craft_jems_scroll()
+Instructions.craft_jems_scroll()
+
 
 
 # Instructions.craft_all_pro_as(riko)
@@ -689,6 +705,7 @@ time.sleep(2)
 # Instructions.craft_all_pro_as(elit_stih)
 # Instructions.craft_all_pro_as(elit_stih)
 # Instructions.craft_all_pro_as(elit_stih)
+# Instructions.craft_all_pro_as(runas)
 # Instructions.craft_all_pro_as(runas)
 # Instructions.craft_all_pro_as(skin)
 # Instructions.craft_all_pro_as(skin)
