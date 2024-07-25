@@ -335,8 +335,11 @@ class Instructions():
             vortex40g.click()
             'обычный эфир'
         base_functions.take_part()
-        Take_res.take20()
-        # Take_res.take40()
+
+        if res == neg_almaz or res == neg_ruby or res == neg_sapfire:
+            Take_res.take40()
+        else:
+            Take_res.take20()
         pyautogui.press('Esc', 2, 0.75)
         #крафтим ресурсы
         jelly.click()
@@ -441,7 +444,7 @@ class Instructions():
     def craft_part_pro_as(cls, res: object):
         'метод крафта одного ресурса всеми 9 персонажами'
         # Instructions.craft_pers_pro(Pers01, res)
-        Instructions.craft_pers_pro(Pers02, res)
+        # Instructions.craft_pers_pro(Pers02, res)
         Instructions.craft_pers_pro(Pers03, res)
         Instructions.craft_pers_pro(Pers04, res)
         Instructions.craft_pers_pro(Pers05, res)
@@ -691,9 +694,12 @@ def drag_res(res: object):
 
 time.sleep(2)
 
-Instructions.craft_jems_scroll()
+# Instructions.craft_jems_scroll()
+# Instructions.craft_jems_scroll()
+# Instructions.craft_jems_scroll()
 
-
+# Instructions.craft_part_pro_as(elit_stih)
+# Instructions.craft_part_pro_as(elit_stih)
 
 # Instructions.craft_all_pro_as(riko)
 # Instructions.craft_all_pro_as(foliata)
@@ -707,6 +713,8 @@ Instructions.craft_jems_scroll()
 # Instructions.craft_all_pro_as(elit_stih)
 # Instructions.craft_all_pro_as(runas)
 # Instructions.craft_all_pro_as(runas)
+# Instructions.craft_all_pro_as(runas)
+# Instructions.craft_all_pro_as(skin)
 # Instructions.craft_all_pro_as(skin)
 # Instructions.craft_all_pro_as(skin)
 # Instructions.craft_all_pro_as(serin)

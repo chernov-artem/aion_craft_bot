@@ -207,9 +207,11 @@ def ore(n: int):
     kol_op = n // 36
     kol_kozh = n // 32
     kol_sum = n // 68
+    kol_sum_fast = (n // 12) * 10
     print('Себестоимость слитков(только атрацита) = ', n * antracide)
     print('Можно сделать ', kol_op, ' опор или ', kol_kozh, ' кожухов')
     print('Или ', kol_sum, ' кожухов и опор')
+    print('Или ', kol_sum_fast, ' кожухов и опор фастом')
     print(kol_sum * 36, ' слитков на опоры')
     print(kol_sum * 32, ' слитков на кожухи')
 
@@ -252,17 +254,18 @@ def price_kun(price: int, n :int = 1, goods: int = 1) -> None:
     print(f'При продаже {goods} шт, 1 шт стоит {int(round((price_one_kun * n_kun_clear) / goods))} кинар')
 
 
-price_kun(40, 10, 31)
+# price_kun(42, 149, 1000)
 # price_kun(40, 16, 107)
 
 # art_stone(0, 0, 0, 6720, 2240)
-# ore(4622)
+ore(2520)
 # calculate(24)
 # vendor_res(60)
-# calculate(60)
+# calculate(59)
 # vendor_res(60)
 
 
 # transfer(1)
 # org_sub(21)
 # convert_kun(100, 75)
+
