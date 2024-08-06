@@ -1,15 +1,14 @@
 """модуль для рассчета количества ресурсов для крафта осадных орудий"""
 mage_vortex_gold = 42000
-mage_vortex_blue = 15500
+mage_vortex_blue = 16000
 dren_ore = (mage_vortex_blue * 20 + 2600) / 360
 gems_cost = (mage_vortex_blue * 40 + 2600) / 180
 cost_v30 = 1500
 cost_v40 = 1299
-cost_v50 = 1800
+cost_v50 = 2050
 elit_stih_cos = (cost_v50 * 20 + 2600) / 40
 nosfe = (cost_v50 * 20 + 2600) / 40
 kach_skin = (cost_v50 * 20 + 2600) / 40
-
 antracide = 1765
 dren_fusion = 3531
 sew_ing = 1412
@@ -61,7 +60,7 @@ def opora(n: int):
     opora_seb = round(ingot*(dren_ore + antracide) + dren_alloy * dren_fusion + n * 9 * cost_v50, 1)
     print('Опора(крафтер оптимист):')
     print('нужно ', nail, 'гвоздей и ', rod, 'стержней')
-    print('это ', ingot, ' слитков', ingot, ' атрацита и ', dren_alloy, ' дрен сплава. Это ', dren_alloy * dren_fusion, ' кинар')
+    print('это ', ingot, ' слитков(', ingot * 1.2, ')фаст', ingot, ' атрацита и ', dren_alloy, ' дрен сплава. Это ', dren_alloy * dren_fusion, ' кинар')
     print('всего слитков надо: ', sum_ignot, ' или ', sum_ignot1, 'пакетов, если фастом(',  sum_ignot2, ')')
     print('Гвоздей ', nail)
     print('Стержней ', rod, ' и дрен сплава ', rod * 2)
@@ -85,7 +84,7 @@ def kozhuh(n: int):
     vortex_cost = n * 12 * cost_v50
     print('Кожух(крафтер девочка):')
     print('нужно ', little_plate, 'малых и больших пластин и ', big_plate, ' больших пластин')
-    print('это ', ingot, ' слитков', ingot, ' атрацита и ', dren_alloy, ' дрен сплава. Это ', dren_alloy_cost, ' кинар')
+    print('это ', ingot, ' слитков(', ingot * 1.2, ')фаст', ingot, ' атрацита и ', dren_alloy, ' дрен сплава. Это ', dren_alloy_cost, ' кинар')
     print('Малая пластина ', little_plate, ' днер сплава ', little_plate)
     print('Средняя пластина ', medium_plate,' днер сплава ', medium_plate * 2)
     print('Большая пластина ', big_plate, ' днер сплава ', big_plate * 2)
@@ -160,7 +159,7 @@ def vendor_res(n: int):
     print('всего дрен сплава:', dren_alloy, ' это ', dren_alloy * dren_fusion, ' кинар')
     print(n * 10, 'сплава  для оптимиста и', n * 9, ' эфира')
     print(n * 18, ' сплава для девочки и ', n * 12, ' эфира')
-    print('Всего слитков нужно: ', n * 68)
+    print('Всего слитков нужно: ', n * 68, '(', n * 68 * 1.2 ,') фаст')
     print()
     print(n * 10, ' элитной краски + столько же эл кож усил для GoodVibes (', paint_cost * 2,' кинар) и ', n * 12, ' эфира')
     print(n * 9, ' элитных катализаторов для RnnS (', elit_catalyst_cost,' кинар) и ', n * 12, ' эфира')
@@ -211,7 +210,7 @@ def ore(n: int):
     print('Себестоимость слитков(только атрацита) = ', n * antracide)
     print('Можно сделать ', kol_op, ' опор или ', kol_kozh, ' кожухов')
     print('Или ', kol_sum, ' кожухов и опор')
-    print('Или ', kol_sum_fast, ' кожухов и опор фастом')
+    print('Или ', kol_sum_fast // 68, ' кожухов и опор фастом')
     print(kol_sum * 36, ' слитков на опоры')
     print(kol_sum * 32, ' слитков на кожухи')
 
@@ -254,18 +253,18 @@ def price_kun(price: int, n :int = 1, goods: int = 1) -> None:
     print(f'При продаже {goods} шт, 1 шт стоит {int(round((price_one_kun * n_kun_clear) / goods))} кинар')
 
 
-# price_kun(42, 149, 1000)
+# price_kun(50, 100, 200)
 # price_kun(40, 16, 107)
 
 # art_stone(0, 0, 0, 6720, 2240)
-ore(2520)
-# calculate(24)
-# vendor_res(60)
-# calculate(59)
-# vendor_res(60)
+# ore(2520)
+# calculate(40)
+vendor_res(40)
+# calculate(22)
+# vendor_res(80)
 
 
 # transfer(1)
-# org_sub(21)
+# org_sub(9)
 # convert_kun(100, 75)
 

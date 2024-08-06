@@ -321,7 +321,13 @@ class Instructions():
             time.sleep(1)
             mouse.double_click('left')
             time.sleep(1.5)
-            sklad_leg_npc.click(0, 225)
+            if images.find_coordinates('images/sklad_leg_npc.png') != None:
+                sklad_leg_npc.click(0, 225)
+            else:
+                time.sleep(3)
+                makros_icon.click()
+                time.sleep(2)
+                sklad_leg_npc.click()
             pyautogui.press('u')
 
         pers.select_pers()
@@ -443,10 +449,10 @@ class Instructions():
     @classmethod
     def craft_part_pro_as(cls, res: object):
         'метод крафта одного ресурса всеми 9 персонажами'
-        # Instructions.craft_pers_pro(Pers01, res)
-        # Instructions.craft_pers_pro(Pers02, res)
-        Instructions.craft_pers_pro(Pers03, res)
-        Instructions.craft_pers_pro(Pers04, res)
+        Instructions.craft_pers_pro(Pers01, res)
+        Instructions.craft_pers_pro(Pers02, res)
+        # Instructions.craft_pers_pro(Pers03, res)
+        # Instructions.craft_pers_pro(Pers04, res)
         Instructions.craft_pers_pro(Pers05, res)
         Instructions.craft_pers_pro(Pers06, res)
         Instructions.craft_pers_pro(Pers07, res)
@@ -698,13 +704,19 @@ time.sleep(2)
 # Instructions.craft_jems_scroll()
 # Instructions.craft_jems_scroll()
 
-# Instructions.craft_part_pro_as(elit_stih)
+
+
+# CRAFT PART!!!
+# Instructions.craft_part_pro_as(dren_ore)
 # Instructions.craft_part_pro_as(elit_stih)
 
 # Instructions.craft_all_pro_as(riko)
-# Instructions.craft_all_pro_as(foliata)
+Instructions.craft_all_pro_as(foliata)
 # Instructions.craft_all_pro_as(tibaf)
 # Instructions.craft_all_pro_as(jiraka)
+# Instructions.craft_all_pro_as(nalim)
+# Instructions.craft_all_pro_as(rabeno)
+# Instructions.craft_all_pro_as(sibas)
 # Instructions.craft_all_pro_as(serin)
 # Instructions.craft_all_pro_as(menze)
 # Instructions.craft_all_pro_as(elit_stih)
@@ -714,6 +726,10 @@ time.sleep(2)
 # Instructions.craft_all_pro_as(runas)
 # Instructions.craft_all_pro_as(runas)
 # Instructions.craft_all_pro_as(runas)
+# Instructions.craft_all_pro_as(skin)
+# Instructions.craft_all_pro_as(skin)
+# Instructions.craft_all_pro_as(skin)
+# Instructions.craft_all_pro_as(skin)
 # Instructions.craft_all_pro_as(skin)
 # Instructions.craft_all_pro_as(skin)
 # Instructions.craft_all_pro_as(skin)
@@ -729,7 +745,7 @@ time.sleep(2)
 
 
 
-# Instructions.buy_water(12)
+Instructions.buy_water(12)
 
 
 
