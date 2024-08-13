@@ -326,8 +326,10 @@ class Instructions():
             else:
                 time.sleep(3)
                 pyautogui.press('u')
+                pyautogui.press('Esc')
                 sist_menu.click(15, -343)
-                makros_u.click(-140, 95)
+                makros_u.click(30, 90)
+                mouse.double_click('left')
                 time.sleep(2)
                 sklad_leg_npc.click(0, 225)
             pyautogui.press('u')
