@@ -315,9 +315,9 @@ class Instructions():
 
         def sklad_leg():
             'функция открытия склада легиона'
-            pyautogui.press('u')
-            time.sleep(1.2)
-            makros_icon.click()
+            menu_btn.click()
+            sist_menu.click(15, -343)
+            makros_u.click(-140, 95)
             time.sleep(1)
             mouse.double_click('left')
             time.sleep(1.5)
@@ -325,7 +325,8 @@ class Instructions():
                 sklad_leg_npc.click(0, 225)
             else:
                 time.sleep(3)
-                makros_icon.click()
+                sist_menu.click(15, -343)
+                makros_u.click(-140, 95)
                 time.sleep(2)
                 sklad_leg_npc.click()
             pyautogui.press('u')
@@ -628,7 +629,7 @@ vortex50b = Item("vortex50b", 'vortex50b.png')
 vortex40g_icon = Item('vortex40g', 'vortex40g.png')
 vortex40g = Item(vortex40g_icon, 'vortex40g.png')
 makros_icon = Item('makros_icon', 'makros_icon.png')
-makrosU = Item('makrosU', 'makrosU.png')
+makros_u = Item('makrosU', 'makrosU.png')
 top_grass = Item('top_grass', 'top_grass.png')
 eode = Item(top_grass, 'eode.png')
 gernita = Item(top_grass, 'gernita.png')
@@ -702,17 +703,18 @@ def drag_res(res: object):
 time.sleep(2)
 
 # Instructions.craft_jems_scroll()
-# Instructions.craft_jems_scroll()
-# Instructions.craft_jems_scroll()
 
-makrosU.click(-140, 95)
-mouse.double_click()
+
+
+
+
+
 
 # CRAFT PART!!!
 # Instructions.craft_part_pro_as(dren_ore)
 # Instructions.craft_part_pro_as(elit_stih)
 
-Instructions.craft_all_pro_as(riko)
+# Instructions.craft_all_pro_as(riko)
 # Instructions.craft_all_pro_as(foliata)
 # Instructions.craft_all_pro_as(tibaf)
 # Instructions.craft_all_pro_as(tibaf)
