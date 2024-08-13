@@ -410,9 +410,9 @@ class Instructions():
         Instructions.craft_pers_pro(Pers07, res)
         Instructions.craft_pers_pro(Pers08, res)
         Instructions.craft_pers_pro(Pers09, res)
-        for i in range(10):
-            time.sleep(59)
-            print('прошло ', i, ' минут')
+        # for i in range(10):
+        #     time.sleep(59)
+        #     print('прошло ', i, ' минут')
 
     @classmethod
     def craft_all_half(cls, res: object, res2: object):
@@ -628,6 +628,7 @@ vortex50b = Item("vortex50b", 'vortex50b.png')
 vortex40g_icon = Item('vortex40g', 'vortex40g.png')
 vortex40g = Item(vortex40g_icon, 'vortex40g.png')
 makros_icon = Item('makros_icon', 'makros_icon.png')
+makrosU = Item('makrosU', 'makrosU.png')
 top_grass = Item('top_grass', 'top_grass.png')
 eode = Item(top_grass, 'eode.png')
 gernita = Item(top_grass, 'gernita.png')
@@ -704,14 +705,16 @@ time.sleep(2)
 # Instructions.craft_jems_scroll()
 # Instructions.craft_jems_scroll()
 
-
+makrosU.click(-140, 95)
+mouse.double_click()
 
 # CRAFT PART!!!
 # Instructions.craft_part_pro_as(dren_ore)
 # Instructions.craft_part_pro_as(elit_stih)
 
-# Instructions.craft_all_pro_as(riko)
-Instructions.craft_all_pro_as(foliata)
+Instructions.craft_all_pro_as(riko)
+# Instructions.craft_all_pro_as(foliata)
+# Instructions.craft_all_pro_as(tibaf)
 # Instructions.craft_all_pro_as(tibaf)
 # Instructions.craft_all_pro_as(jiraka)
 # Instructions.craft_all_pro_as(nalim)
@@ -719,6 +722,8 @@ Instructions.craft_all_pro_as(foliata)
 # Instructions.craft_all_pro_as(sibas)
 # Instructions.craft_all_pro_as(serin)
 # Instructions.craft_all_pro_as(menze)
+# Instructions.craft_all_pro_as(elit_stih)
+# Instructions.craft_all_pro_as(elit_stih)
 # Instructions.craft_all_pro_as(elit_stih)
 # Instructions.craft_all_pro_as(elit_stih)
 # Instructions.craft_all_pro_as(elit_stih)
@@ -745,7 +750,7 @@ Instructions.craft_all_pro_as(foliata)
 
 
 
-Instructions.buy_water(12)
+# Instructions.buy_water(12)
 
 
 

@@ -253,14 +253,14 @@ def price_kun(price: int, n :int = 1, goods: int = 1) -> None:
     print(f'При продаже {goods} шт, 1 шт стоит {int(round((price_one_kun * n_kun_clear) / goods))} кинар')
 
 
-# price_kun(50, 100, 200)
+# price_kun(49, 55, 1000)
 # price_kun(40, 16, 107)
 
 # art_stone(0, 0, 0, 6720, 2240)
 # ore(2520)
-# calculate(40)
-vendor_res(40)
-# calculate(22)
+# calculate(60)
+# vendor_res(60)
+calculate(80)
 # vendor_res(80)
 
 
