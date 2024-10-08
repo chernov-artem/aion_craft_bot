@@ -72,7 +72,7 @@ class Item():
             print(x, y)
             move_and_clic(x + 6 + xdx, y + 6 + xdy)
         else:
-            move_and_clic(1024, 959)
+            pyautogui.press('Space')
         time.sleep(0.5)
 
     def click2(self, xdx = 0, xdy = 0):
@@ -332,7 +332,7 @@ class Instructions():
                 mouse.double_click('left')
                 time.sleep(2)
                 sklad_leg_npc.click(0, 225)
-            pyautogui.press('u')
+            makros_u.click(233, 7)
 
         pers.select_pers()
         #берем эфир со склада лега
@@ -453,10 +453,10 @@ class Instructions():
     @classmethod
     def craft_part_pro_as(cls, res: object):
         'метод крафта одного ресурса всеми 9 персонажами'
-        Instructions.craft_pers_pro(Pers01, res)
+        # Instructions.craft_pers_pro(Pers01, res)
         Instructions.craft_pers_pro(Pers02, res)
-        # Instructions.craft_pers_pro(Pers03, res)
-        # Instructions.craft_pers_pro(Pers04, res)
+        Instructions.craft_pers_pro(Pers03, res)
+        Instructions.craft_pers_pro(Pers04, res)
         Instructions.craft_pers_pro(Pers05, res)
         Instructions.craft_pers_pro(Pers06, res)
         Instructions.craft_pers_pro(Pers07, res)
@@ -708,15 +708,24 @@ time.sleep(2)
 # Instructions.craft_jems_scroll()
 
 
-
+# Instructions.craft_pers_pro(Pers01, jiraka)
+# Instructions.craft_pers_pro(Pers02, dren_ore)
+# Instructions.craft_pers_pro(Pers03, dren_ore)
+# Instructions.craft_pers_pro(Pers04, dren_ore)
+# Instructions.craft_pers_pro(Pers05, dren_ore)
+# Instructions.craft_pers_pro(Pers06, dren_ore)
+# Instructions.craft_pers_pro(Pers07, dren_ore)
+# Instructions.craft_pers_pro(Pers08, dren_ore)
+# Instructions.craft_pers_pro(Pers09, dren_ore)
 
 
 
 
 # CRAFT PART!!!
-# Instructions.craft_part_pro_as(dren_ore)
+# Instructions.craft_part_pro_as(nalim)
 # Instructions.craft_part_pro_as(elit_stih)
 
+# Instructions.craft_all_pro_as(dren_ore)
 # Instructions.craft_all_pro_as(riko)
 # Instructions.craft_all_pro_as(foliata)
 # Instructions.craft_all_pro_as(tibaf)
@@ -751,11 +760,11 @@ time.sleep(2)
 
 
 # botle_icon.click()
+#123
 
 
 
-
-# Instructions.buy_water(12)
+# Instructions.buy_water(16)
 
 
 
